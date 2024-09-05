@@ -1,0 +1,219 @@
+.Footer {
+    width: 100%;
+    height: 500px;
+    background: #121111;
+    display: flex;
+    gap: 30px;
+
+}
+
+.Footer-section1 {
+    width: 28%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    gap: 33px;
+}
+
+.Fotter-logo {
+    width: 300px;
+    height: 187.8px;
+    margin-top: 33px;
+    gap: 0px;
+    opacity: 0px;
+    /* border: 1px solid black; */
+
+
+    & img {
+        width: 100%;
+        height: 100%;
+
+    }
+
+}
+
+.footer-contact-text {
+    width: 231px;
+    height: 53px;
+    margin-left: 80px;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24.38px;
+    text-align: left;
+    color: white;
+
+
+
+}
+
+.footericon {
+    width: 195px;
+    height: 45px;
+    margin-left: 50px;
+    gap: 30px;
+    opacity: 0px;
+    display: flex;
+
+
+
+}
+
+.Footer-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #072AC8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.Footer-section2 {
+    width: 63%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.Footer-section2-inner {
+    width: 100%;
+    height: 261px;
+    gap: 117px;
+    display: flex;
+
+}
+
+.Footer-section-2A {
+    width: 213px;
+    height: 261px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.Fotter-section2-QuicklinkHolder {
+    width: 100%;
+    height: 29px;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29.26px;
+    text-align: center;
+    color: white;
+
+}
+
+.Footer-section2-aboutusHolder {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+
+
+    & p {
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 24.38px;
+        text-align: left;
+        color: white;
+
+    }
+}
+
+.Footer-section-2b {
+    width: 320px;
+    height: 211px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.Fotter-section2-ContactHolder {
+    width: 100%;
+    height: 29px;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29.26px;
+    text-align: center;
+    color: white;
+
+}
+
+.Footer-section2-infoHolder {
+    width: 100%;
+    height: 142px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+   
+
+
+    & p {
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 24.38px;
+        text-align: left;
+        color: white;
+
+    }
+}
+
+.Footer-section-2c {
+    width: 180px;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.Fotter-section2-NewsHolder {
+    width: 100%;
+    height: 29px;
+    font-family: Montserrat;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 29.26px;
+    text-align: center;
+    color: white;
+
+}
+
+.suscribeBtn {
+    width: 133px;
+    height: 41px;
+    border: 1px solid white;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    text-align: left;
+    color:white;
+
+
+}
+.suscribeBtn:hover{
+    cursor: pointer;
+    background: #072ACB;
+
+}

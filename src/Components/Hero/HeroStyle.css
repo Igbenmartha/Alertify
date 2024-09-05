@@ -1,0 +1,115 @@
+.hero{
+    width: 100%;
+    height: 700px;
+    /* background: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.HeroHolder{
+    width: 84%;
+    height: 600px;
+    background:white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* border: solid black; */
+    display: flex;
+    align-items: center;
+
+
+}
+.HeroleftHolder{
+    width: 56%;
+    height: 70%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.Heroinner-left-Holder{
+    width: 95%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    gap:35px;
+    /* justify-content: flex-end; */
+
+
+
+}
+.HeroinnerText-left-Holder{
+    width: 100%;
+height: 59px;
+top: 278px;
+left: 160px;
+gap: 0px;
+opacity: 0px;
+font-family: Montserrat;
+font-size: 50px;
+font-weight: 700;
+line-height: 58.51px;
+text-align: left;
+color: #2D2B2B;
+
+
+& span{
+    color: #2ECC71;
+
+}
+
+
+}
+.HeroinnerPara-left-Holder{
+    width: 93%;
+height: 87px;
+top: 365px;
+left: 160px;
+gap: 0px;
+opacity: 0px;
+font-family: Montserrat;
+font-size: 25.5px;
+font-weight: 500;
+line-height: 29.26px;
+text-align: left;
+
+
+}
+
+
+.HeroBtn{
+    width: 143px;
+    height: 41px;
+    background: #FF0000;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    /* margin-left: 517px;
+    margin-top: 50px; */
+font-family: Poppins;
+font-size: 14px;
+font-weight: 700;
+line-height: 21px;
+text-align: left;
+color:white
+
+    
+
+}
+.HeroBtn:hover{
+    cursor: pointer;
+    background: #2ECC71;
+    transition: 100ms ease-in-out;
+}
+.Heroinner-right-Holder{
+    width: 42%;
+height: 333.07px;
+background-image: url(../../assets/cuate.svg);
+background-size: cover;
+top: 208px;
+left: 780px;
+gap: 0px;
+opacity: 0px;
+
+}

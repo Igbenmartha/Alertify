@@ -1,0 +1,240 @@
+.InciWatch{
+    width: 100%;
+    height: 110vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    position: relative;
+    gap:20px;
+}
+.InciWatch-Header{
+    width: 577px;
+    height: 59px;
+font-family: Montserrat;
+font-size: 48px;
+font-weight: 600;
+line-height: 58.51px;
+text-align: left;
+
+}
+.InciWatch-Holder{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    gap:80px;
+}
+.InciWatch-circle-holder{
+    width: 320px;
+    height: 320px;
+    position: relative;
+}
+.InciWatch-circle{
+    width: 300px;
+    height: 300px;
+    ;border-radius: 50%;
+    background: #D7DDF8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+.InciWatch-innercircle{
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+border: 4px solid #072AC8;
+display: flex;
+align-items: center;
+font-family: Montserrat;
+font-size: 20px;
+font-weight: 700;
+line-height: 24.38px;
+text-align: center;
+
+
+}
+.InciWatch-smallerNumber{
+    width: 80px;
+    height: 80px ;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #EF233C;
+font-family: Montserrat;
+color:white;
+font-size: 48px;
+font-weight: 600;
+line-height: 58.51px;
+text-align: left;
+position:absolute;
+top:0%;
+right:15%
+
+}
+.InciWatch-circle-holderb{
+    width: 320px;
+    height: 320px;
+    position: relative;
+    top: 50%;
+    /* padding:  200px; */
+
+
+}
+.InciWatch-circleb{
+    width: 300px;
+    height: 300px;
+    ;border-radius: 50%;
+    background: #D7DDF8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+.InciWatch-innercircleb{
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+border: 4px solid #072AC8;
+display: flex;
+align-items: center;
+font-family: Montserrat;
+font-size: 20px;
+font-weight: 700;
+line-height: 24.38px;
+text-align: center;
+
+
+}
+.InciWatch-smallerNumberb{
+    width: 80px;
+    height: 80px ;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #EF233C;
+font-family: Montserrat;
+color:white;
+font-size: 48px;
+font-weight: 600;
+line-height: 58.51px;
+text-align: left;
+position:absolute;
+top:0%;
+right:15%
+
+}
+.InciWatch-circle-holderc{
+    width: 320px;
+    height: 320px;
+    position: relative;
+}
+.InciWatch-circlec{
+    width: 300px;
+    height: 300px;
+    ;border-radius: 50%;
+    background: #D7DDF8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+.InciWatch-innercirclec{
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+border: 4px solid #072AC8;
+display: flex;
+align-items: center;
+font-family: Montserrat;
+font-size: 20px;
+font-weight: 700;
+line-height: 24.38px;
+text-align: center;
+
+
+}
+.InciWatch-smallerNumberc{
+    width: 80px;
+    height: 80px ;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #EF233C;
+font-family: Montserrat;
+color:white;
+font-size: 48px;
+font-weight: 600;
+line-height: 58.51px;
+text-align: left;
+position:absolute;
+top:0%;
+right:15%
+
+}
+.InciWatch-Text{
+    width: 937px;
+    height: 29px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+font-family: Montserrat;
+font-size: 24px;
+font-weight: 700;
+line-height: 29.26px;
+margin-top: 150px;
+
+}
+.InciWatch-Icon{
+    width: 424px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap:20px;
+    position: absolute;
+    top:18%;
+    /* background: red; */
+}
+.InciWatch-Icon1{
+    width: 169px;
+
+}
+.InciWatch-Iconb{
+    width: 424px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap:20px;
+    
+    /* background: red; */
+}
+
+.InciBtn{
+    width: 135px;
+    height: 41px;
+    background: #072AC8;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+font-family: Poppins;
+font-size: 14px;
+font-weight: 700;
+line-height: 21px;
+text-align: left;
+color:white
+
+
+
+}
+.InciBtn:hover{
+cursor: pointer;
+}
