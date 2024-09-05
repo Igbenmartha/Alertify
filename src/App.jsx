@@ -4,6 +4,7 @@ import Footer from './Components/Footer/Footer'
 import { HashRouter, Route, Routes } from 'react-router-dom'
 import Layout from './Components/Layout/Layout'
 import HomePage from './Pages/HomePage/HomePage'
+import Holder from './Components/Contact/Holder'
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
     <Routes>
       <Route element={<Layout/>} >
       <Route path= "/" element={<HomePage/>}/>
+      <Route path= "contact" element={<Holder/>}/>
 
       </Route>
     </Routes>

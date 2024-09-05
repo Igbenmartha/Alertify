@@ -2,6 +2,7 @@ import React from 'react'
 import "./HeaderStyle.css"
 import logo from "../../assets/logo.svg"
 import { GoPerson } from "react-icons/go";
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   return ( 
@@ -11,9 +12,14 @@ const Header = () => {
                 <img src={logo} alt="Logo" />
             </div>
             <div className='Header-nav'>
-                <p> Home</p>
+               <NavLink to= "/"     className={({ isActive }) =>
+                isActive ? "HeaderActive" : "HeaderNotActive"
+              }> <p>Home</p></NavLink>
+               
                 <p>About us</p>
-                <p>Contact Us</p>
+               <NavLink to= "/contact"     className={({ isActive }) =>
+                isActive ? "HeaderActive" : "HeaderNotActive"
+              }> <p>Contact Us</p></NavLink>
             </div>
             <div className='Auth'>
             <div className='AuthInner'>

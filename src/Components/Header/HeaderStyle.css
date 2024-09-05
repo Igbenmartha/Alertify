@@ -102,3 +102,11 @@ color: white;
 
 
 }
+.HeaderActive{
+  text-decoration: none;
+  color: #072ACB;
+}
+.HeaderNotActive{
+    text-decoration: none;
+  color: black;
+}
