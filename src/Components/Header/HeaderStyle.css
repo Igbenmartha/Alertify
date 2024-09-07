@@ -35,11 +35,12 @@ height: 100%;
 
 }
 .Header-nav{
-    width: 40%;
+    width: 38%;
     height: 100%;
     display: flex;
     align-items: center;
     /* justify-content: center; */
+    border: solid black;
     gap:75px;
 
 
@@ -58,13 +59,15 @@ text-align: left;
     }
 }
 .Auth{
-    width: 30%;
+    width: 33%;
 height:100%;
 gap: 35px;
 opacity: 0px;
 display: flex;
 justify-content: space-between;
 align-items: center;
+    border: solid black;
+
 
 }
 .AuthInner{
@@ -73,6 +76,9 @@ align-items: center;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border: solid black;
+
+
 
     & p{
 font-family: Roboto;
@@ -86,8 +92,41 @@ text-align: center;
         cursor: pointer;
     }
 }
+.Header-username-holder{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+
+
+    & .Cg{
+        width: 100%;
+        height: 100%;
+    }
+}
+.Header-username-textholder{
+    width: max-content;
+    height: 100%;
+
+    & h6{
+        font-family: Roboto;
+font-size: 18px;
+font-weight: 500;
+line-height: 21.09px;
+text-align: left;
+color:#141313
+    }
+
+    & p{
+        font-family: Roboto;
+font-size: 18px;
+font-weight: 500;
+line-height: 21.09px;
+text-align: left;
+color:#777474
+    }
+}
 .EmergencyCtbtn{
-    width: 45%;
+    width: 200px;
     height: 41px;
     border-radius: 10px;
     background: #072ACB;
@@ -112,4 +151,23 @@ color: white;
 .HeaderNotActive{
     text-decoration: none;
   color: black;
+}
+.profileAuth{
+    width: max-content;
+    height:100%;
+    gap: 35px;
+    opacity: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+        border: solid black; 
+}
+.Header-Profile{
+    width: max-content;
+    height: 100%;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    border: solid black;
+    gap:10px;
 }
