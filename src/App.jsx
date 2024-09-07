@@ -5,6 +5,7 @@ import { HashRouter, Route, Routes } from 'react-router-dom'
 import Layout from './Components/Layout/Layout'
 import HomePage from './Pages/HomePage/HomePage'
 import Holder from './Components/Contact/Holder'
+import ProfilePage from './Pages/ProfilePage/ProfilePage'
 
 const App = () => {
   return (
@@ -15,6 +16,8 @@ const App = () => {
       <Route path= "contact" element={<Holder/>}/>
 
       </Route>
+      <Route path= "profile" element={<ProfilePage/>}></Route>
+
     </Routes>
    </HashRouter>
   )
