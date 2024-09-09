@@ -1,0 +1,67 @@
+
+.guiding-values {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: blue;
+    align-self: center;
+  }
+
+  .value-section1 {
+    /* margin-bottom: 20px; */
+    margin-right: 5rem;
+  }
+
+  
+  .value-section1 h2 {
+    font-size: 1.5rem;
+    color: white;
+    margin-left: 3rem;
+    gap: 20%;
+  }
+  
+  .value-section1 p {
+    font-size: 25px;
+    /* line-height: 1.6; */
+    justify-content: space-around;
+    display: flex;
+    color: white;
+    margin-bottom: 5rem;
+    margin-right: 4rem;
+  }
+
+  .value-section2 h2 {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+
+    
+  }
+  
+  .value-section2 p {
+    font-size: 25px;
+    /* line-height: 1.6; */
+    justify-content: space-around;
+    display: flex;
+    color: white;
+    margin-left: 4rem;
+    margin-bottom: 5rem;
+  }
+
+  .hand{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-left: 17rem;
+    margin-top: 10rem;
+  }
+  
+  .heart{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-left: 7rem;
+    margin-top: 10rem;
+  }
