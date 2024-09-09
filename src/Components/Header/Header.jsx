@@ -27,10 +27,10 @@ const Header = () => {
                 <p>Sign Up</p>
             </div> 
             <button className='EmergencyCtbtn'>
-                <NavLink to = "">
+                
 
                  Emergency Contact</button>
-                </NavLink>
+                
 
             </div> 
         </div>
