@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import "./login.css"
-import alert from "../assets/AlertifyLogo.svg";
+import alert from "../../assets/AlertifyLogo.svg";
  import { FaEye } from "react-icons/fa6";
  // import { TiEyeOutline } from "react-icons/ti";
   import { FaRegEyeSlash } from "react-icons/fa";

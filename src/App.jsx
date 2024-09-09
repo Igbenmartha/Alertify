@@ -8,6 +8,9 @@ import Holder from './Components/Contact/Holder'
 import EmergencyHolder from './Components/EmergencyLine/EmergencyHolder'
 import ProfilePage from './Pages/ProfilePage/ProfilePage'
 import AboutUs from './Components/About Us/AboutUs'
+import SignUp from './Components/Forms/SignUp'
+import Login from './Components/Forms/Login'
+import SignUpImage from './Components/Forms/SignUpImage'
 // import AboutUs from './Components/About Us/AboutUs'
 
 const App = () => {
@@ -17,7 +20,7 @@ const App = () => {
       <Route element={<Layout/>} >
       <Route path= "/" element={<HomePage/>}/>
       <Route path= "contact" element={<Holder/>}/>
-      <Route path= "emergecny" element={<EmergencyHolder/>}/>
+      <Route path= "emergency" element={<EmergencyHolder/>}/>
     
 
       </Route>
@@ -26,6 +29,10 @@ const App = () => {
       <Route path='About' element= {<AboutUs/>}/>
       </Route>
       <Route path= "profile" element={<ProfilePage/>}></Route>
+      <Route path= "sigup" element={<SignUp/>}></Route>
+      <Route path= "login" element={<Login/>}></Route>
+      <Route path= "signupimage" element={<SignUpImage/>}></Route>
+
     </Routes>
    </HashRouter>
   )
