@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
 import "./signup.css"
 import "./signupimage.css"
-import user from "../assets/UserPics.svg"
-// import usercamera from "../assets/userPics.svg"
-import plus from "../assets/PlusFrame.svg";
-import camera from "../assets/camera.svg"
-import round from "../assets/RoundFace.svg"
+
+
+import camera from "../../assets/camera.svg"
+import round from "../../assets/RoundFace.svg"
 
 const SignUpImage = ({ alert }) => {
     const [img, setImg] = useState()
