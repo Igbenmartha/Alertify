@@ -1,7 +1,6 @@
 .herocontactBody{
     width: 100%;
-    height: 500px;
-    /* background-color: red; */
+    height: 80vh; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,30 +8,34 @@
 
 .herocontactInner{
     width: 92%;
-    height: 500px;
-    background-image:url("../assets/Mancontact.svg");
+    height: 100%;
+    background-image:url("../../assets/Mancontact.svg");
     background-repeat: no-repeat;
     background-size:cover ; 
     background-position: center;
     display: flex;
     align-items: flex-end;
+    
+    /* position: relative; */
 }
 
 .contactUs{
-    width: 751px;
-        height: 183px;
+    width: 60%;
+    max-width: 600px;
+        height: 35%;
     background: #0000009a;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 25px;
 top: 426px;
 left: 106px;
 padding: 10px;
+/* position: absolute; */
 }
 
 .contactUsText{
-    width: 731px;
-    height: 59px;
+    width: 100%;
+    height: 35%;
     color: white;
 font-family: Montserrat;
 font-size: 48px;
@@ -43,8 +46,8 @@ text-align: left;
 }
 
 .contactText2{
-    width: 731px;
-    height: 74px;
+    width: 100%;
+    height: 30%;
 font-family: Montserrat;
 font-size: 23px;
 font-weight: 700;
@@ -53,4 +56,41 @@ text-align: left;
 color: white;
 
 
+}
+
+
+@media (max-width: 768px) {
+    .contactUs {
+        width: 90%; 
+        max-width: none; 
+        bottom: 2%;
+        left: 5%;
+        transform: none;
+    }
+
+    .contactUsText {
+        font-size: 2rem; 
+    }
+
+    .contactText2 {
+        font-size: 1.2rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .contactUs {
+        width: 95%;
+        bottom: 0; 
+        left: 2%;
+        padding: 5px;
+    }
+
+    .contactUsText {
+        font-size: 1.5rem; 
+    }
+
+    .contactText2 {
+        font-size: 1rem; 
+}
 }

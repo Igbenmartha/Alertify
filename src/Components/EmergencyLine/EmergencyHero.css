@@ -1,0 +1,71 @@
+.emergencyHeroBody{
+    width: 100%;
+    height: 80vh;
+     background-color: #EFF0F5; 
+
+    /* background-color: rgb(62, 162, 162); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.emergencyHeroBodyInner{
+    width: 90%;
+    height: 100%;
+    background-color: aqua;
+    display: flex;
+    background: #EFF0F5;
+
+    /* justify-content: center; */
+    /* align-items: center; */
+
+
+}
+
+.emergencyHeroTextDiv{
+    width: 55%;
+    height: 100%;
+    /* background-color: red; */
+     display: flex;
+     
+    justify-content: center;
+    align-items: center;
+}
+
+
+.emergencyHeroTexts{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* background-color: lawngreen; */
+
+    >h1{
+        font-family: Montserrat;
+font-size: 50px;
+font-weight: 700;
+line-height: 58.51px;
+text-align: left;
+color: #252424;
+
+
+    }
+
+    >p{
+        font-family: Montserrat;
+font-size: 24px;
+font-weight: 700;
+line-height: 29.26px;
+text-align: left;
+color: #2E2B2B;
+;
+    }
+   
+}
+
+.emergencyHeroImageDiv{
+    width: 45%;
+    height: 100%;
+    /* background-color: purple; */
+}

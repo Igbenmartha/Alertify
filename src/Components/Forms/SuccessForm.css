@@ -1,0 +1,69 @@
+.SuccesFormMain{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: blue; */
+}
+
+.successform{
+    width: 50%;
+    height: 70vh;
+    display: flex;
+    gap:15px;
+    /* background: #000; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkimageDiv{
+    width: 100%;
+    height: 65%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+      
+    & img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.sucesstext{
+    height: 30%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px; 
+}
+
+.text1{
+     >p{
+font-family: Montserrat;
+font-size: 19px;
+font-weight: 700;
+line-height: 29.26px;
+    }
+
+}
+.sucessbutton{
+    width:25%;
+height:61px;
+padding: 20px;
+gap: 10px;
+border-radius: 10px;
+ background-color: #072AC8;
+ color: white;
+ border: none;
+ outline: none;
+
+}
+
+.successbutton:hover{
+
+}
