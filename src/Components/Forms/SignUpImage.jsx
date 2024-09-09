@@ -16,7 +16,8 @@ const SignUpImage = ({ alert }) => {
     }
   return (
     <>
-      <div className="signupbodyLogo">
+      <div className="signupbodyLogo">git pull origin main
+
         <img src={alert} alt="" />
       </div>
       <div className='imageBox'>
