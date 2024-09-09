@@ -1,13 +1,13 @@
 import React from 'react'
 import "./emergencycallline.css"
-import police from "../assets/PoliceImage.svg"
-import helipcopter from "../assets/HelicopterImage.svg"
-import boykick from "../assets/BoyKickGirl.svg"
-import ArmyMan from "../assets/SoldierMan.svg"
-import rope from "../assets/HangRope.svg"
-import FederalRoadSafetyLogo from "../assets/FrscGreenHead.svg"
-import domesticBoy from "../assets/DomesticBoy.svg"
-import shortNikaGirl from "../assets/ShortNika.svg"
+import police from "../../assets/PoliceImage.svg"
+import helipcopter from "../../assets/HelicopterImage.svg"
+import boykick from "../../assets/BoyKickGirl.svg"
+import ArmyMan from "../../assets/SoldierMan.svg"
+import rope from "../../assets/HangRope.svg"
+import FederalRoadSafetyLogo from "../../assets/FrscGreenHead.svg"
+import domesticBoy from "../../assets/DomesticBoy.svg"
+import shortNikaGirl from "../../assets/ShortNika.svg"
 
 const EmergencyCallLine = () => {
   return (

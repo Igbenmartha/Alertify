@@ -1,11 +1,11 @@
 import React from 'react'
 import "./emergencyhelp.css"
-import tongue from "../assets/RedTongue.svg"
-import traffic from "../assets/TrafficLight.svg"
-import  Frcs from "../assets/FrscGreenHead.svg"
-import fire from "../assets/FireBox.svg"
-import fineboy from "../assets/Boy.svg"
-import boygirl from "../assets/BoyKickGirl.svg"
+import tongue from "../../assets/RedTongue.svg"
+import traffic from "../../assets/TrafficLight.svg"
+import  Frcs from "../../assets/FrscGreenHead.svg"
+import fire from "../../assets/FireBox.svg"
+import fineboy from "../../assets/Boy.svg"
+import boygirl from "../../assets/BoyKickGirl.svg"
 
 const EmergencyHelp = () => {
     const data = [
