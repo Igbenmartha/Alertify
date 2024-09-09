@@ -13,6 +13,9 @@ const Header = () => {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
 
   return (
     <div className='Header'> 
@@ -24,15 +27,26 @@ const Header = () => {
           {menuOpen ? <AiOutlineClose size={30} /> : <FiMenu size={30} />}
         </div>
         <div className={`Header-nav ${menuOpen ? 'open' : ''}`}>
-          <NavLink to="/" className={({ isActive }) => isActive ? "HeaderActive" : "HeaderNotActive"}>
+          <NavLink to="/" className={({ isActive }) => isActive ? "HeaderActive" : "HeaderNotActive"} onClick={closeMenu}>
             <p>Home</p>
           </NavLink>
-          <NavLink to="/about" className={({ isActive }) => isActive ? "HeaderActive" : "HeaderNotActive"}>
+          <NavLink to="/about" className={({ isActive }) => isActive ? "HeaderActive" : "HeaderNotActive"} onClick={closeMenu}>
             <p>About</p>
           </NavLink>
-          <NavLink to="/contact" className={({ isActive }) => isActive ? "HeaderActive" : "HeaderNotActive"}>
+          <NavLink to="/contact" className={({ isActive }) => isActive ? "HeaderActive" : "HeaderNotActive"} onClick={closeMenu}>
             <p>Contact Us</p>
           </NavLink>
+          <div className='Header-Auth'> 
+          <NavLink to="/login" className={({ isActive }) => isActive ? "HeaderActive" : "HeaderNotActive"} onClick={closeMenu}>
+            <p>Login</p>
+          </NavLink>
+          <NavLink to="signup" className={({ isActive }) => isActive ? "HeaderActive" : "HeaderNotActive"} onClick={closeMenu}>
+            <p>Sign Up</p>
+          </NavLink>
+          <NavLink to="/emergency" className={({ isActive }) => isActive ? "HeaderActive" : "HeaderNotActive"} onClick={closeMenu}>
+            <p>Emergency</p>
+          </NavLink>
+          </div>
          
         </div>
         <div className='Auth'>
