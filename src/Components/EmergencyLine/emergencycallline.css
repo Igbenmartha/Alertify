@@ -1,0 +1,578 @@
+.emergencyCallIneBody{
+    width: 100%;
+    height: 120vh;
+      background-color: white; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.emergencyCallIneBodyInner{
+    width: 90%;
+    height: 100%;
+    background-color: white; 
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.PlsCallOnlyDiv{
+    width: 100%;
+    height: 10%;
+    /* background:teal; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+
+    >h1{
+        font-family: Montserrat;
+font-size: 24px;
+font-weight: 700;
+line-height: 29.26px;
+text-align: left;
+color: black;
+
+& span{
+    color: blue;
+}
+
+    }
+}
+
+.emergencyCallLineFirstImages{
+    width: 100%;
+    height: 30%;
+    /* background-color: red; */
+}
+
+.emergencyCallLineImage1Div{
+    width: 100%;
+    height: 45%;
+    /* background-color: green; */
+    display: flex;
+}
+
+.emergencycallLinePoliceImageDiv{
+    width: 50%;
+    height: 100%;
+    /* background: pink; */
+     display: flex; 
+    /* flex-direction: column; */
+}
+
+.policeImage{
+    width: 30%;
+    height: 100%;
+    /* background-color: teal; */
+}
+
+.policeImageText{
+    width: 70%;
+    height: 100%;
+    /* background-color: antiquewhite; */
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+    gap:10px;
+
+      >h1{
+        font-family: Montserrat;
+font-size: 24px;
+font-weight: 700;
+line-height: 29.26px;
+text-align: left;
+color: #2E2D2D;
+
+    }
+
+    >p{
+        font-family: Roboto;
+font-size: 18px;
+font-weight: 400;
+line-height: 21.09px;
+text-align: left;
+color: #8C8E93;
+
+
+    }
+
+}
+
+.emergencyRapidSquad{
+    width: 50%;
+    height: 100%;
+    /* background-color: purple; */
+    display: flex;
+}
+
+.helipCopterImage{
+    width: 30%;
+    height: 100%;
+    /* background-color: aqua; */
+}
+
+.HelipcopterText{
+    width: 45%;
+    height: 100%;
+    /* background: aliceblue; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+
+    >h1{
+        font-family: Montserrat;
+font-size: 24px;
+font-weight: 700;
+line-height: 29.26px;
+text-align: left;
+color: #2E2D2D;
+
+    }
+
+    >p{
+        font-family: Roboto;
+font-size: 18px;
+font-weight: 400;
+line-height: 21.09px;
+text-align: left;
+color: #8C8E93;
+
+    }
+}
+
+
+
+.emergencyCallLineImage2Div{
+     width: 100%;
+    height: 48%;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.boyGirlImageDiv{
+    width: 40%;
+    height: 100%;
+    /* background-color: orange; */
+    display: flex;
+    align-items: center;
+    gap:10px;
+    justify-content: center;
+
+}
+
+.BoyGirlImage{
+    width: 30%;
+    height: 100%;
+    /* background: gray; */
+}
+
+.BoyKickImageText{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    justify-content:end;
+    gap:10px;
+    
+    /* background-color: aquamarine; */
+
+    >h1{
+        font-family: Montserrat;
+font-size: 24px;
+font-weight: 700;
+line-height: 29.26px;
+text-align: left;
+color: #2E2D2D;
+
+    }
+
+    >p{
+        font-family: Roboto;
+font-size: 18px;
+font-weight: 400;
+line-height: 21.09px;
+text-align: left;
+color: #8C8E93;
+
+
+
+    }
+}
+
+.emergencycallLineArmyRightsBox{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    /* background: white; */
+     /* display: flex;  */
+}
+
+
+.emencygencyCallLineArmyBox1{
+    width: 100%;
+    height: 60%;
+    /* background-color: #8C8E93; */
+    display: flex;
+}
+
+.emergencyArmyBox1Div{
+    width: 50%;
+    height: 100%;
+    /* background-color: orange; */
+    display: flex;
+}
+
+.emergencyArmyBox1ImageDiv{
+    width: 30%;
+    height: 75%;
+    /* background-color: aqua; */
+    display: flex;
+    align-self: end;
+}
+
+.emergencyArmyBox1TextDiv{
+    width: 55%;
+    height: 100%;
+    /* background-color: wheat; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+
+
+     >h1{
+        font-family: Montserrat;
+font-size: 24px;
+font-weight: 700;
+line-height: 29.26px;
+text-align: left;
+color: #2E2D2D;
+
+    }
+
+    >p{
+        font-family: Roboto;
+font-size: 18px;
+font-weight: 400;
+line-height: 21.09px;
+text-align: left;
+color:#8C8E93;
+
+    }
+
+    
+
+}
+
+.EmergencyDepressionBoxDiv{
+    width: 50%;
+    height: 100%;
+    /* background: lawngreen; */
+    display: flex;
+}
+
+.emergencyDepressionImageDiv{
+    width: 30%;
+    height: 70%;
+    /* background-color: antiquewhite;  */
+    display: flex;
+    align-self: end;
+    margin-bottom: 20px;
+    
+}
+
+.emergencydepressionTextDiv{
+    width: 60%;
+    height: 100%;
+    /* background-color: wheat;  */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+
+
+    >h1{
+        font-family: Montserrat;
+font-size: 24px;
+font-weight: 700;
+line-height: 29.26px;
+text-align: left;
+color: #1D1C1C;
+
+
+    }
+
+    >p{
+        font-family: Roboto;
+font-size: 18px;
+font-weight: 400;
+line-height: 21.09px;
+text-align: left;
+color: #8C8E93;
+
+    }
+}
+
+
+
+.emencygencyCallLineArmyBox2{
+    width: 100%;
+    height: 40%;
+    /* background-color: teal; */
+    display: flex;
+    justify-content: center;
+}
+.emengencyFederalRoadServiceDiv{
+    /* background-color: red; */
+    height: 100%;
+    width: 40%;
+    display: flex;
+    gap: 10px;
+}
+
+.emergencyFederalRoadServiceImageDiv{
+    width: 30%;
+    height: 100%;
+    /* background-color: aqua; */
+}
+
+.emergencyFederalRoadServiceTextDiv{
+    width: 70%;
+    height: 100%;
+    /* background-color: purple; */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+
+    >h1{
+        font-family: Montserrat;
+font-size: 24px;
+font-weight: 700;
+line-height: 29.26px;
+color: #2F2E2E;
+
+
+
+    }
+
+    >p{
+        font-family: Roboto;
+font-size: 18px;
+font-weight: 400;
+line-height: 21.09px;
+color: #8C8E93;
+
+
+    }
+
+}
+
+.emergencyCallLineLastDiv{
+    width: 100%;
+    height: 20%;
+    /* background: #000; */
+    display: flex;
+}
+
+.emergencyChildViolenceDiv{
+    width: 50%;
+    height: 100%;
+    /* background-color: lavenderblush; */
+    display: flex;
+}
+
+.ChildViolenceImageDiv{
+    width: 30%;
+    height: 80%;
+    display: flex;
+    align-self: end;
+    /* background-color: aliceblue; */
+
+}
+
+.ChildViolenceTextDiv{
+    width: 40%;
+    height: 100%;
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+
+    >h1{
+        font-family: Montserrat;
+font-size: 24px;
+font-weight: 700;
+line-height: 29.26px;
+text-align: left;
+color:#2F2E2E;
+    }
+
+    >p{
+        font-family: Roboto;
+font-size: 18px;
+font-weight: 400;
+line-height: 21.09px;
+text-align: left;
+color: #8C8E93;
+
+    }
+}
+
+.GirlsViolationAndWomenHelplineDiv{
+    width: 50%;
+    height: 100%;
+    /* background-color: crimson; */
+    display: flex;
+}
+
+.GirlsViolationImageDiv{
+    width: 30%;
+    height: 80%;
+    /* background-color: aliceblue; */
+    display: flex;
+    align-self: end;
+}
+
+.GirlsViolationTextDiv{
+    width: 50%;
+    height: 100%;
+    /* background-color: lawngreen; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+
+    >h1{
+        font-family: Montserrat;
+font-size: 24px;
+font-weight: 700;
+line-height: 29.26px;
+text-align: left;
+color: #2F2E2E;
+
+    }
+
+    >p{
+        font-family: Roboto;
+font-size: 18px;
+font-weight: 400;
+line-height: 21.09px;
+text-align: left;
+
+        color:#8C8E93;
+    }
+
+}
+
+/* .emergencyArmyBox1{
+    width: 50%;
+    height: 50%;
+    background-color: #8C8E93;
+    display: flex;
+    gap: 10px;
+}
+.ArmyRightImage{
+    width: 30%;
+    background-color: blanchedalmond;
+    height: 75%;
+    display: flex;
+    align-self: self-end;
+
+}
+
+.ArmyRightText{
+    width: 55%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: purple;
+
+    >h1{
+        font-family: Montserrat;
+font-size: 24px;
+font-weight: 700;
+line-height: 29.26px;
+text-align: left;
+color: #2E2D2D;
+
+    }
+
+    >p{
+        font-family: Roboto;
+font-size: 18px;
+font-weight: 400;
+line-height: 21.09px;
+text-align: left;
+color:#8C8E93;
+
+    }
+}
+
+.emergencyDepressionBox{
+    width: 50%;
+    height: 50%;
+    background-color: azure;
+    display: flex;
+}
+
+.DepressionBox{
+    width: 30%;
+    height: 70%;
+    display: flex;
+    align-self: self-end;
+    justify-content:end;
+    background: pink;
+    /* align-self: center; */
+
+
+/* .EmergencyDepressionBoxText{
+    width: 50%;
+    height: 100%;
+    background-color: teal;
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    >h1{
+        font-family: Montserrat;
+font-size: 24px;
+font-weight: 700;
+line-height: 29.26px;
+text-align: left;
+color: #1D1C1C;
+
+
+    }
+
+    >p{
+        font-family: Roboto;
+font-size: 18px;
+font-weight: 400;
+line-height: 21.09px;
+text-align: left;
+color: #8C8E93;
+
+    }
+}
+
+
+
+.lastDiv{
+    width: 100%;
+    height: 16%;
+    background: teal;
+} */ */

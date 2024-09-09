@@ -1,6 +1,6 @@
 .contactIconsBody{
     width: 100%;
-    height: 390px;
+    height: 65vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,16 +8,16 @@
 
 .contactIconsInner{
     width: 92%;
-    height: 320px;
+    height: 85%;
     align-items: center;
     justify-content: space-between;
     display: flex;
-    gap: 150px;
+    gap: 80px;
 }
 
 .contactIconsDiv{
-    width:322px;
-height:300px;
+    width:40%;
+height:40%;
 background-color: white;
 padding: 10px;
 gap: 30px;
@@ -26,6 +26,7 @@ border: 2px #979494a9 solid;
 display: flex;
 flex-direction: column;
 align-items: center; 
+/* background: #000; */
 transition: 350ms;
 }
 
@@ -37,25 +38,26 @@ box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .commentIcon{
-    width: 75px;
-height: 70.31px;
-top: 9.85px;
+    width: 25%;
+height: 20%;
+/* background: #000; */
 }
 
 .commentIconText{
-    width:302px;
-height:160px;
+    width:100%;
+height:55%;
 display: flex;
 
 flex-direction: column;
 gap: 10px;
-background:white;
+/* background:white; */
 }
 
 .chatUsDiv{
-    width: 302px;
-height: 29px;
+    width: 100%;
+height: 15%;
 gap: 0px;
+/* background: red; */
 font-family: Montserrat;
 font-size: 24px;
 font-weight: 600;
@@ -64,8 +66,8 @@ text-align: center;
 }
 
 .ourFaqDiv{
-    width: 302px;
-height: 62px;
+    width: 100%;
+height:30%;
 color: #747070;
 font-family: Roboto;
 font-size: 15px;
@@ -74,6 +76,7 @@ line-height: 21.09px;
 letter-spacing: 0.04em;
 text-align: center;
 display: flex;
+/* background: blue; */
 justify-content: center;
 
 >.IconPTag{
@@ -83,8 +86,8 @@ justify-content: center;
 }
 
 .startChatDiv{
-    width: 302px;
-height: 49px;
+    width: 100%;
+height: 30%;
 font-family: Montserrat;
 font-size: 24px;
 font-weight: 700;
@@ -93,6 +96,7 @@ text-align: left;
 display: flex;
 color:#072AC8;;
 align-items: center;
+/* background: green; */
 justify-content: center;
 }
 

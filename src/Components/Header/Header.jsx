@@ -26,7 +26,11 @@ const Header = () => {
                 <p>Log In</p> 
                 <p>Sign Up</p>
             </div> 
-            <button className='EmergencyCtbtn'> Emergency Contact</button>
+            <button className='EmergencyCtbtn'>
+                <NavLink to = "">
+
+                 Emergency Contact</button>
+                </NavLink>
 
             </div> 
         </div>

@@ -5,6 +5,7 @@ import { HashRouter, Route, Routes } from 'react-router-dom'
 import Layout from './Components/Layout/Layout'
 import HomePage from './Pages/HomePage/HomePage'
 import Holder from './Components/Contact/Holder'
+import EmergencyHolder from './Components/EmergencyLine/EmergencyHolder'
 
 const App = () => {
   return (
@@ -13,8 +14,11 @@ const App = () => {
       <Route element={<Layout/>} >
       <Route path= "/" element={<HomePage/>}/>
       <Route path= "contact" element={<Holder/>}/>
+      <Route path= "emergecny" element={<EmergencyHolder/>}/>
+    
 
       </Route>
+      {/* <Route path=""></Route> */}
     </Routes>
    </HashRouter>
   )
