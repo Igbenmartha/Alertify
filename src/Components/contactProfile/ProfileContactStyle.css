@@ -97,8 +97,12 @@ border: none;
         margin-top: 20px;
 
     }
+    .ProfileContactBoxHolder{
+        /* justify-content: space-between; */
+        gap:70px;
+    }
     .ProfileContactBox {
-        width: 31%;
+        width: 39%;
         height: 25vh;
     }
     .ProfileContactBoxCont{
