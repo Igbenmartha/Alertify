@@ -6,6 +6,9 @@ import Layout from './Components/Layout/Layout'
 import HomePage from './Pages/HomePage/HomePage'
 import Holder from './Components/Contact/Holder'
 import EmergencyHolder from './Components/EmergencyLine/EmergencyHolder'
+import ProfilePage from './Pages/ProfilePage/ProfilePage'
+import AboutUs from './Components/About Us/AboutUs'
+// import AboutUs from './Components/About Us/AboutUs'
 
 const App = () => {
   return (
@@ -19,6 +22,9 @@ const App = () => {
 
       </Route>
       {/* <Route path=""></Route> */}
+      {/* <Route path='AboutUs' element= {<AboutUs/>}/> */}
+      <Route path='Aboutus' element= {<AboutUs/>}/>
+      <Route path= "profile" element={<ProfilePage/>}></Route>
     </Routes>
    </HashRouter>
   )

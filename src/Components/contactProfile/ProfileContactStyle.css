@@ -1,0 +1,132 @@
+.ProfileContact {
+    width: 90%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    position: relative;
+}
+
+.ProfileCatAddBtn {
+    width: 15%;
+    height: 55px;
+    border-radius: 50px;
+border: 1px solid  #072ACB;
+    color: #000;
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self:flex-end;
+}
+.ProfileContactBoxHolder{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+    justify-content: center;
+}
+.ProfileContactBoxCont{
+    width: 100%;
+    height: 20%;
+    /* border: solid black; */
+    color: #000;
+font-family: Roboto;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+display: flex;
+align-items: center;
+
+& span{
+     font-weight: 400;  
+     font-size: 18px; 
+}
+}
+
+.ProfileContactBox {
+    width: 28%;
+    height: 35vh;
+    border-radius: 20px;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+
+   
+
+
+
+}
+.ProfileContactBtnDiv{
+    width: 100%;
+    height: 25%;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ProfileContacEditBtn,
+.ProfileContacDeleteBtn
+{
+width: 20%;
+height: 31px;
+color: #FFF;
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+border-radius: 5px;
+background: #072AC8;
+border: none;
+}
+@media screen  and (max-width:900px){
+   
+
+    .ProfileCatAddBtn {
+        width: 23%;
+        margin-top: 20px;
+
+    }
+    .ProfileContactBoxHolder{
+        /* justify-content: space-between; */
+        gap:70px;
+    }
+    .ProfileContactBox {
+        width: 39%;
+        height: 25vh;
+    }
+    .ProfileContactBoxCont{
+        font-family: Roboto;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+/* line-height: normal; */
+
+& span{
+font-size: 16px;
+
+}
+
+    }
+}
+@media screen  and (max-width:480px){
+    .ProfileCatAddBtn {
+        width: 35%;
+        height: 40px;
+
+    }
+    .ProfileContactBox {
+        width: 70%;
+        height: 30vh;
+    }
+}
