@@ -1,0 +1,443 @@
+.signupbody{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signupbodyInner{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.signupbodyLogo{
+    width: 10%;
+    height: 15%;
+    display: flex;
+    align-self: flex-start;
+}
+
+.signUpDiv{
+    width: 45%;
+    height: 83%;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+
+.signupDivText{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+
+
+        >h2{
+        font-family: Montserrat;
+font-size: 24px;
+font-weight: 700;
+line-height: 29.26px;
+text-align: center;      
+    }
+
+    >p{
+font-family: Roboto;
+font-size: 17px;
+font-weight: 400;
+color: #9B9393;
+text-align: center;
+    }
+}
+
+.formDiv{
+    width: 90%;
+    height: 75%;
+    display: flex;
+     gap:10px;
+    flex-direction: column;
+}
+
+.fullnameInputDiv{
+    width: 100%;
+    height: 43px;
+    border-radius: 5px;
+  
+    cursor: pointer;
+   
+}
+
+.fullnameInput{
+    height: 85%;
+    width: 100%;
+font-family: Roboto;
+font-size: 18px;
+font-weight: 400;
+color: black;
+  padding: 10px;
+  outline:1px solid blue;
+
+
+line-height: 21.09px;
+text-align: left;
+
+     border: 1px solid #EEE5E5;
+      border-radius: 5px;
+      cursor: pointer;
+ 
+}
+
+.passwordDiv{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    font-family: Roboto;
+    padding-right: 10px;
+     outline: 1px solid blue; 
+
+    align-items: center;
+        background-color: white;
+     border: 0.5px solid  #EEE5E5; 
+   
+}
+
+.passwordInput{
+    width: 95%;
+    height: 85%;
+font-size: 18px;
+font-weight: 400;
+color: black;
+outline: none;
+   
+   padding-left: 10px;
+    border: none;
+    cursor: pointer;
+}
+.haveAccountTextDiv{
+    width: 100%;
+    height: 14%;
+    /* background:white; */
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+}
+/* .continueButton{
+    width: 90%;
+    height: 41px;
+    background-color:#072ACB;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    color: white;
+} */
+
+.alreadyHaveAnAccountText{
+font-family: Roboto;
+font-size: 18px;
+font-weight: 400;
+line-height: 21.09px;
+text-align: left;
+display: flex;
+align-self: center;
+
+& span{
+    font-family: Roboto;
+font-size: 18px;
+font-weight: 400;
+line-height: 21.09px;
+text-align: left;
+
+}
+
+}
+
+/* .EmergencyformDiv{
+    width: 90%;
+    height: 70%;
+    gap:10px;
+    display: flex;
+    flex-direction: column;
+
+} */
+
+
+.emergencyMailDiv{
+     width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    outline: 1px solid blue;
+    font-family: Roboto;
+    justify-content: center;
+    align-items: center;
+        background-color: white;
+     border: 0.5px solid  #EEE5E5;
+
+}
+
+
+.firstNextButton{
+
+    width: 90%;
+    height: 41px;
+    background-color:#072ACB;
+
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    color: white;
+
+       font-family: "Poppins-Bold", Helvetica;
+  font-size: 17px;
+  font-weight: 700;
+    color: white;
+
+}
+
+.newNextButton{
+    width: 100%;
+    height: 41px;
+    background-color: #072ACB;
+;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    color: white;
+
+       font-family: "Poppins-Bold", Helvetica;
+  font-size: 17px;
+  font-weight: 700;
+    color: white;
+}
+
+.formDiv2{
+     width: 90%;
+    height: 75%;
+    display: flex;
+     gap:10px;
+    flex-direction: column;
+
+}
+
+.emergencyNameInput{
+     width: 100%;
+    height: 100%;
+font-size: 18px;
+font-weight: 400;
+ display: flex;
+font-family: Roboto;
+font-size: 18px;
+font-weight: 400;
+border: none;
+padding: 10px;
+outline: blue;
+line-height: 21.09px;
+    align-items: center;
+/* padding-right: 10px; */
+   /* padding-left: 10px; */
+    cursor: pointer;
+
+   
+}
+
+.addBtn{
+    width: 10%;
+    height: 30px;
+    background-color: blue;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    margin-left: 28rem;
+    font-weight: 200;
+    cursor: pointer;
+    /* display: flex; */
+    
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .signUpDiv {
+        width: 70%;
+    }
+
+    .signupbodyLogo {
+        width: 15%;
+        height: 20%;
+    }
+
+    .signupbodyInner {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .signUpDiv {
+        width: 80%;
+    }
+
+    .signupDivText {
+        > h2 {
+            font-size: 20px;
+        }
+
+        > p {
+            font-size: 15px;
+        }
+    }
+
+    .fullnameInputDiv, .passwordDiv, .emergencyMailDiv {
+        height: 40px;
+    }
+
+    .fullnameInput, .passwordInput, .emergencyInput {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .signUpDiv {
+        width: 90%;
+        height: auto;
+    }
+
+    .signupDivText {
+        > h2 {
+            font-size: 18px;
+        }
+
+        > p {
+            font-size: 14px;
+        }
+    }
+
+    .fullnameInputDiv, .passwordDiv, .emergencyMailDiv {
+        height: 35px;
+    }
+
+    .fullnameInput, .passwordInput, .emergencyInput {
+        font-size: 14px;
+    }
+
+    .continueButton, .newConitinueButton {
+        width: 90%;
+    }
+
+    .signupbodyLogo {
+        width: 20%;
+        height: 25%;
+    }
+
+    .signupbodyInner {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .alreadyHaveAnAccountText {
+        font-size: 16px;
+    }
+} 
+
+
+@media screen and (max-width: 300px) {
+    .signUpDiv {
+        width: 100%;
+        height: auto;
+        padding: 5px;
+    }
+
+    .signupDivText {
+        > h2 {
+            font-size: 14px;
+        }
+
+        > p {
+            font-size: 12px;
+        }
+    }
+
+    .fullnameInputDiv, .passwordDiv, .emergencyMailDiv {
+        height: 30px;
+    }
+
+    .fullnameInput, .passwordInput, .emergencyInput {
+        font-size: 12px;
+    }
+
+    .continueButton, .newConitinueButton {
+        height: 30px;
+        font-size: 12px;
+    }
+
+    .signupbodyLogo {
+        display: none;
+    }
+
+    .signupbodyInner {
+        width: 100%;
+        height: auto;
+        padding: 5px;
+    }
+
+    .alreadyHaveAnAccountText {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 162px) {
+    .signUpDiv {
+        width: 100%;
+        height: auto;
+        padding: 2px;
+        background: #000;
+    }
+
+    .signupDivText {
+        > h2 {
+            font-size: 10px;
+        }
+
+        > p {
+            font-size: 8px;
+        }
+    }
+
+    .fullnameInputDiv, .passwordDiv, .emergencyMailDiv {
+        height: 20px;
+    }
+
+    .fullnameInput, .passwordInput, .emergencyInput {
+        font-size: 10px;
+    }
+
+    .continueButton, .newConitinueButton {
+        height: 20px;
+        font-size: 10px;
+        width: 90%;
+    }
+
+    .signupbodyLogo {
+        display: none;
+    }
+
+    .signupbodyInner {
+        width: 100%;
+        height: auto;
+        padding: 2px;
+    }
+
+    .alreadyHaveAnAccountText {
+        font-size: 8px;
+    }
+}

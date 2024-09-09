@@ -40,7 +40,7 @@ const Header = () => {
             <p onClick={(()=>navigate('/login'))}>Log In</p>
             <p onClick={(()=>navigate('/signup'))}>Sign Up</p>
           </div>
-          <button className='EmergencyCtbtn' onClick={() => navigate("/emergency")}>
+          <button className='EmergencyCtbtn' onClick={() => navigate('/emergency')}>
             Emergency Contact
           </button>
         </div>
