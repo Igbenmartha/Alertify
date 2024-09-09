@@ -4,7 +4,7 @@ import alert from "../../assets/AlertifyLogo.svg"
  import { FaEye } from "react-icons/fa6";
  // import { TiEyeOutline } from "react-icons/ti";
  import { FaRegEyeSlash } from "react-icons/fa";
- import plus from "../assets/PlusFrame.svg"
+
 import SignUpImage from './SignUpImage';
 
 const SignUp = () => {
