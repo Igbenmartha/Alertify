@@ -27,7 +27,9 @@ const Header = () => {
           <NavLink to="/" className={({ isActive }) => isActive ? "HeaderActive" : "HeaderNotActive"}>
             <p>Home</p>
           </NavLink>
-          <p>About us</p>
+          <NavLink to="/contact" className={({ isActive }) => isActive ? "HeaderActive" : "HeaderNotActive"}>
+            <p>About</p>
+          </NavLink>
           <NavLink to="/contact" className={({ isActive }) => isActive ? "HeaderActive" : "HeaderNotActive"}>
             <p>Contact Us</p>
           </NavLink>
@@ -35,8 +37,8 @@ const Header = () => {
         </div>
         <div className='Auth'>
           <div className='AuthInner'>
-            <p>Log In</p>
-            <p>Sign Up</p>
+            <p onClick={(()=>navigate('/login'))}>Log In</p>
+            <p onClick={(()=>navigate('/signup'))}>Sign Up</p>
           </div>
           <button className='EmergencyCtbtn' onClick={() => navigate("/emergency")}>
             Emergency Contact

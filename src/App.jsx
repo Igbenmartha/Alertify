@@ -23,7 +23,8 @@ const App = () => {
       </Route>
       {/* <Route path=""></Route> */}
       {/* <Route path='AboutUs' element= {<AboutUs/>}/> */}
-      <Route path='Aboutus' element= {<AboutUs/>}/>
+      <Route path='About' element= {<AboutUs/>}/>
+      </Route>
       <Route path= "profile" element={<ProfilePage/>}></Route>
     </Routes>
    </HashRouter>
