@@ -1,14 +1,15 @@
 
 .Profile-MainBody {
     width: 34%;
-    height: 90%;
+    height: 78vh;
     /* background-color:turquoise; */
     padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 10px;
-    gap:10px
+    gap:10px;
+    position: relative;
     /* justify-content: space-around; */
 }
 
@@ -133,4 +134,21 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+@media screen  and (max-width:900px){
+    .Profile-MainBody {
+        width: 60%;
+        height: 70vh;
+    }
+}
+@media screen  and (max-width:480px){
+    .Profile-MainBody {
+        width: 90%;
+        height: 80vh;
+    }
+}
+@media screen  and (max-width:380px){
+    .Profile-MainBody {
+        height: 90vh;
+    }
 }

@@ -1,49 +1,12 @@
 import React, { useState } from 'react';
 import "./ProfileStyle.css";
-import cam from "../../assets/Cameraa.svg";
-import person from "../../assets/person.png";
+;
 import Profile from '../../Components/profiler/Profile';
+import ProfileContact from '../../Components/contactProfile/ProfileContact';
 
 const ProfilePage = () => {
-    const [imgP, setImgP] = useState(null);
-    const [edit, setEdit] = useState(false);
-    const [profileData, setProfileData] = useState({
-        name: 'John Doe',
-        address: "46, community road",
-        gender: "female",
-        phoneNumber: "08099475775",
-        email: 'john@example.com',
-    });
-
-    const [editData, setEditData] = useState({
-        name: profileData.name,
-        email: profileData.email,
-        address: profileData.address,
-        gender: profileData.gender,
-        phoneNumber: profileData.phoneNumber,
-    });
-
-    const posting = (e) => {
-        const file = e.target.files[0];
-        const img = URL.createObjectURL(file);
-        setImgP(img);
-        console.log(img);
-    };
-
-    // Update editData as user types
-    const handleInputChange = (e) => {
-        const { name, value } = e.target;
-        setEditData({
-            ...editData,
-            [name]: value, // Dynamically update the corresponding field
-        });
-    };
-
-    // Function to handle updating profile data
-    const handleUpdateProfile = () => {
-        setProfileData(editData); // Save edited data
-        setEdit(false); // Exit edit mode
-    };
+    const [activeComponent, setActiveComponent] = useState('true');
+   
 
     return (
         <div className='Profile'>
@@ -52,10 +15,16 @@ const ProfilePage = () => {
             </div>
             <div className='Profile-Main'>
                 <div className='Profile-SubHeader'>
-                    <button className='ProfileCatBtn'>Personal details</button>
-                    <button className='ProfileEmgBtn'></button>
+                    <button className= {`ProfileCatBtn ${activeComponent ? 'active' :''}`}
+                     onClick={(()=>setActiveComponent(true))}>Personal details</button>
+                    <button className=  {`ProfileEmgBtn ${!activeComponent ? 'active' :''}`}
+                    onClick={(()=>setActiveComponent(false))}>Emergency contact detail</button>
                 </div>
-               <Profile/>
+                {
+               
+               activeComponent? <Profile/> :
+               <ProfileContact/>
+                }
             </div>
         </div>
     );

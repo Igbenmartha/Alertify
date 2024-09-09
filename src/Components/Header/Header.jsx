@@ -23,7 +23,7 @@ const Header = () => {
                 isActive ? "HeaderActive" : "HeaderNotActive"
               }> <p>Contact Us</p></NavLink>
             </div>
-            {/* <div className='Auth'>
+            <div className='Auth'>
             <div className='AuthInner'>
                 <p>Log In</p> 
                 <p>Sign Up</p>
@@ -33,8 +33,8 @@ const Header = () => {
             
             <button className='EmergencyCtbtn'> Emergency Contact</button>
 
-            </div>  */}
-            <div className='profileAuth'>
+            </div> 
+            {/* <div className='profileAuth'>
             <div className='Header-Profile'>
                    <div className='Header-username-holder'>
                   <CgProfile className='Cg' onClick={(()=>navigate("/profile"))}/>
@@ -46,7 +46,7 @@ const Header = () => {
             <button className='EmergencyCtbtn'> Emergency Contact</button>
 
                 </div>
-            </div>
+            </div> */}
         </div>
     </div>
   )
