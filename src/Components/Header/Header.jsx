@@ -15,7 +15,7 @@ const Header = () => {
   };
 
   return (
-    <div className='Header'>
+    <div className='Header'
       <div className='Header-inner'>
         <div className='logo'>
           <img src={logo} alt="Logo" />
@@ -37,9 +37,7 @@ const Header = () => {
           </NavLink>
           <div className='Header-Auth'>
           <NavLink to="/Login" className={({ isActive }) => isActive ? "HeaderActive" : "HeaderNotActive"}>
-            <p>Login</p>
-            
-
+            <p>Login</p
           </NavLink>
           <NavLink to="/signup" className={({ isActive }) => isActive ? "HeaderActive" : "HeaderNotActive"}>
             <p>Sign Up</p>
