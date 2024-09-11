@@ -307,3 +307,34 @@ width: 100%;
    
   
 }
+@media (min-width: 310px) and (max-width: 500px)  {
+    .InciWatch{
+        height: auto;
+        background: #E0E3F2;
+    }
+    .InciWatch-Header{
+        width: 100%;
+        font-size: 30px;
+        line-height: normal;
+        text-align: center;
+
+    }
+    .InciWatch-Holder{
+        margin-top: 30px;
+        width: 70%;
+        display: block;
+
+
+    }
+    .InciWatch-circle-holder{
+        align-self: center;
+    }
+    .InciWatch-Icon{
+        top: 6%;
+    }
+    .InciWatch-Text{
+        margin-top: 0%;
+        font-size: 20px;
+
+    }
+}
