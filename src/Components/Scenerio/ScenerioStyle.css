@@ -47,6 +47,7 @@ main{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
     gap:72px
 
 
@@ -101,4 +102,30 @@ line-height: 21.09px;
 text-align: center;
 color:#302E2E;
 
+}
+@media screen and (max-width:900px){
+    .Scenerio-holder{
+        width: 94%;
+        /* border: solid blue; */
+    }
+    .Scenerio-title{
+        width: 45%;
+        
+        font-size: 35px;
+
+    }
+    .Main-box{
+        width: 43%;
+        height: 370px;
+
+
+    }
+    .Main-boxImg{
+        height: 45%;
+    }
+    .Main-boxText{
+        gap:10px
+    }
+   
+    
 }

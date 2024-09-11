@@ -203,7 +203,9 @@ margin-top: 150px;
     /* background: red; */
 }
 .InciWatch-Icon1{
-    width: 169px;
+    width: 159px;
+    height: 1px;
+    background: url(../../assets//Line1.svg);
 
 }
 .InciWatch-Iconb{
@@ -237,4 +239,71 @@ color:white
 }
 .InciBtn:hover{
 cursor: pointer;
+}
+
+@media screen  and (max-width:900px){
+    .InciWatch{
+        width: 100%;
+        height: 70vh;
+/* background-color: #EF233C; */
+
+    }
+    .InciWatch-Holder{
+        padding-left: 20px;
+    gap:40px;
+
+
+
+    }
+    
+    .InciWatch-circle-holder,
+    
+    .InciWatch-circle-holderc
+
+    {
+        width: 260px;
+        height: 260px;
+
+    }
+    .InciWatch-circle-holderb{
+        width: 260px;
+        height: 260px;
+    top: 70%;
+    }
+    .InciWatch-circle,
+    .InciWatch-circleb,
+    .InciWatch-circlec{
+        width: 230px;
+        height: 230px;
+
+       
+    }
+    .InciWatch-innercircle,
+    .InciWatch-innercircleb,
+    .InciWatch-innercirclec{
+         width: 200px;
+         height: 200px;   
+         font-size: 16px;
+    }
+    .InciWatch-smallerNumber,
+    .InciWatch-smallerNumberb,
+    .InciWatch-smallerNumberc{
+        width: 70px;
+        height: 70px;
+    }
+    .InciWatch-Icon,
+    .InciWatch-Iconb
+    {
+        width: 320px;
+        gap:20px;
+    }
+    .InciWatch-Icon1{
+        height: 2px  ;
+    }
+    .InciWatch-Text{
+width: 100%;
+    }
+   
+   
+  
 }

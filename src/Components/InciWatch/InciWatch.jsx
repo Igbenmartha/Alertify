@@ -40,24 +40,20 @@ const InciWatch = () => {
         <button className='InciBtn'> Sign Up Now</button>
         <div className='InciWatch-Icon'>
             <div className='InciWatch-Icon1'>
-                <img src={Line1}alt="Line" />
             </div>
             <div className='InciWatch-Icon2'>
                 <img src={Polygon}alt="Line" />
             </div>
             <div className='InciWatch-Icon1'>
-                <img src={Line1}alt="Line" />
             </div>
         </div>
         <div className='InciWatch-Iconb'>
             <div className='InciWatch-Icon1'>
-                <img src={Line1}alt="Line" />
             </div>
             <div className='InciWatch-Icon2'>
                 <img src={Polygon}alt="Line" />
             </div>
             <div className='InciWatch-Icon1'>
-                <img src={Line1}alt="Line" />
             </div>
         </div>
     </div>

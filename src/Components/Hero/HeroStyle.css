@@ -130,3 +130,28 @@ opacity: 0px;
         width: 46%;
     }
 }
+@media screen and (max-width:1300px){
+    .hero{
+        height: 55vh;
+    }
+    .HeroHolder{
+        width: 94%;
+    }
+    .HeroleftHolder{
+        width: 54%;
+        height: 70%;
+        gap:20px;
+    }
+    .Heroinner-left-Holder{
+        width: 100%;
+    }
+    .HeroinnerText-left-Holder{
+        font-size: 33px;
+    }
+    .HeroinnerPara-left-Holder{
+        font-size: 17px;
+    }
+    .Heroinner-right-Holder{
+        background: url(../../assets//cuateV.svg);
+    }
+}
