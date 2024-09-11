@@ -1,82 +1,83 @@
-import React from 'react'
-import "./BuggerStyle.css"
+import React from 'react';
+import "./BuggerStyle.css";
 import { AiOutlineClose } from "react-icons/ai";
-import home from "../../assets/home.svg"
-import about from "../../assets/about.svg"
-import contact from "../../assets/contact.svg"
-import emergent from "../../assets/emergent.svg"
-import setting from "../../assets/setting.svg"
-import logout from "../../assets/logout.svg"
+import home from "../../assets/home.svg";
+import about from "../../assets/about.svg";
+import contact from "../../assets/contact.svg";
+import emergent from "../../assets/emergent.svg";
+import setting from "../../assets/setting.svg";
+import logout from "../../assets/logout.svg";
 import person from "../../assets/person.png";
 import { useNavigate } from 'react-router-dom';
 
-
-const BuggerMenu = ({menuOpen,setMenuOpen}) => {
-    const navigate =useNavigate()
+const BuggerMenu = ({ menuOpen, setMenuOpen }) => {
+    const navigate = useNavigate();
+    
     const closeMenu = () => {
         setMenuOpen(false);
-      };
+    };
 
-    const handleNavigation = (path) => {
+    const handleNavigation = (path) => () => {
         navigate(path);
         closeMenu(); 
     };
-  return (
-    <div className={`BuggerMenu ${menuOpen ? 'open' : ''}`}>
-        <div className='Bugger-Header'>
-            <div className='bugger-headerclose'>
-            <AiOutlineClose size={30} onClick={closeMenu}/>
-            </div>
-            <div className='bugger-profile-holder'>
-                <div className='bugger-profile'>
-                    <img src={person} alt="person" />
+
+    return (
+        <div className={`BuggerMenu ${menuOpen ? 'open' : ''}`}>
+            <div className='Bugger-Header'>
+                <div className='bugger-headerclose'>
+                    <AiOutlineClose size={30} onClick={closeMenu} />
                 </div>
-                <div className='bugger-profile-text-holder'>
-                    <h5>Username</h5>
-                    <p>username@gmail.com</p>
+                <div className='bugger-profile-holder'>
+                    <div className='bugger-profile'>
+                        <img src={person} alt="person" />
+                    </div>
+                    <div className='bugger-profile-text-holder'>
+                        <h5>Username</h5>
+                        <p>username@gmail.com</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div className='bugger-main'>
-            <div className='bugger-main-div ' onClick={handleNavigation("/")}>
-                <div className='bugger-icon'>
-                    <img src={home}alt="home" />
+            <div className='bugger-main'>
+                <div className='bugger-main-div' onClick={handleNavigation("/")}>
+                    <div className='bugger-icon'>
+                        <img src={home} alt="home" />
+                    </div>
+                    <p>Home</p>
                 </div>
-                <p>Home</p>
-            </div>
-            <div className='bugger-main-div' onClick={handleNavigation("/about")}>
-                <div className='bugger-icon'>
-                    <img src={about}alt="about" />
+                <div className='bugger-main-div' onClick={handleNavigation("/about")}>
+                    <div className='bugger-icon'>
+                        <img src={about} alt="about" />
+                    </div>
+                    <p>About us</p>
                 </div>
-                <p>About us</p>
-            </div>
-            <div className='bugger-main-div' onClick={handleNavigation("/contact")}>
-                <div className='bugger-icon'>
-                    <img src={contact}alt="contact" />
+                <div className='bugger-main-div' onClick={handleNavigation("/contact")}>
+                    <div className='bugger-icon'>
+                        <img src={contact} alt="contact" />
+                    </div>
+                    <p>Contact us</p>
                 </div>
-                <p>Contact us</p>
-            </div>
-            <div className='bugger-main-div' onClick={handleNavigation("/emergency")}>
-                <div className='bugger-icon'>
-                    <img src={emergent}alt="emergent" />
+                <div className='bugger-main-div' onClick={handleNavigation("/emergency")}>
+                    <div className='bugger-icon'>
+                        <img src={emergent} alt="emergent" />
+                    </div>
+                    <p>Emergency contact</p>
                 </div>
-                <p>Emergency contact</p>
-            </div>
-            <div className='bugger-main-div'>
-                <div className='bugger-icon'>
-                    <img src={setting}alt="setting" onClick={handleNavigation("/profile")}/>
+                <div className='bugger-main-div' onClick={handleNavigation("/profile")}>
+                    <div className='bugger-icon'>
+                        <img src={setting} alt="setting" />
+                    </div>
+                    <p>Setting</p>
                 </div>
-                <p>Setting</p>
             </div>
-        </div>
             <div className='bugger-Logout-holder'>
                 <div className='bugger-logouticon'>
                     <img src={logout} alt="" />
                 </div>
                 <p>Logout</p>
             </div>
-    </div>
-  )
+        </div>
+    );
 }
 
-export default BuggerMenu
+export default BuggerMenu;
