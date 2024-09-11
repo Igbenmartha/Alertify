@@ -6,6 +6,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    z-index: 999;
   }
   .Header-Auth{
     display:none;
@@ -106,7 +108,7 @@
   }
   
   /* Media Queries for Mobile Devices */
-  @media (max-width: 480px) {
+  @media (min-width: 310px) and (max-width: 650px)  {
     .Header {
         height: 13vh;
  
@@ -145,8 +147,11 @@
         width: 50%;
       transform: translateX(0);
       opacity: 1;
+      height: 90vh;
       visibility: visible;
-     
+     position: fixed;
+     /* top: 0; */
+  /* left:0; */
 
 
 
@@ -167,7 +172,7 @@
       color: white;
     }
   }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 700px) and (max-width: 1200px) {
     .Header-inner {
       width: 95%;
       justify-content: space-between;

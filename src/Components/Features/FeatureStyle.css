@@ -135,3 +135,34 @@ line-height: 21.09px;
 text-align: left;
 
 }
+@media screen and (max-Width:900px){
+    .Features{
+        height: 500px;
+    }
+    .Features-inner{
+        width: 93%;
+    }
+    .Feature-Header{
+        width: 30%;
+    }
+    .Features-section1-left{
+font-size: 39px;
+    }
+    .Features-section1-right{
+        font-size:16px ;
+    }
+    .Features-section2inner{
+gap:40px;
+
+
+    }
+    .Features-box{
+        gap:7px;
+width: 32%;    }
+    .FeatureBox-title{
+        font-size: 20px;
+    }
+    .FeatureBox-text{
+        font-size: 14px;
+    }
+}

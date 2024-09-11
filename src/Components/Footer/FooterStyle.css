@@ -11,6 +11,7 @@
     width: 26%;
     height: 100%;
 
+
     display: flex;
     align-items: center;
     /* justify-content: center; */
@@ -65,6 +66,7 @@ align-self: flex-end;
 
 
 
+
 }
 
 .Footer-icon {
@@ -100,6 +102,7 @@ align-self: flex-end;
     height: 261px;
     display: flex;
     flex-direction: column;
+
 
     gap: 50px;
 }
@@ -146,6 +149,7 @@ align-self: flex-end;
     display: flex;
     flex-direction: column;
     gap: 40px;
+
 
 
 }
@@ -230,9 +234,62 @@ align-self: flex-end;
     background: #072ACB;
 
 }
-@media screen and (max-width:1300px){
-    .Fotter-section2-ContactHolder {
-        font-size: 19px;
+@media screen and (max-width:900px){
+    .Footer {
+        height: 350px;
+    }
+    .Footer-section1 {
+        width: 25%;
+        align-items: flex-end;        
+    }
+    .Fotter-logo {
+        width: 80%;
+        height:29%;
+    }
+    .footer-contact-text {
+        width: 85%;
+        height: 18%;
+        font-size: 14px;
+    }
+    .footericon {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .Footer-icon {
+        width: 35px;
+        height: 35px;
+    }
+    .Footer-section2 {
+        width: 70%;
+    }
+    .Footer-section2-inner {
+        gap:15px;
+    }
+  
+    .Footer-section-2A {
+        width: 28%
+
+    }
+   
+    .Fotter-section2-ContactHolder,
+     .Fotter-section2-QuicklinkHolder,
+      .Fotter-section2-NewsHolder{
+        font-size: 17px;
+    }
+    .Footer-section-2b {
+        width: 40%;
+    }
+    .Footer-section2-infoHolder,
+    .Footer-section2-aboutusHolder{
+
+
+        & p{
+            font-size: 15px;
+
+        }
     }
 
 }
+
+ 
