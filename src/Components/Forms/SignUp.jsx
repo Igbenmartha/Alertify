@@ -169,9 +169,8 @@ const SignUp = () => {
                   </div> */}
                   <button
                     className="newNextButton"
-                    onClick={() => setContinueSignUp(2)}
                   >
-                    Next
+                    SignUp
                   </button>
                 </div>
               </div>
