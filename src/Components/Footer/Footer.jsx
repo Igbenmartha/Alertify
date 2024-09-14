@@ -12,7 +12,7 @@ const Footer = () => {
             <div className='Fotter-logo'>
                 <img src={logo} alt="Logo" />
             </div>
-            <div className='footer-contact-text'>Contact us throuh our social media platforms</div>
+            <div className='footer-contact-text'>Contact us through our social media platforms</div>
             <div className='footericon'>
                 <div className='Footer-icon'>
                     <FaFacebookF color="white" size="20px"/>

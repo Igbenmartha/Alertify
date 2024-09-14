@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "./ProfileStyle.css";
-;
+
 import Profile from '../../Components/profiler/Profile';
 import ProfileContact from '../../Components/contactProfile/ProfileContact';
 

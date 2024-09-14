@@ -1,38 +1,258 @@
 import React, { useState } from 'react'
 import "./signup.css"
 import alert from "../../assets/AlertifyLogo.svg"
- import { FaEye } from "react-icons/fa6";
- // import { TiEyeOutline } from "react-icons/ti";
- import { FaRegEyeSlash } from "react-icons/fa";
+import { FaEye } from "react-icons/fa6";
+// import { TiEyeOutline } from "react-icons/ti";
+import { FaRegEyeSlash } from "react-icons/fa";
+import { Toaster, toast } from 'react-hot-toast';
+
 
 import SignUpImage from './SignUpImage';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const SignUp = () => {
-    const [continueSignUp, setContinueSignUp]=useState(0)
-    const [showEye, setShowEye]=useState(true)
-    const[eyeShow, setEyeShow]=useState(true)
-     const [email, setEmail] = useState("");
-     const [emailError, setEmailError] = useState(false);
+  const [continueSignUp, setContinueSignUp] = useState(0)
+  const [showEye, setShowEye] = useState(true)
+  const [eyeShow, setEyeShow] = useState(true)
+  const [email, setEmail] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [emailErrorShow, setEmailErrorShow] = useState(false);
+  const [password, setPassword] = useState(false)
+  const [address, setAddress] = useState('')
+  const [phoneNumber, setPhoneNumber] = useState('')
+  const [gender, setGender] = useState()
+  const [loading,setLoading] = useState(false)
 
-// event.preventdefault()
+  const [confirmPassword, setConfirmPassword] = useState("");
+  // const [passwordCheck, setPasswordCheck] = useState(false)
+  const [passwordErrorlow, setPasswordErrorLow] = useState("");
+  const [passwordErrorUpper, setPasswordErrorUpper] = useState();
+  const [passwordErrorNumber, setPasswordErrorNumber] = useState();
+  const [passwordErrorSymbol, setPasswordErrorSymbol] = useState();
+  const [passwordStrength, setPasswordStrength] = useState(0);
+  const [strengthLabel, setStrengthLabel] = useState('Weak');
+  const [passwordFocused, setPasswordFocused] = useState(false);
+  const [showStrengthBar, setShowStrengthBar] = useState(false);
+  const [confirmPasswordError, setConfirmPasswordError] = useState()
+  const [fullName, setFullName] = useState('')
+
+
+  const [emergencyContacts, setEmergencyContacts] = useState([
+    {
+      name: "",
+      phoneNumber: "",
+      email: ""
+
+    }
+  ])
+
+  // event.preventdefault()
 
 
 
-    const handleEmail = (e) => {
-        // e.preventdefault()
-      "";
-      const newEmail = e.target.value;
-      setEmail(newEmail);
-      setEmailError(false);
-      if (newEmail === "") {
-        setEmailError("Email is required");
-      } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        setEmailError("Email is not valid");
-      }
+  const handleEmail = (e) => {
+    const validateEmail = (input) => {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(input);
     };
+    const newEmail = e.target.value;
+    setEmail(newEmail);
+    setEmailError(false);
+    if (newEmail.trim() === '') {
+      toast.error('Email is required');
+      setEmailErrorShow(false)
+    } else if (!validateEmail(newEmail)) {
+      setEmailErrorShow(true)
+      setEmailError('Invalid email format');
+    } else {
+      setEmailError("")
+    }
+  };
+
+  const calculatePasswordStrength = (password) => {
+    let strength = 0;
+    if (password.length >= 8) strength += 1;
+    if (/[a-z]/.test(password)) strength += 1;
+    if (/[A-Z]/.test(password)) strength += 1;
+    if (/\d/.test(password)) strength += 1;
+    if (/[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]/.test(password)) strength += 1;
+
+    return strength;
+  };
+
+  const handlePassword = (e) => {
+    const newPassword = e.target.value;
+    setPassword(newPassword);
+    const strength = calculatePasswordStrength(newPassword);
+    setPasswordStrength(strength);
+
+    if (strength === 1) setStrengthLabel('Weak');
+    else if (strength === 2) setStrengthLabel('Fair');
+    else if (strength === 3) setStrengthLabel('Good');
+    else if (strength === 4) setStrengthLabel('Strong');
+    else if (strength === 5) setStrengthLabel('Very Strong');
+
+    setPasswordErrorLow(!/[a-z]/.test(newPassword));
+    setPasswordErrorUpper(!/[A-Z]/.test(newPassword));
+    setPasswordErrorNumber(!/\d/.test(newPassword));
+    setPasswordErrorSymbol(!/[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]/.test(newPassword));
+
+    // Show strength bar only if password is not strong enough
+    if (strength < 5) {
+      setShowStrengthBar(true);
+    } else {
+      setShowStrengthBar(false);
+    }
+  };
+  const HandleConfirmPassword = (e) => {
+    const confirmData = e.target.value;
+    setConfirmPassword(confirmData);
+    if (confirmData !== password) {
+      setConfirmPasswordError("Passwords do not match!"); // Custom message when passwords don't match
+    } else {
+      setConfirmPasswordError(""); // Clear message when passwords match
+    }
+  };
+  const data = {
+    fullName,
+    email,
+    address,
+    gender,
+    phoneNumber,
+    password,
+    confirmPassword,
+    emergencyContacts
+  }
+
+  // const Continue = ()=>{
+  //   if (!fullName || !email || !address || !phoneNumber || !password || !confirmPassword || !gender) {
+  //     toast.error("Please fill out all fields")
+  //     return
+  //   }
+  //   setContinueSignUp(1)
+  // }
+  const Continue = () => {
+    // Regular expression for email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+    // Regular expression for special characters
+    const specialCharRegex = /[!@#$%^&*(),.?":{}|<>]/;
+  
+    // Validation checks
+    if (!fullName) {
+      toast.error("Full Name is required");
+      return;
+    }
+    
+    if (!address) {
+      toast.error("Address is required");
+      return;
+    }
+  
+    if (!phoneNumber) {
+      toast.error("Phone Number is required");
+      return;
+    }else if (phoneNumber.length !== 11) {
+      toast.error("Phone Number must be exactly 11 digits long");
+      return;
+    }
+    // console.log(phoneNumber.length);
+    
+  
+    if (!email) {
+      toast.error("Email is required");
+      return;
+    } else if (!emailRegex.test(email)) {
+      toast.error("Please enter a valid email address");
+      return;
+    }
+  
+    if (!password) {
+      toast.error("Password is required");
+      return;
+    } else if (password.length < 8) {
+      toast.error("Password must be at least 8 characters long");
+      return;
+    } else if (!/[A-Z]/.test(password)) {
+      toast.error("Password must include at least one uppercase letter");
+      return;
+    } else if (!/[a-z]/.test(password)) {
+      toast.error("Password must include at least one lowercase letter");
+      return;
+    } else if (!/[0-9]/.test(password)) {
+      toast.error("Password must include at least one number");
+      return;
+    } else if (!specialCharRegex.test(password)) {
+      toast.error("Password must include at least one special character (!@#$%^&*)");
+      return;
+    }
+  
+    if (!confirmPassword) {
+      toast.error("Confirm Password is required");
+      return;
+    } else if (password !== confirmPassword) {
+      toast.error("Passwords do not match");
+      return;
+    }
+  
+    if (!gender) {
+      toast.error("Gender is required");
+      return;
+    }
+  
+    // If all validations pass, move to the next step
+    setContinueSignUp(1);
+  };
+  
+
+
+const handleSubmit = async (e) => {
+  e.preventDefault()
+
+  // if (!fullName || !email || !address || !phoneNumber || !password || !confirmPassword || !gender) {
+  //   toast.error("Please fill out all fields")
+  //   return
+  // }
+
+ 
+
+  // Filter out empty emergency contacts
+  const validEmergencyContacts = emergencyContacts.filter(
+    contact => contact.name && contact.phoneNumber && contact.email
+  )
+setLoading(true)
+  try {
+    const data = {
+      fullName,
+      email,
+      address,
+      gender,
+      phoneNumber,
+      password,
+      confirmPassword,
+      emergencyContacts: validEmergencyContacts // Only send valid contacts
+    }
+
+
+    const response = await axios.post("https://alertify-9tr5.onrender.com/api/v1/user/sign-up", data)
+    // console.log(res.response.response)
+    console.log(response)
+    // Handle successful signup (e.g., redirect or show a success message)
+  } catch (error) {
+    console.log(error)
+    // toast.error(error.message)
+    console.log(error.response.data.message);
+    
+    // toast.error("Signup failed, please try again")
+    setLoading(false)
+  }
+}
+const Navigate = useNavigate()
   return (
     <div className="signupbody">
-      <div className="signupbodyInner">
+      <form className="signupbodyInner" onSubmit={handleSubmit}>
+        <Toaster />
         {
           continueSignUp === 0 ? (
             <>
@@ -54,6 +274,7 @@ const SignUp = () => {
                       type="text"
                       placeholder="Fullname"
                       className="fullnameInput"
+                      onChange={((e)=>setFullName(e.target.value))}
                     />
                   </div>
                   <div className="fullnameInputDiv">
@@ -61,9 +282,12 @@ const SignUp = () => {
                       type="text"
                       placeholder="Address"
                       className="fullnameInput"
+                      onChange={((e)=>setAddress(e.target.value))}
+
                     />
                   </div>
-                  <select name="geneder" className="fullnameInputDiv">
+                  <select name="geneder" className="fullnameInputDiv"
+                  onChange={((e)=>setGender(e.target.value))}>
                     <option value="">Select Gender</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
@@ -73,6 +297,8 @@ const SignUp = () => {
                       type="number"
                       placeholder="Phone Number"
                       className="fullnameInput"
+                      onChange={((e) => setPhoneNumber(e.target.value))}
+
                     />
                   </div>
                   <div className="fullnameInputDiv">
@@ -82,7 +308,7 @@ const SignUp = () => {
                       placeholder="Email"
                       className="fullnameInput"
                     />
-                    {emailError ? (
+                    {emailErrorShow ? (
                       <p style={{ color: "red" }}>{emailError}</p>
                     ) : null}
                   </div>
@@ -91,6 +317,10 @@ const SignUp = () => {
                       type={showEye ? "password" : "text"}
                       placeholder="Password"
                       className="passwordInput"
+                      onChange={handlePassword}
+                      onFocus={() => setPasswordFocused(true)}
+                      onBlur={() => setPasswordFocused(false)}
+                    // value={password}
                     />
                     {showEye ? (
                       <FaEye size={25} onClick={() => setShowEye(false)} />
@@ -106,6 +336,9 @@ const SignUp = () => {
                       type={showEye ? "password" : "text"}
                       placeholder="ConfirmPassword"
                       className="passwordInput"
+                      onChange={HandleConfirmPassword}
+
+
                     />
                     {eyeShow ? (
                       <FaEye size={25} onClick={() => setEyeShow(false)} />
@@ -116,17 +349,37 @@ const SignUp = () => {
                       />
                     )}
                   </div>
+                  {passwordFocused && showStrengthBar && (
+                    <div className="passwordStrengthBar">
+                      <div
+                        className="passwordStrengthProgress"
+                        style={{
+                          width: `${(passwordStrength / 5) * 100}%`,
+                          backgroundColor:
+                            passwordStrength < 2
+                              ? 'red'
+                              : passwordStrength < 4
+                                ? 'orange'
+                                : 'green',
+                        }}
+                      />
+                    </div>
+                  )}
+                  {passwordFocused && showStrengthBar && (
+                    <p className="passwordStrengthLabel">{strengthLabel}</p>
+                  )}
+                  {confirmPasswordError && <p style={{ color: "red" }}>{confirmPasswordError}</p>}
                 </form>
 
                 <div className="haveAccountTextDiv">
                   <button
                     className="firstNextButton"
-                    onClick={() => setContinueSignUp(1)}
+                    onClick={Continue}
                   >
                     Next
                   </button>
                   <p className="alreadyHaveAnAccountText">
-                    Already have an account? <span>Login</span>
+                    Already have an account? <span onClick={(()=>Navigate("/login"))}>Login</span>
                   </p>
                 </div>
               </div>
@@ -147,6 +400,15 @@ const SignUp = () => {
                       type="text"
                       placeholder="Contact Name"
                       className="emergencyNameInput"
+                      onChange={(e) =>
+                        setEmergencyContacts((prevContacts) =>
+                          prevContacts.map((contact, index) =>
+                            index === 0 ? { ...contact, name: e.target.value } : contact
+                          )
+                        )
+                      }
+                      
+                      value={emergencyContacts.name}
                     />
                   </div>
                   <div className="emergencyMailDiv">
@@ -154,6 +416,15 @@ const SignUp = () => {
                       type="text"
                       placeholder="Emergency Email"
                       className="emergencyNameInput"
+                      onChange={(e) =>
+                        setEmergencyContacts((prevContacts) =>
+                          prevContacts.map((contact, index) =>
+                            index === 0 ? { ...contact, email: e.target.value } : contact
+                          )
+                        )
+                      }
+                      
+                      value={emergencyContacts.email}
                     />
                   </div>
 
@@ -162,6 +433,15 @@ const SignUp = () => {
                       type="number"
                       placeholder="Emergency Number"
                       className="emergencyNameInput"
+                      onChange={(e) =>
+                        setEmergencyContacts((prevContacts) =>
+                          prevContacts.map((contact, index) =>
+                            index === 0 ? { ...contact, phoneNumber: e.target.value } : contact
+                          )
+                        )
+                      }
+                      
+                      value={emergencyContacts.phoneNumber}
                     />
                   </div>
                   {/* <div>
@@ -169,21 +449,17 @@ const SignUp = () => {
                   </div> */}
                   <button
                     className="newNextButton"
-                    onClick={() => setContinueSignUp(2)}
+                    type='submit'
                   >
-                    Next
+                    {!loading? "Sign Up": "Loading..."}
                   </button>
                 </div>
               </div>
             </>
-          ) : continueSignUp === 2 ? (
-            <SignUpImage alert={alert} />
           ) : null
-          // (
-          //   2
-          // )
+         
         }
-      </div>
+      </form>
     </div>
   );
 }

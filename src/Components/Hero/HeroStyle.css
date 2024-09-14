@@ -106,10 +106,9 @@ color:white
 .Heroinner-right-Holder{
     width: 42%;
 height: 333.07px;
-background-image: url(../../assets/cuate.svg);
+background-image: url(../../assets/caute.svg);
 background-size: cover;
-top: 208px;
-left: 780px;
+background-repeat: no-repeatx   ;
 gap: 0px;
 opacity: 0px;
 
@@ -128,5 +127,86 @@ opacity: 0px;
     }
     .Heroinner-right-Holder{
         width: 46%;
+    }
+}
+@media screen and (max-width:1300px){
+    .hero{
+        height: 55vh;
+    }
+    .HeroHolder{
+        width: 94%;
+    }
+    .HeroleftHolder{
+        width: 54%;
+        height: 70%;
+        gap:20px;
+    }
+    .Heroinner-left-Holder{
+        width: 100%;
+    }
+    .HeroinnerText-left-Holder{
+        font-size: 33px;
+    }
+    .HeroinnerPara-left-Holder{
+        font-size: 17px;
+    }
+    .Heroinner-right-Holder{
+        background: url(../../assets//cauteV.svg);
+        background-repeat: no-repeat;
+        /* background-size: fill; */
+    }
+}
+@media (min-width: 310px) and (max-width: 500px)  {
+    .hero{
+        height: 70vh;
+        margin-top: 70px;
+        /* border: solid green; */
+
+    }
+    .HeroHolder{
+        height: 100%;
+        /* border: solid green; */
+
+        flex-direction: column-reverse;
+
+    }
+    .HeroleftHolder{
+    width: 100%;
+        height: 60%;
+        display: block;
+
+        /* display: none; */
+    }
+    .Heroinner-left-Holder{
+        height: 100%;
+    }
+    .HeroinnerText-left-Holder{
+        width: 100%;
+        height: 30%;
+        /* border: solid green; */
+        font-size: 28px;
+
+    }
+    .Heroinner-left-Holder{
+        display: block;
+
+    }
+    .HeroinnerPara-left-Holder{
+        width: 100%;
+        height: 40%;
+        font-size: 16.2px;
+
+    }
+    .Heroinner-right-Holder{
+        width: 100%;
+        height: 60%;
+        background: url(../../assets//cuateV.svg);
+        background-size: cover;
+        /* border: solid green; */
+
+
+    }
+    .HeroBtn{
+            margin-top: 30px;
     }
 }
