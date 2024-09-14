@@ -97,6 +97,7 @@ const Login = () => {
               <div className="loginBtnandTextDiv">
                 {/* <div> */}
                   <button className="loginBtn" type='submit'>{!loading? "Login In" :"loading..."}</button>
+
                   <p className='loginlastText'>Don't have an account? <span>Sign Up</span></p>
                 {/* </div> */}
               </div>

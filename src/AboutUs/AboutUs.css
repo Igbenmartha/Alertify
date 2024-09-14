@@ -1,0 +1,259 @@
+.main-container{
+    width: auto;
+    height: auto;
+}
+
+.abt-img{
+    width: 85%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 3rem; */
+    margin-left: 6rem;
+    background-size: cover;
+}
+
+.abt-img:hover{
+    transform: scale(1.1);
+    animation: bounce 0.5s;
+}
+
+.us h1,h2{
+    gap: 0.5rem;
+}
+.inci{
+    color: blue;
+}
+
+.aboutus p{
+    font-size: 100px;
+    color: rgb(14, 13, 13);
+}
+
+.us2{
+    margin-top: 6rem;
+}
+
+.text1{
+    margin-top: 2rem;
+}
+.us h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+.text1 p{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    gap: none;
+}
+
+p{
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+.us2 p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.us3 h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+}
+
+.us3 p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.us4{
+    background-color: blue;
+}
+
+.us4:hover{
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    animation: bounce 0.5s;
+}
+
+
+  .circle-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+    gap: 15rem;
+}
+
+.circle-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.circle-image {
+    width: 160px; 
+    height: 160px; 
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.circle-text {
+    color: black;
+    margin-top: 0%;
+}
+
+.meet{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+p{
+    margin-bottom: 0%;
+}
+
+@media (max-width: 768px) {
+    .abt-img {
+        width: 100%; /* Adjust width for smaller screens */
+        height: 60vh; /* Reduce height for smaller screens */
+        margin-left: 0; /* Remove left margin */
+    }
+
+    .aboutus p {
+        font-size: 40px; /* Reduce font size for smaller screens */
+    }
+
+    .us2 {
+        margin-top: 4rem; /* Adjust margin-top for smaller screens */
+    }
+
+    .text1 {
+        margin-top: 1rem; /* Adjust margin-top for smaller screens */
+    }
+
+    .us h1 {
+        margin-top: 3rem; /* Adjust margin-top for smaller screens */
+    }
+
+    .text1 p {
+        font-size: 18px; /* Adjust font size for smaller screens */
+    }
+
+    .us2 p {
+        font-size: 18px; /* Adjust font size for smaller screens */
+    }
+
+    .us3 h1 {
+        margin-top: 3rem;
+        margin-bottom: 1rem; 
+    }
+
+    .us3 p {
+        font-size: 18px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .abt-img {
+        display: none; 
+    }
+
+    .aboutus p {
+        font-size: 40px; 
+    }
+
+    .us2 {
+        margin-top: 2rem; 
+    }
+
+    .text1 {
+        margin-top: 0.5rem; 
+    }
+
+    .us h1 {
+        margin-top: 2rem; 
+    }
+
+    .text1 p {
+        font-size: 13px; 
+    }
+
+    .us2 p {
+        font-size: 13px; 
+    }
+
+    .us3 h1 {
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem; 
+    }
+
+    .us3 p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 768px) {
+    .circle-container {
+        flex-direction: column;
+        gap: 2rem; /* Reduce gap between items */
+    }
+
+    .circle-image {
+        width: 120px; /* Adjust image size for smaller screens */
+        height: 120px; /* Adjust image size for smaller screens */
+    }
+
+    .circle-text {
+        font-size: 16px; /* Adjust text size for smaller screens */
+    }
+
+    .meet {
+        margin-top: 0.5rem; /* Adjust margin-top for smaller screens */
+    }
+}
+
+/* Responsive styles for very small screens */
+@media (max-width: 480px) {
+    .circle-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 2 columns on mobile screens */
+      grid-template-rows: repeat(3, auto); /* 3 rows to accommodate all items */
+      gap: 1rem; /* Space between items */
+      width: 100%; /* Full width */
+    }
+  
+    .circle-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center content horizontally */
+      text-align: center;
+    }
+  
+    .circle-image {
+      width: 100px; /* Smaller size for mobile screens */
+      height: 100px; /* Smaller size for mobile screens */
+    }
+  
+    .circle-text h3 {
+      font-size: 14px; /* Smaller font size for mobile screens */
+    }
+  
+    .meet {
+      text-align: center; /* Center align the heading */
+      font-size: 2rem; /* Adjust font size for mobile screens */
+      margin-bottom: 1rem; /* Add margin below the heading */
+    }
+  }
