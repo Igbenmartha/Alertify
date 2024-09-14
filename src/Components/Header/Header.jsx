@@ -6,6 +6,7 @@ import { CgProfile } from "react-icons/cg";
 import { FiMenu } from "react-icons/fi"; // Import burger menu icon
  // Close icon for burger menu
 import BuggerMenu from '../BuggerMenu/BuggerMenu';
+import { useSelector } from 'react-redux';
 
 const Header = () => {
   const navigate = useNavigate();
@@ -14,6 +15,8 @@ const Header = () => {
   const toggleMenu = () => {
     setMenuOpen(true);
   };
+const token = useSelector((state)=>state.user.token)
+console.log(token);
 
 
   return (
@@ -42,7 +45,40 @@ const Header = () => {
          
          
         </div>
-        <div className='Auth'>
+
+        {
+          token ? (
+              <div className='profileAuth'>
+            <div className='Header-Profile'>
+              <div className='Header-profile-inner'>
+              <div className='Header-username-holder'>
+                  <CgProfile className='Cg' onClick={(()=>navigate("/profile"))}/>
+                </div> 
+                <div className='Header-username-textholder'>
+                  <h6>igben oghenfejiro Martha</h6>
+                  <p>igbenji@gmail.com</p>
+                </div>
+
+              </div>
+                  
+            <button className='EmergencyCtbtn'> Emergency Contact</button>
+
+                </div>
+            </div> 
+            
+          ): (
+            <div className='Auth'>
+            <div className='AuthInner'>
+              <p onClick={(()=>navigate('/login'))}>Log In</p>
+              <p onClick={(()=>navigate('/signup'))}>Sign Up</p>
+            </div>
+            <button className='EmergencyCtbtn' onClick={() => navigate('/emergency')}>
+              Emergency Contact
+            </button>
+          </div>
+          )
+        }
+        {/* <div className='Auth'>
           <div className='AuthInner'>
             <p onClick={(()=>navigate('/login'))}>Log In</p>
             <p onClick={(()=>navigate('/signup'))}>Sign Up</p>
@@ -50,7 +86,7 @@ const Header = () => {
           <button className='EmergencyCtbtn' onClick={() => navigate('/emergency')}>
             Emergency Contact
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -9,6 +9,7 @@ import setting from "../../assets/setting.svg";
 import logout from "../../assets/logout.svg";
 import person from "../../assets/person.png";
 import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const BuggerMenu = ({ menuOpen, setMenuOpen }) => {
     const navigate = useNavigate();
@@ -21,6 +22,8 @@ const BuggerMenu = ({ menuOpen, setMenuOpen }) => {
         navigate(path);
         closeMenu(); 
     };
+
+    const token = useSelector((state)=>state.user.token)
 
     return (
         <div className={`BuggerMenu ${menuOpen ? 'open' : ''}`}>
@@ -63,19 +66,39 @@ const BuggerMenu = ({ menuOpen, setMenuOpen }) => {
                     </div>
                     <p>Emergency contact</p>
                 </div>
-                <div className='bugger-main-div' onClick={handleNavigation("/profile")}>
+                {
+                    token ? 
+                    <div className='bugger-main-div' onClick={handleNavigation("/profile")}>
                     <div className='bugger-icon'>
                         <img src={setting} alt="setting" />
                     </div>
                     <p>Setting</p>
-                </div>
+                </div> :
+            <>
+            
+            <div className='bugger-main-div'  onClick={handleNavigation("/login")}>
+                      Login
+                    </div>
+                    <div className='bugger-main-div' onClick={handleNavigation("/signup")}>
+                      Sign Up
+                    </div>
+            </>
+
+                }
+               
             </div>
-            <div className='bugger-Logout-holder'>
+
+            {
+                token ? 
+                <div className='bugger-Logout-holder'>
                 <div className='bugger-logouticon'>
                     <img src={logout} alt="" />
                 </div>
                 <p>Logout</p>
             </div>
+            : null
+            }
+           
         </div>
     );
 }
