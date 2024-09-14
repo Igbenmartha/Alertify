@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
-import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import './Login.css';
-import Alert from '../../assets/Alert.svg';
+// import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import './Reset.css';
+import Alert from '../assets/alert.svg';
 
-const Login = () => {
-  // State to manage password visibility
-  const [passwordVisible, setPasswordVisible] = useState(false);
+const Reset = () => {
+
+  // const [passwordVisible, setPasswordVisible] = useState(false);
 
   // Toggle password visibility function
-  const togglePasswordVisibility = () => {
-    setPasswordVisible(!passwordVisible);
-  };
+  // const togglePasswordVisibility = () => {
+    // setPasswordVisible(!passwordVisible);
+  // };
 
   return (
-    <div className='Login-maincontainer'>
+    <div className='Reset-maincontainer'>
       <div className="logo">
         <img src={Alert} alt="Alert Logo" />
       </div>
@@ -28,42 +28,39 @@ const Login = () => {
         </div>
         <div className='Form-group'>
           <label htmlFor="Password"></label>
-          <div className='password-container'>
+          {/* <div className='password-container'> */}
             <input
-              type={passwordVisible ? 'text' : 'password'}
+              type='password'
               placeholder='password'
             />
-            <button
+            {/* <button
               type="button"
               className='toggle-password'
-              onClick={togglePasswordVisibility}
             >
-              {passwordVisible ? <FaEye /> : <FaEyeSlash />}
-            </button>
-          </div>
+            </button> */}
+          {/* </div> */}
         </div>
         <div className='Form-group'>
           <label htmlFor="comfirm password"></label>
-          <div className='confirm password-container'>
             <input
-              type={passwordVisible ? 'text' : 'password'}
+              type='password'
               placeholder='confirm password'
             />
-            <button
+            {/* <button
               type="button"
               className='toggle-password'
-              onClick={togglePasswordVisibility}
-            >
-              {passwordVisible ? <FaEye /> : <FaEyeSlash />}
-            </button>
-          </div>
+            > */}
+            {/* </button> */}
         </div>
+        <div className='reset-btn'>
+
         <button className='Reset-button'>
           Reset Password
         </button>
+        </div>
       </form>
     </div>
   );
 };
 
-export default Login;
+export default Reset;

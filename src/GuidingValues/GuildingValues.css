@@ -1,0 +1,159 @@
+.guiding-values {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  color: white;
+  align-self: center;
+  flex-direction: column;
+  background-color: blue;
+}
+
+.value-section1 {
+
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-around; */
+  flex-direction: column;
+  justify-content: center;
+  /* background-color: rgb(0, 255, 128); */
+
+  & p{
+    width: 65%;
+    height: 40%;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+  }
+}
+
+
+.innerdiv{
+  width: 100%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: blue;
+  /* background: #c42e2e; */
+}
+
+
+
+.value-section2  {
+ 
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-around; */
+  flex-direction: column;
+  justify-content: center;
+  /* background-color: rgb(0, 255, 128); */
+  & p{
+    width: 65%;
+    height: 40%;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  
+}
+
+.guilding{
+  width: 100%;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  /* flex-direction: column; */
+  text-align: center;
+  /* background-color: black; */
+  & .guid{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: red; */
+  }
+}
+
+  @media (max-width: 768px) {
+    .value-section1, .value-section2 {
+      width: 100%;
+      height: auto; 
+    }
+  
+    .value-section1 p, .value-section2 p {
+      width: 80%;
+      font-size: 18px; 
+    }
+    
+    .innerdiv {
+      height: auto; 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .guiding-values {
+      height: auto; 
+      padding: 1rem; 
+      display: flex;
+      flex-direction: column; 
+      align-items: center; 
+      text-align: center; 
+    }
+  
+    .guilding {
+      width: 100%; 
+      margin-bottom: 1rem; 
+    }
+  
+    .guilding .guid {
+      font-size: 2rem;
+      margin: 0; 
+    }
+  
+    .innerdiv {
+      width: 100%; 
+      display: flex;
+      flex-direction: column;
+      gap: 1rem; 
+    }
+  
+    .value-section1, .value-section2 {
+      width: 100%; 
+      padding: 1rem; 
+      box-sizing: border-box; 
+      display: flex;
+      flex-direction: column;
+      align-items: center; 
+      text-align: center;
+    }
+  
+    .value-section1 img, .value-section2 img {
+      width: 50px; 
+      height: 50px; 
+    }
+  
+    .value-section1 h2, .value-section2 h2 {
+      margin-top: 0.5rem; 
+      margin-bottom: 0.5rem;
+    }
+  
+    .value-section1 p, .value-section2 p {
+      width: 90%; 
+      font-size: 16px; 
+      margin-top: 0; 
+      margin-bottom: 0; 
+    }
+  }
+  

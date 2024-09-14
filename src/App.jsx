@@ -7,10 +7,13 @@ import HomePage from './Pages/HomePage/HomePage'
 import Holder from './Components/Contact/Holder'
 import EmergencyHolder from './Components/EmergencyLine/EmergencyHolder'
 import ProfilePage from './Pages/ProfilePage/ProfilePage'
-import AboutUs from './Components/About Us/AboutUs'
+// import AboutUs from './Components/About Us/AboutUs'
+import AboutUs from './AboutUs/AboutUs'
 import SignUp from './Components/Forms/SignUp'
 import Login from './Components/Forms/Login'
 import SignUpImage from './Components/Forms/SignUpImage'
+import Reset from './Reset/Reset'
+import Description from '../Description/Description'
 // import AboutUs from './Components/About Us/AboutUs'
 
 const App = () => {
@@ -21,7 +24,7 @@ const App = () => {
       <Route path= "/" element={<HomePage/>}/>
       <Route path= "contact" element={<Holder/>}/>
       <Route path= "emergency" element={<EmergencyHolder/>}/>
-      <Route path='About' element= {<AboutUs/>}/>
+      <Route path='about' element= {<AboutUs/>}/>
 
       </Route>
       <Route path= "profile" element={<ProfilePage/>}></Route>
@@ -31,6 +34,10 @@ const App = () => {
 
     </Routes>
    </HashRouter>
+  
+  
+  // <Description/>
+    // <Reset/>
   )
 }
 

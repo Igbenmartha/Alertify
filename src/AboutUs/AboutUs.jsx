@@ -1,8 +1,8 @@
 import React from 'react';
-import about2 from "../../assets/about2.jpg"
-import us from "../../assets/us.svg";
+import about2 from "../assets/about2.jpg"
+import us from "../assets/us.svg";
 import './AboutUs.css';
-import GuidingValues from '../../Guiding Values/GuidingValues';
+import GuidingValues from '../GuidingValues/GuidingValues'
 
 const AboutUs = () => {
   return (
@@ -12,29 +12,29 @@ const AboutUs = () => {
         <h1>Hello, Welcome to <span className='inci'>Alertify</span></h1>
 
         <div className='text1'>
-          <h3>At Alertify, we believe that everyone has to feel safe, no matter where</h3>
-          <h3>they are or any situation they find themselves in. Our mission is to empower</h3>
-          <h3>individuals with a reliable, easy-to-use tool that connects them to help when they</h3>
-          <h3>need it most.</h3>
+          <p>At Alertify, we believe that everyone has to feel safe, no matter where</p>
+          <p>they are or any situation they find themselves in. Our mission is to empower</p>
+          <p>individuals with a reliable, easy-to-use tool that connects them to help when they</p>
+          <p>need it most.</p>
         </div>
       </div>
 
       <div className='us2'>
-        <h3>Alertify was founded by a dedicated team of tech innovators who understand</h3>
-        <h3>the importance of safety. We've combined our expertise and personal experiences</h3>
-        <h3>to create an app that offers more than just technology—it offers peace of mind. Whether</h3>
-        <h3>you are out for a jog, heading home late, or traveling in unfamiliar places, Alertify is</h3>
-        <h3>designed to be your companion, providing security and support at the touch of a button.</h3>
+        <p>Alertify was founded by a dedicated team of tech innovators who understand</p>
+        <p>the importance of safety. We've combined our expertise and personal experiences</p>
+        <p>to create an app that offers more than just technology—it offers peace of mind. Whether</p>
+        <p>you are out for a jog, heading home late, or traveling in unfamiliar places, Alertify is</p>
+        <p>designed to be your companion, providing security and support at the touch of a button.</p>
       </div>
 
       <div className='us3'>
         <h1>Our Mission</h1>
-        <h3>At Alertify, our mission is to empower individuals with the tools and confidence to protect</h3>
-        <h3>themselves and their loved ones in moments of uncertainty. We are committed to</h3>
-        <h3>making safety reliable, accessible, and intuitive by providing a platform that ensures</h3>
-        <h3>that help is just one tap away. Through innovation, user-centric design, and a deep</h3>
-        <h3>understanding of the challenges people face, we strive to create a safer world where</h3>
-        <h3>everyone feels secure, no matter where they are.</h3>
+        <p>At Alertify, our mission is to empower individuals with the tools and confidence to protect</p>
+        <p>themselves and their loved ones in moments of uncertainty. We are committed to</p>
+        <p>making safety reliable, accessible, and intuitive by providing a platform that ensures</p>
+        <p>that help is just one tap away. Through innovation, user-centric design, and a deep</p>
+        <p>understanding of the challenges people face, we strive to create a safer world where</p>
+        <p>everyone feels secure, no matter where they are.</p>
       </div>
 
       <GuidingValues/>
@@ -56,7 +56,7 @@ const AboutUs = () => {
       <div className="circle-container">
         <div className="circle-item">
           <img src={about2} alt="Ama Victory" className="circle-image" />
-          <p className="circle-text"><h3>Ama Victory</h3></p>
+          <p className="circle-text"><h3>Amasiatu Victory</h3></p>
         </div>
         <div className="circle-item">
           <img src={about2} alt="Mbachu Charles" className="circle-image" />

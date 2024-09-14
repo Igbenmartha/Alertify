@@ -187,3 +187,152 @@ outline: none;
   font-weight: 700;
     color: white;
 }
+
+@media (max-width: 768px) {
+    .loginbody {
+        height: auto; 
+        padding: 20px; 
+    }
+
+    .loginInner {
+        width: 100%;
+        height: auto; 
+    }
+
+    .logoBody {
+        width: 15%; 
+        height: auto; 
+    }
+
+    .loginDiv {
+        width: 100%;
+        height: auto; 
+        margin-top: 5rem;
+    }
+
+    .loginDivText {
+        width: 100%;
+        height: auto; 
+    }
+
+    .loginFormDiv {
+        width: 100%;
+        height: auto; 
+        margin-top: 1rem;
+    }
+
+    .LoginEmailDiv, .loginPasswordDiv {
+        width: 100%;
+        height: auto; 
+    }
+
+    .LoginEmailInput, .loginPasswordInput {
+        font-size: 16px; 
+        padding: 10px; 
+    }
+
+    .lastLoginDiv {
+        width: 100%;
+        height: auto;
+    }
+
+    .loginForgetPasswordDiv {
+        width: 100%;
+        height: auto; 
+        justify-content: flex-end; 
+    }
+
+    .loginBtnandTextDiv {
+        width: 100%;
+        height: auto; 
+    }
+
+    .loginlastText {
+        width: 100%;
+        height: auto; 
+    }
+
+    .loginBtn {
+        width: 100%;
+        height: 50px;
+        font-size: 18px; 
+    }
+}
+
+@media (max-width: 490px) {
+    .loginbody {
+        height: auto; 
+        padding: 10px; 
+    }
+
+    .loginInner {
+        width: 100%;
+        height: auto; 
+    }
+
+    .logoBody {
+        width: 25%; 
+        height: auto; 
+    }
+
+    .loginDiv {
+        width: 100%;
+        height: auto; 
+        margin-top: 5rem;
+    }
+
+    .loginDivText {
+        width: 100%;
+        height: auto; 
+        margin-bottom: 1rem;
+        padding: 5px;
+    }
+
+    .loginDivText p{
+        font-size: 10.5px;
+    }
+
+    .loginFormDiv {
+        width: 100%;
+        height: auto; 
+    }
+
+    .LoginEmailDiv, .loginPasswordDiv {
+        width: 100%;
+        height: auto;
+        margin: 5px;
+        /* padding: 5px; */
+    }
+
+    .LoginEmailInput, .loginPasswordInput {
+        font-size: 20px; 
+        padding: 8px; 
+    }
+
+    .lastLoginDiv {
+        width: 100%;
+        height: auto; 
+    }
+
+    .loginForgetPasswordDiv {
+        width: 100%;
+        height: auto; 
+        justify-content: flex-end; 
+    }
+
+    .loginBtnandTextDiv {
+        width: 100%;
+        height: auto; 
+    }
+
+    .loginlastText {
+        width: 100%;
+        height: auto; 
+    }
+
+    .loginBtn {
+        width: 100%;
+        height: 50px; 
+        font-size: 18px; 
+    }
+}

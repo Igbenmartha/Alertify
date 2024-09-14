@@ -48,7 +48,7 @@ const Login = () => {
               </div>
               <div className="loginBtnandTextDiv">
                 {/* <div> */}
-                  <button className="loginBtn">Login In</button>
+                  <button className="loginBtn">Login</button>
                   <p className='loginlastText'>Don't have an account? <span>Sign Up</span></p>
                 {/* </div> */}
               </div>
