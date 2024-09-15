@@ -100,7 +100,7 @@
     .ProfilePageHeader {
         width: 40%;
         height: 6vh;
-        border: solid red;
+        /* border: solid red; */
         display: block;
     }
     .Profile-SubHeader {
@@ -148,7 +148,7 @@
                 width: 40%;
                 height: 100%;
                 margin: 0;
-                border: solid black;
+                /* border: solid black; */
                 /* align-self: flex-start; */
                 /* justify-content: ; */
             }

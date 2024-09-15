@@ -56,20 +56,25 @@
   
   .Header-inner {
     width: 90%;
-    height: 80%;
+    height: 90%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    /* border: solid green; */
+
   }
   
-  .logo {
+  .header-logo{
     width: 15%;
     height: 100%;
+
   }
   
-  .logo img {
+  .header-logo img {
     width: 100%;
     height: 100%;
+    /* border: solid green; */
+
   }
   
   .Header-nav {
@@ -161,7 +166,7 @@
 
       /* justify-content: space-between; */
     }
-    .logo {
+    .header-logo{
         width: 35%;
 
 
@@ -228,7 +233,7 @@
       justify-content: space-between;
     }
   
-    .logo {
+    .header-logo {
       width: 15%;
     }
   

@@ -36,7 +36,7 @@ const Login = () => {
          
     
           )
-          console.log(response);
+          // console.log(response);
           toast.success(response.data.message)
           // dispatch(userinfo(response.data))
           dispatch(userToken(response.data.token))
@@ -46,7 +46,7 @@ const Login = () => {
             setLoading(false); 
           }, 2000);
         } catch (error) {
-          console.log(error);
+          // console.log(error);
           // console.log(error.response.data.data.message);
           setLoading(false)
           
@@ -98,7 +98,7 @@ const Login = () => {
                 {/* <div> */}
                   <button className="loginBtn" type='submit'>{!loading? "Login In" :"loading..."}</button>
 
-                  <p className='loginlastText'>Don't have an account? <span>Sign Up</span></p>
+                  <p className='loginlastText'>Don't have an account? <span onClick={(()=> navigate("/signup"))}>Sign Up</span></p>
                 {/* </div> */}
               </div>
             </div>

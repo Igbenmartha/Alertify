@@ -171,6 +171,14 @@ outline: none;
         font-family: "Roboto-Regular", Helvetica;
   font-size: 18px;
         justify-content: center;
+
+
+       
+        & span:hover{
+            color: red;
+            cursor: pointer;
+
+        }
     }
 
 
