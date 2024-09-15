@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import "./HeaderStyle.css";
 import logo from "../../assets/logo.svg";
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate, useParams } from 'react-router-dom';
 import { CgProfile } from "react-icons/cg";
 import { FiMenu } from "react-icons/fi"; // Import burger menu icon
  // Close icon for burger menu
 import BuggerMenu from '../BuggerMenu/BuggerMenu';
 import { useSelector } from 'react-redux';
+import axios from 'axios';
 
 const Header = () => {
   const navigate = useNavigate();
@@ -16,13 +17,39 @@ const Header = () => {
     setMenuOpen(true);
   };
 const token = useSelector((state)=>state.user.token)
-console.log(token);
+// console.log(token);
+// const {userId} = useParams();
+// console.log(token,userId);
 
+// const userDetail = async (e) => {
+//   e.preventDefault();
+//   const url = "https://alertify-9tr5.onrender.com/api/v1/user"
 
+//   try {
+//       const res = await axios.get(`${url}/${userId}`, {
+//           headers: {
+//               "Content-Type": "application/json",
+//               Authorization: `Bearer ${token}`
+
+//               }
+//           }
+//       )
+//       console.log(res);
+      
+//   } catch (error) {
+//           console.log(error);
+          
+//   }
+// }
+// useEffect(() => {
+//   // if (userId && token) {
+//     userDetail();
+//   // }
+// }, []);
   return (
     <div className='Header'> 
       <div className='Header-inner'>
-        <div className='logo'>
+        <div className='header-logo'>
           <img src={logo} alt="Logo" />
         </div>
         <div className='burger-menu'   >
@@ -52,7 +79,7 @@ console.log(token);
             <div className='Header-Profile'>
               <div className='Header-profile-inner'>
               <div className='Header-username-holder'>
-                  <CgProfile className='Cg' onClick={(()=>navigate("/profile"))}/>
+                  <CgProfile className='Cg' onClick={(()=>navigate(`/profile`))}/>
                 </div> 
                 <div className='Header-username-textholder'>
                   <h6>igben oghenfejiro Martha</h6>

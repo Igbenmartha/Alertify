@@ -14,6 +14,7 @@ import Login from './Components/Forms/Login'
 import SignUpImage from './Components/Forms/SignUpImage'
 import Reset from './Reset/Reset'
 import Description from '../Description/Description'
+import UserPrivate from './Components/Route/UserPrivate'
 // import AboutUs from './Components/About Us/AboutUs'
 
 const App = () => {
@@ -27,7 +28,10 @@ const App = () => {
       <Route path='about' element= {<AboutUs/>}/>
 
       </Route>
-      <Route path= "profile" element={<ProfilePage/>}></Route>
+      <Route element= {<UserPrivate/>}>
+      <Route path= "profile/" element={<ProfilePage/>}/>
+
+      </Route>
       <Route path= "signup" element={<SignUp/>}></Route>
       <Route path= "login" element={<Login/>}></Route>
       <Route path= "signupimage" element={<SignUpImage/>}></Route>
