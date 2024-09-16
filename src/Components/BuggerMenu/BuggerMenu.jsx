@@ -66,14 +66,17 @@ const BuggerMenu = ({ menuOpen, setMenuOpen }) => {
                     </div>
                     <p>Emergency contact</p>
                 </div>
-                {
-                    token ? 
-                    <div className='bugger-main-div' onClick={handleNavigation("/profile")}>
+                <div className='bugger-main-div' onClick={handleNavigation("/profile")}>
                     <div className='bugger-icon'>
                         <img src={setting} alt="setting" />
                     </div>
-                    <p>Setting</p>
-                </div> :
+                    <p>Profile</p>
+                </div>
+
+                {
+                    token ? 
+                   null
+                 :
             <>
             
             <div className='bugger-main-div'  onClick={handleNavigation("/login")}>

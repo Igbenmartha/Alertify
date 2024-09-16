@@ -210,14 +210,6 @@ const SignUp = () => {
 const handleSubmit = async (e) => {
   e.preventDefault()
 
-  // if (!fullName || !email || !address || !phoneNumber || !password || !confirmPassword || !gender) {
-  //   toast.error("Please fill out all fields")
-  //   return
-  // }
-
- 
-
-  // Filter out empty emergency contacts
   const validEmergencyContacts = emergencyContacts.filter(
     contact => contact.name && contact.phoneNumber && contact.email
   )
@@ -237,10 +229,10 @@ setLoading(true)
 
     const response = await axios.post("https://alertify-9tr5.onrender.com/api/v1/user/sign-up", data)
     // console.log(res.response.response)
-    console.log(response)
+    // console.log(response)
     // Handle successful signup (e.g., redirect or show a success message)
   } catch (error) {
-    console.log(error)
+    // console.log(error)
     // toast.error(error.message)
     console.log(error.response.data.message);
     
