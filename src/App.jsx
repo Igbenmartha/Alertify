@@ -15,6 +15,7 @@ import SignUpImage from './Components/Forms/SignUpImage'
 import Reset from './Reset/Reset'
 import Description from '../Description/Description'
 import UserPrivate from './Components/Route/UserPrivate'
+
 // import AboutUs from './Components/About Us/AboutUs'
 
 const App = () => {
@@ -40,8 +41,11 @@ const App = () => {
    </HashRouter>
   
   
-  // <Description/>
-    // <Reset/>
+  
+  
+    //  <Reset/>
+
+
   )
 }
 

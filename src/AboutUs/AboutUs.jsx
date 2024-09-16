@@ -1,13 +1,19 @@
 import React from 'react';
 import about2 from "../assets/about2.jpg"
-import us from "../assets/us.svg";
+import us from "../assets/us.svg"
 import './AboutUs.css';
+import Jude from '../assets/Jude.png'
+import Martha from '../assets/Martha.png'
+import Victory from '../assets/Victory.png'
+import Olaitan from '../assets/Olaitan.png'
+import Charles from '../assets/Charles.png'
+import Favour from '../assets/Favour.png'
 import GuidingValues from '../GuidingValues/GuidingValues'
 
 const AboutUs = () => {
   return (
     <div className='main-container1'>
-      <img src={us} alt="About Us" className='abt-img'/>
+      <img src={us} alt="AboutUs" className='abt-img'/>
       <div className='us'>
         <h1>Hello, Welcome to <span className='inci'>Alertify</span></h1>
 
@@ -41,29 +47,29 @@ const AboutUs = () => {
       <h1 className='meet'>Meet Our Team</h1>
       <div className="circle-container">
         <div className="circle-item">
-          <img src={about2} alt="Ibrahim Olaitan" className="circle-image" />
+          <img src={Olaitan} alt="Ibrahim Olaitan" className="circle-image" />
           <p className="circle-text"><h3>Ibrahim Olaitan</h3></p>
         </div>
         <div className="circle-item">
-          <img src={about2} alt="Igben Martha" className="circle-image" />
+          <img src={Martha} alt="Igben Martha" className="circle-image" />
           <p className="circle-text"><h3>Igben Martha</h3></p>
         </div>
         <div className="circle-item">
-          <img src={about2} alt="Elechi Jude" className="circle-image" />
+          <img src={Jude} alt="Elechi Jude" className="circle-image" />
           <p className="circle-text"><h3>Elechi Jude</h3></p>
         </div>
       </div>
       <div className="circle-container">
         <div className="circle-item">
-          <img src={about2} alt="Ama Victory" className="circle-image" />
+          <img src={Victory} alt="Ama Victory" className="circle-image" />
           <p className="circle-text"><h3>Amasiatu Victory</h3></p>
         </div>
         <div className="circle-item">
-          <img src={about2} alt="Mbachu Charles" className="circle-image" />
+          <img src={Charles} alt="Mbachu Charles" className="circle-image" />
           <p className="circle-text"><h3>Mbachu Charles</h3></p>
         </div>
         <div className="circle-item">
-          <img src={about2} alt="Ejiogu Favour" className="circle-image" />
+          <img src={Favour} alt="Ejiogu Favour" className="circle-image" />
           <p className="circle-text"><h3>Ejiogu Favour</h3></p>
         </div>
       </div>

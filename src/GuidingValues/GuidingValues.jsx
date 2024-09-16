@@ -2,7 +2,6 @@
 import React from 'react';
 import "./GuildingValues.css"
 import hand from '../assets/hand.svg'
-// import hand from "../assets/hand.svg"
 import heart from "../assets/heart.svg"
 
 const GuidingValues = () => {

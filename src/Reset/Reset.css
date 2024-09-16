@@ -125,6 +125,7 @@
 
     .Form-group input {
         width: 70%; 
+        height: 40px;
         margin: 0 auto; 
     }
 
