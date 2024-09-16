@@ -23,7 +23,7 @@ const Description = () => {
           value={description}
           onChange={handleChange}
         />
-        {/* <p>Character count: {description.length} / 30</p> */}
+        <p>Character count: {description.length} / 30</p>
         <div className='description-btnDiv'>
           <button className='btn-btn-description'>Send</button>
         </div>

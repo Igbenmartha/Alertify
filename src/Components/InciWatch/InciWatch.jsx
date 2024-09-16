@@ -2,8 +2,10 @@ import React from 'react'
  import "./InciWatchStyle.css"
  import Line1 from "../../assets/Line1.svg"
  import Polygon from "../../assets/Polygon.svg"
+import { useNavigate } from 'react-router-dom'
 
 const InciWatch = () => {
+    const navigate = useNavigate()
   return (
     <div className='InciWatch'>
         <div className='InciWatch-Header'> Why choose Alertify</div>
@@ -37,27 +39,23 @@ const InciWatch = () => {
                 </div> 
         </div>
         <div className='InciWatch-Text'> Sign up now to enjoy this features</div>
-        <button className='InciBtn'> Sign Up Now</button>
+        <button className='InciBtn' onClick={(()=>navigate('/signup'))}> Sign Up Now</button>
         <div className='InciWatch-Icon'>
             <div className='InciWatch-Icon1'>
-                <img src={Line1}alt="Line" />
             </div>
             <div className='InciWatch-Icon2'>
                 <img src={Polygon}alt="Line" />
             </div>
             <div className='InciWatch-Icon1'>
-                <img src={Line1}alt="Line" />
             </div>
         </div>
         <div className='InciWatch-Iconb'>
             <div className='InciWatch-Icon1'>
-                <img src={Line1}alt="Line" />
             </div>
             <div className='InciWatch-Icon2'>
                 <img src={Polygon}alt="Line" />
             </div>
             <div className='InciWatch-Icon1'>
-                <img src={Line1}alt="Line" />
             </div>
         </div>
     </div>

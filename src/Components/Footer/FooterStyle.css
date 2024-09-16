@@ -5,11 +5,13 @@
     display: flex;
     gap: 30px;
 
+
 }
 
 .Footer-section1 {
     width: 26%;
     height: 100%;
+
 
     display: flex;
     align-items: center;
@@ -65,6 +67,7 @@ align-self: flex-end;
 
 
 
+
 }
 
 .Footer-icon {
@@ -100,6 +103,7 @@ align-self: flex-end;
     height: 261px;
     display: flex;
     flex-direction: column;
+
 
     gap: 50px;
 }
@@ -146,6 +150,7 @@ align-self: flex-end;
     display: flex;
     flex-direction: column;
     gap: 40px;
+
 
 
 }
@@ -230,9 +235,176 @@ align-self: flex-end;
     background: #072ACB;
 
 }
-@media screen and (max-width:1300px){
-    .Fotter-section2-ContactHolder {
-        font-size: 19px;
+@media screen and (max-width:900px){
+    .Footer {
+        height: 350px;
+    }
+    .Footer-section1 {
+        width: 25%;
+        align-items: flex-end;        
+    }
+    .Fotter-logo {
+        width: 80%;
+        height:29%;
+    }
+    .footer-contact-text {
+        width: 85%;
+        height: 18%;
+        font-size: 14px;
+    }
+    .footericon {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .Footer-icon {
+        width: 35px;
+        height: 35px;
+    }
+    .Footer-section2 {
+        width: 70%;
+    }
+    .Footer-section2-inner {
+        gap:15px;
+    }
+  
+    .Footer-section-2A {
+        width: 28%
+
+    }
+   
+    .Fotter-section2-ContactHolder,
+     .Fotter-section2-QuicklinkHolder,
+      .Fotter-section2-NewsHolder{
+        font-size: 17px;
+    }
+    .Footer-section-2b {
+        width: 40%;
+    }
+    .Footer-section2-infoHolder,
+    .Footer-section2-aboutusHolder{
+
+
+        & p{
+            font-size: 15px;
+
+        }
     }
 
 }
+  /* @media screen and (max-width: 1300px){
+    .Fotter-section2-ContactHolder {
+        font-size: 19px;
+    }
+        
+
+} */
+@media (min-width: 310px) and (max-width: 500px)  {
+    .Footer{
+        width: 100%;
+        height: 200px;
+        gap:10px;
+        margin-bottom: 0;
+        overflow: hidden;
+        /* display: none; */
+    }
+    .Footer-section2-inner{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+        gap:10px;
+    }
+    .Footer-section1{
+        width: 30%;
+        /* gap:10; */
+        height: 100%;
+        
+    }
+    .Fotter-logo{
+        height: 25%;
+        /* width: 100%; */
+
+    }
+    .footer-contact-text{
+        display: block;
+        text-align: center;
+        width: 90%;
+        height: 20%;
+        margin-left: 0;;
+
+      
+        line-height: normal;
+
+        font-size: 10px;    }
+       
+        .footericon{
+            width: 100%;
+        gap:10px;
+
+        }
+        .Footer-icon{
+            width: 20px;
+            height: 20px;
+        }
+        .Footer-section-2A{
+            display: block;
+            height: 55%;
+        
+        }
+        .Fotter-section2-QuicklinkHolder{
+            font-size: 8px;
+            line-height: normal;
+            
+
+        }
+        .Footer-section2-aboutusHolder{
+            display: block;
+
+            & p{
+            font-size: 7px;
+            text-align: center;
+
+
+            }
+        }
+        .Footer-section-2b{
+            width: 43%;
+            height: 55%;
+            display: block;
+
+        }
+        .Fotter-section2-ContactHolder{
+            font-size: 8px;
+            line-height: normal;
+        }
+        .Footer-section2-infoHolder{
+            display: block;
+
+            & p{
+                font-size: 9px;
+                text-align: center;
+            }
+        }
+        .Footer-section-2c{
+            display: block;
+            align-items: center;
+            width: 26%;
+            height: 55%;
+            gap:5px;
+
+        }
+        .Fotter-section2-NewsHolder{
+            font-size: 10px;
+            line-height: normal;
+        }
+        .suscribeBtn{
+            width: 50px;
+            height: 15px;
+            font-size: 9px;
+            margin-left: 10px;
+        }
+       
+}
+
+ 

@@ -1,5 +1,5 @@
 import React from 'react'
-import "./holder.css"
+// import "./holder.css"
 import HeroContact from './HeroContact'
 import ContactsIcons from './ContactsIcons'
 import QuestionTeam from './QuestionTeam'
