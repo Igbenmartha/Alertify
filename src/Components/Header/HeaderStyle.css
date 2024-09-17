@@ -185,10 +185,10 @@
       height: 90vh;
       flex-direction: column;
       align-items: center;
-      transform: translateX(100%);
-      transition: transform 0.3s ease-in-out;
+      /* transform: translateX(100%); */
+      /* transition: transform 0.3s ease-in-out; */
       opacity: 0;
-      visibility: hidden;
+      /* visibility: hidden; */
       background-color: #072ACB;
     } 
     /* .Header-Auth{
@@ -227,6 +227,9 @@
       color: white;
     }
   }
+  .Header-nav{
+    display: none;
+  }
   .Header-username-textholder{
     display: flex;
     align-items: center;
@@ -240,9 +243,7 @@
   .header-logo {
     width: 15%;
   }
-  .Header-nav {
-
-  }
+ 
   .profileAuth{
     width: 51%;
     
