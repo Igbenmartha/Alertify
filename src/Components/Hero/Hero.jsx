@@ -13,7 +13,9 @@ const Hero = () => {
                 </div>
 
             </div>
-            <div className='Heroinner-right-Holder'></div>
+            <div className='Heroinner-right-Holder'>
+                
+            </div>
 
             
             </div>

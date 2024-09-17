@@ -83,7 +83,7 @@ main{
 }
 .Main-box-title{
     width: 85%;
-    height: 58px;
+    height: auto;
     font-family: Montserrat;
 font-size: 24px;
 font-weight: 600;
@@ -150,11 +150,13 @@ color:#302E2E;
    .main{
 
     display: block;
+    gap:30px;
 
    }
    .Main-box{
     width: 75%;
     height: 60vh;
+    margin: 20px;;
 
    }
    .Main-box-title{

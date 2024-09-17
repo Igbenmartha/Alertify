@@ -83,7 +83,7 @@ const token = useSelector((state)=>state.user.token)
                 </div> 
                 <div className='Header-username-textholder'>
                   <h6>igben oghenfejiro Martha</h6>
-                  <p>igbenji@gmail.com</p>
+                  {/* <p>igbenji@gmail.com</p> */}
                 </div>
 
               </div>
