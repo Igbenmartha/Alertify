@@ -1,6 +1,6 @@
-.herocontactBody{
+.herocontactBody {
     width: 100%;
-    height: 80vh; 
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -9,70 +9,56 @@
     /* margin-top: 100px; */
 }
 
-.herocontactInner{
+.herocontactInner {
     width: 92%;
     height: 100%;
-    background-image:url("../../assets/Mancontact.svg");
+    background-image: url("../../assets/Mancontact.svg");
     background-repeat: no-repeat;
-    background-size:cover ; 
+    background-size: cover;
     background-position: center;
     display: flex;
     align-items: flex-end;
-    
-    /* position: relative; */
 }
 
-.contactUs{
+.contactUs {
     width: 60%;
-    max-width: 600px;
-        height: 35%;
-    background: #0000009a;
+    height: 35%;
+    background: rgba(0, 0, 0, 0.6); 
     display: flex;
     flex-direction: column;
     gap: 25px;
-top: 426px;
-left: 106px;
-padding: 10px;
-/* position: absolute; */
-}
-
-.contactUsText{
-    width: 100%;
-    height: 35%;
+    padding: 20px; 
     color: white;
-font-family: Montserrat;
-font-size: 48px;
-font-weight: 600;
-line-height: 58.51px;
-text-align: left;
-
 }
 
-.contactText2{
+.contactUsText {
     width: 100%;
-    height: 30%;
-font-family: Montserrat;
-font-size: 23px;
-font-weight: 700;
-line-height: 29.26px;
-text-align: left;
-color: white;
+    font-family: Montserrat, sans-serif;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 58.51px;
+    text-align: left;
+}
 
-
+.contactText2 {
+    width: 100%;
+    font-family: Montserrat, sans-serif;
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 29.26px;
+    text-align: left;
 }
 
 
 @media (max-width: 768px) {
     .contactUs {
-        width: 90%; 
-        max-width: none; 
+        width: 90%;
         bottom: 2%;
         left: 5%;
-        transform: none;
     }
 
     .contactUsText {
-        font-size: 2rem; 
+        font-size: 2rem;
     }
 
     .contactText2 {
@@ -84,16 +70,16 @@ color: white;
 @media (max-width: 480px) {
     .contactUs {
         width: 95%;
-        bottom: 0; 
+        bottom: 0;
         left: 2%;
-        padding: 5px;
+        padding: 10px;
     }
 
     .contactUsText {
-        font-size: 1.5rem; 
+        font-size: 1.5rem;
     }
 
     .contactText2 {
-        font-size: 1rem; 
-}
+        font-size: 1rem;
+    }
 }
