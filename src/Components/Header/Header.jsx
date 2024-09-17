@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import "./HeaderStyle.css";
+import "./style.css"
 import logo from "../../assets/logo.svg";
 import { NavLink, useNavigate, useParams } from 'react-router-dom';
 import { CgProfile } from "react-icons/cg";
@@ -82,7 +82,7 @@ const token = useSelector((state)=>state.user.token)
                   <CgProfile className='Cg' onClick={(()=>navigate(`/profile`))}/>
                 </div> 
                 <div className='Header-username-textholder'>
-                  <h6>igben oghenfejiro Martha</h6>
+                  <h6>igben oghenfejiro</h6>
                   {/* <p>igbenji@gmail.com</p> */}
                 </div>
 
