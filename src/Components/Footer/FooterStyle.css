@@ -33,7 +33,7 @@ align-self: flex-end;
     /* border: 1px solid black; */
 
 
-    & img {
+    img{
         width: 100%;
         height: 100%;
 
