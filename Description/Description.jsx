@@ -7,7 +7,7 @@ const Description = () => {
   const handleChange = (event) => {
     const newValue = event.target.value;
 
-    if (newValue.length <= 30) {
+    if (newValue.length <= 250) {
       setDescription(newValue);
     }
   };
@@ -15,15 +15,16 @@ const Description = () => {
   return (
     <div className='description-container'>
       <div className='text-con'>
-        <p>Briefly describe the situation you are in under <span className='words'>(30 characters)</span></p>
-        <input
+        {/* <p>Briefly describe the situation you are in under <span className='words'>(30 characters)</span></p> */}
+        <p>Briefly describe the situation you are in under <span className='words'>{description.length}/250</span></p>
+        <textarea
           type='text'
           placeholder='Description'
           className='description-inp'
           value={description}
           onChange={handleChange}
         />
-        <p>Character count: {description.length} / 30</p>
+        {/* <p>Character count: {description.length} / 250</p> */}
         <div className='description-btnDiv'>
           <button className='btn-btn-description'>Send</button>
         </div>

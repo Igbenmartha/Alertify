@@ -241,6 +241,8 @@ color:white
 cursor: pointer;
 }
 
+
+
 @media screen  and (max-width:900px){
     .InciWatch{
         width: 100%;

@@ -134,10 +134,7 @@ opacity: 0px;
     }
 }
 @media screen and (max-width:820px){
-    .HeroleftHolder{
-
-
-    }
+   
     .HeroinnerText-left-Holder{
         line-height: normal;
         /* display: flex; */

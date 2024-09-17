@@ -22,47 +22,78 @@ const Header = () => {
   // const {userId} = useParams();
   console.log("this is happening", userId);
 
+  const userDetail = () => {
+  // const url = "https://alertify-9tr5.onrender.com/api/v1/user"
+
+    fetch(`https://alertify-9tr5.onrender.com/api/v1/user/one/:${userId}`, {  
+      method: "GET",  
+      headers: {
+        "Content-Type": "application/json",
+        // "Authorization": `Bearer ${token}`, 
+      },
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log(data);  
+    })
+    .catch(error => {
+      console.error('Error:', error);  
+    });
+  };
+  
+
+
+//   const userDetail = async (e) => {
+//     e.preventDefault();
+//     const url = "https://alertify-9tr5.onrender.com/api/v1/user"
+//     const userId = "your-user-id";
+// const token = "your-jwt-token";
+
+
+
+//     try {
+//         const res = await axios.get(`${url}/one/:${userId}`,
+//           headers:{
+//             'Content-type': "application/json"
+//           },
+
+
+//         )
+//         console.log(res);
+
+//     } catch (error) {
+//             console.log(error);
+
+//     }
+//   }
+
   // const userDetail = async (e) => {
   //   e.preventDefault();
-  //   const url = "https://alertify-9tr5.onrender.com/api/v1/user"
+  //   const url = "https://alertify-9tr5.onrender.com/api/v1/user";
+
+  //   if (!userId) {
+  //     console.error('userId is not defined');
+  //     return;
+  //   }
+
+  //   console.log(`Requesting URL: ${url}/${userId}`);
 
   //   try {
-  //       const res = await axios.get(`${url}/${userId}`
-
-
-  //       )
-  //       console.log(res);
-
+  //     const res = await axios.get(`${url}/${userId}`);
+  //     console.log('API Response:', res);
   //   } catch (error) {
-  //           console.log(error);
-
+  //     console.error('API Error:', error);
   //   }
   // }
+  // useEffect(()=>{
+  //   userDetail()
+  // },[])
 
-  const userDetail = async (e) => {
-    e.preventDefault();
-    const url = "https://alertify-9tr5.onrender.com/api/v1/user";
-
-    if (!userId) {
-      console.error('userId is not defined');
-      return;
-    }
-
-    console.log(`Requesting URL: ${url}/${userId}`);
-
-    try {
-      const res = await axios.get(`${url}/${userId}`);
-      console.log('API Response:', res);
-    } catch (error) {
-      console.error('API Error:', error);
-    }
-  }
-
-  useEffect(() => {
-    if (userId) {
-      userDetail();
-    }
-  }, [userId]);
+  // useEffect(() => {
+  //   if (userId) {
+  //     userDetail();
+  //   }
+  // }, [userId]);
   return (
     <div className='Header'>
       <div className='Header-inner'>
@@ -97,7 +128,7 @@ const Header = () => {
                     <CgProfile className='Cg' onClick={(() => navigate(`/profile`))} />
                   </div>
                   <div className='Header-username-textholder'>
-                    <h6>igben oghenfejiro</h6>
+                    <h6 onClick={userDetail}>igben oghenfejiro</h6>
                     {/* <p>igbenji@gmail.com</p> */}
                   </div>
 
