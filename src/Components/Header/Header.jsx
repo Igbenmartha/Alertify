@@ -69,7 +69,7 @@ const Header = () => {
         <div className='header-logo'>
           <img src={logo} alt="Logo" />
         </div>
-        <div className='burger-menu'   >
+        <div className='burger-menu'>
           <FiMenu size={30} onClick={toggleMenu} />
 
           {
