@@ -6,8 +6,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* position: fixed; */
-    position: sticky;
+    position: fixed;
+    /* position: sticky; */
     top:0;
     /* left:0;
     right: 0; */
@@ -217,8 +217,11 @@
 
     }
   
-    .Auth {
-      display: none; /* Hide auth links on mobile */
+    .Auth{
+      display: none; 
+    }
+    .profileAuth{
+display: none;
     }
   
     .Header-nav p {
