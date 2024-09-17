@@ -1,0 +1,227 @@
+.Header{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    z-index: 9999;
+    top:0;
+    background-color: white;
+
+}
+.Header-inner{
+    width: 92%;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-logo{
+    width: 15%;
+    height: 100%;
+
+  }
+  
+  .header-logo img {
+    width: 100%;
+    height: 100%;
+
+  }
+  .burger-menu{
+    display: none;
+  }
+  
+  .Header-nav {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 75px;
+    justify-content: center;
+    
+
+    & p{
+        
+        font-family: Roboto;
+        font-size: 22px;
+        font-weight: 400;
+    }
+
+  }
+  
+  .Header-nav p {
+    font-family: Roboto;
+    font-size: 22px;
+    font-weight: 400;
+  }
+  
+  .Auth {
+    width: 33%;
+    height: 100%;
+    display: flex;
+    gap: 35px;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+  
+  .AuthInner {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & p{
+      font-family: Roboto;
+    font-size: 22px;
+    font-weight: 400;
+    }
+    & p:hover{
+      cursor: pointer;
+    }
+  }
+  
+  .EmergencyCtbtn {
+    width: 200px;
+    height: 41px;
+    border-radius: 10px;
+    background: #072ACB;
+    color: white;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .EmergencyCtbtn {
+    cursor: pointer;
+  }
+  .HeaderActive {
+    text-decoration: none;
+    color: #072ACB;
+  }
+  
+  .HeaderNotActive {
+    text-decoration: none;
+    color: black;
+  }
+  .Header-Profile{
+    width: max-content;
+    height: 100%;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    gap:30px;
+    /* border: solid green; */
+  
+  
+    & h6{
+      font-size: 20px;
+    }
+  
+    & p{
+      font-size: 18px;
+    }
+  
+  }
+  .Cg{
+    width: 50px;
+    height: 50px;
+  }
+  .Header-profile-inner{
+    width: max-content;
+    display: flex;
+    gap:10px;
+  }
+  .Header-username-textholder{
+    display: flex;
+    align-items: center;
+  }
+  @media screen and (max-width: 900px) {
+    .Header-inner {
+      width: 95%;
+      justify-content: space-between;
+    }
+  
+    .header-logo {
+      width: 15%;
+    }
+   
+    .profileAuth{
+      width: 51%;
+      
+    }
+    .Header-username-textholder{
+      font-size: 10px;
+      
+    }
+    
+    
+  }
+  @media screen and (max-width: 1200px) {
+      .Header-inner {
+        width: 95%;
+        justify-content: space-between;
+      }
+    
+      .header-logo {
+        width: 15%;
+      }
+    
+      .Header-nav {
+        width: 40%;
+        display: flex;
+          gap:20px;
+          justify-content: center;
+          /* border: solid black;/ *//
+  
+  
+  
+      }
+      
+    
+      .Header-nav p {
+        font-size: 18px;
+      }
+    
+      .Auth {
+        width: 40%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+       
+  
+      }
+    
+      .Auth p {
+        font-size: 18px;
+      }
+    
+      .EmergencyCtbtn {
+        width: 150px;
+        font-size: 12px;
+      }
+    } 
+    @media (min-width: 310px) and (max-width: 650px)  {
+        .Header {
+            width: 100%;
+              height: 13vh;
+      
+       
+          }
+          .header-logo{
+            width: 30%;
+    
+          
+        }
+        .profileAuth{
+            display: none;
+        }
+        .Header-nav{
+            display: none;
+        }
+        .burger-menu{
+            display: block;
+        }
+    }
