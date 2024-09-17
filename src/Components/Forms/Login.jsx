@@ -7,7 +7,7 @@ import alert from "../../assets/AlertifyLogo.svg";
 import axios from 'axios';
 import { Toaster, toast } from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
-import { userinfo, userToken } from '../../Global/Slice';
+import { userId, userinfo, userToken } from '../../Global/Slice';
 import { useDispatch } from 'react-redux';
 
 
@@ -36,7 +36,8 @@ const Login = () => {
          
     
           )
-          // console.log(response);
+          console.log(response);
+   dispatch(userId (response.data.data._id))
           toast.success(response.data.message)
           // dispatch(userinfo(response.data))
           dispatch(userToken(response.data.token))
@@ -75,6 +76,7 @@ const Login = () => {
                 placeholder="Email"
                 className="LoginEmailInput"
                 onChange={((e)=>setEmail(e.target.value))}
+                required={true}
               />
             </div>
             <div className="loginPasswordDiv">
@@ -83,6 +85,8 @@ const Login = () => {
                 placeholder="Password"
                 className="loginPasswordInput"
                 onChange={((e)=>setPassword(e.target.value))}
+                required={true}
+
               />
               {!showEye ? (
                 <FaEye size={25} onClick={() => setShowEye(true)} />
@@ -96,7 +100,7 @@ const Login = () => {
               </div>
               <div className="loginBtnandTextDiv">
                 {/* <div> */}
-                  <button className="loginBtn" type='submit'>{!loading? "Login In" :"loading..."}</button>
+                  <button className="loginBtn" type='submit'>{!loading? "Login " :"loading..."}</button>
 
                   <p className='loginlastText'>Don't have an account? <span onClick={(()=> navigate("/signup"))}>Sign Up</span></p>
                 {/* </div> */}
