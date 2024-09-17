@@ -34,6 +34,7 @@ const Hero = () => {
                 <div className='Heroinner-right-Holder'></div>
             </div>
 
+
             {/* Render the PopupComponent conditionally */}
             {isPopupVisible && <Popup onClose={hidePopup} />}
         </div>

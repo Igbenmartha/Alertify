@@ -307,10 +307,12 @@ width: 100%;
    
   
 }
-@media (min-width: 310px) and (max-width: 500px)  {
+
+@media screen and (max-width: 500px)  {
     .InciWatch{
         height: auto;
         background: #E0E3F2;
+        gap:20px;
     }
     .InciWatch-Header{
         width: 100%;
@@ -321,7 +323,7 @@ width: 100%;
     }
     .InciWatch-Holder{
         margin-top: 30px;
-        width: 70%;
+        width: 60%;
         display: block;
 
 
@@ -331,10 +333,52 @@ width: 100%;
     }
     .InciWatch-Icon{
         top: 6%;
+        width: 70%;
+    }
+    .InciWatch-Iconb{
+        width: 70%;
     }
     .InciWatch-Text{
         margin-top: 0%;
-        font-size: 20px;
+        font-size: 18px;
+        margin-left: 20px;
+        height: 70px;
+        align-items: center;
+        justify-content: center;
 
+    }
+    
+}
+@media screen and (min-width: 320px) and (max-width: 380px)  {
+    .InciWatch{
+        height: auto;
+        background: #E0E3F2;
+        gap: 15px; /* Adjust gap for smaller screens */
+    }
+    .InciWatch-Header{
+        width: 100%;
+        font-size: 24px; /* Decrease font size for smaller width */
+        line-height: normal;
+        text-align: center;
+    }
+    .InciWatch-Holder{
+        margin-top: 20px; /* Adjust margin for better alignment */
+        width: 70%; /* Reduce width slightly */
+        display: block;
+    }
+    .InciWatch-circle-holder{
+        align-self: center;
+    }
+    .InciWatch-Icon{
+        top: 5%;
+        width: 60%; /* Reduce width for smaller screens */
+    }
+    .InciWatch-Text{
+        margin-top: 0;
+        font-size: 16px; /* Adjust font size for readability */
+        margin-left: 10px; /* Reduce margin for smaller screen */
+        height: 60px; /* Adjust height to fit */
+        align-items: center;
+        justify-content: center;
     }
 }

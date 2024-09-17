@@ -6,8 +6,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    /* position: sticky; */
+    /* position: fixed; */
+    position: sticky;
     top:0;
     /* left:0;
     right: 0; */
@@ -227,7 +227,33 @@
       color: white;
     }
   }
-@media (min-width: 700px) and (max-width: 1200px) {
+  .Header-username-textholder{
+    display: flex;
+    align-items: center;
+  }
+@media screen and (max-width: 900px) {
+  .Header-inner {
+    width: 95%;
+    justify-content: space-between;
+  }
+
+  .header-logo {
+    width: 15%;
+  }
+  .Header-nav {
+
+  }
+  .profileAuth{
+    width: 51%;
+    
+  }
+  .Header-username-textholder{
+    font-size: 10px;
+    
+  }
+  
+}
+@media screen and (max-width: 1200px) {
     .Header-inner {
       width: 95%;
       justify-content: space-between;
