@@ -22,7 +22,7 @@ export const DashboardHeader = () => {
     <div className='DashBoardHeaderContainer'>
       <div className='DashBoardHeaderInnerContainer'>
         <div className='DashboardHeaderLeftCornerone'>
-          <img src={Logo} className='DashBoardHeaderLogo' alt="Logo"/>
+          <img src="" className='DashBoardHeaderLogo' alt="Logo"/>
         </div>
 
         <div className='DashboardHeaderLeftCornerTwo'>

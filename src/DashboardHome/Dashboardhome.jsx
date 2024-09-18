@@ -2,6 +2,7 @@ import React from 'react'
 import "./DashboardHome.css"
 import "./DashboardHomeMobile.css"
 // import Face from "../assets/Face.JPEG";
+// import Face from "../assets/Face.JPEG";
 
 export const Dashboardhome = () => {
   const data = [
