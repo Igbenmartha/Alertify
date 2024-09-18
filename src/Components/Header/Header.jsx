@@ -17,9 +17,11 @@ const Header = () => {
     setMenuOpen(true);
   };
   const token = useSelector((state) => state.user.token)
-  const userId = useSelector((state) => state.user.id)
+  // const userId = useSelector((state) => state.user.id)
   // console.log(token);
   // const {userId} = useParams();
+  const userId = localStorage.getItem('userId');
+
   console.log("this is happening", userId);
 
   const userDetail = () => {
