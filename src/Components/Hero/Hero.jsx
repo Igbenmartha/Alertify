@@ -3,17 +3,14 @@ import "./HeroStyle.css";
 // import Description from '../Description/Description'
 import Popup from '../Popup/Popup'
 import { useSelector } from 'react-redux';
+import { Toaster, toast } from 'react-hot-toast';
+
 
 const Hero = () => {
-    // State to manage the visibility of the popup
+
     const [isPopupVisible, setPopupVisible] = useState(false);
+    const [Loading,setLoading] = useState(false)
 
-    // Function to show the popup
-    // const showPopup = () => {
-    //     setPopupVisible(true);
-    // };
-
-    // Function to hide the popup
     const hidePopup = () => {
         setPopupVisible(false);
 
@@ -23,6 +20,7 @@ const Hero = () => {
     const Alert = (e)=>{
         e.preventDefault()
         setPopupVisible(true);
+        setLoading(true)
 
         fetch(`https://alertify-9tr5.onrender.com/api/v1/user/distress`, {  
             method: "POST",  
@@ -33,14 +31,18 @@ const Hero = () => {
           })
           .then(response => response.json())
           .then(data => {
-            console.log(data.message);  
+            toast.success(data.message); 
+            setLoading(false) 
           })
           .catch(error => {
-            console.error('Error:', error);  
+            console.error('Error:', error);
+            setLoading(false)
           });
     }
     return (
         <div className='heroPage'>
+        <Toaster/>
+
             <div className='HeroHolder'>
                 <div className='HeroleftHolder'>
                     <div className='Heroinner-left-Holder'>
@@ -50,7 +52,7 @@ const Hero = () => {
                         <div className='HeroinnerPara-left-Holder'>
                             Feel unsafe? One tap alert your trusted contact with your location and details. Your safety is our priority.
                         </div>
-                        <button className='HeroBtn' onClick={Alert}>Report Now</button>
+                        <button className='HeroBtn' onClick={Alert}>{!Loading?"Report Now" :"Loading"}</button>
                     </div>
                 </div>
                 <div className='Heroinner-right-Holder'></div>
@@ -58,7 +60,7 @@ const Hero = () => {
 
 
             {/* Render the PopupComponent conditionally */}
-            {isPopupVisible && <Popup onClose={hidePopup} />}
+            {isPopupVisible && <Popup onClose={hidePopup} setPopupVisible={setPopupVisible}/>}
         </div>
     );
 }

@@ -6,7 +6,8 @@ const Slice = createSlice({
         userdata:{},
         
         id: "",
-        token: ""
+        token: "",
+        isAdmin: ""
         
     },
     reducers:{
@@ -20,14 +21,13 @@ const Slice = createSlice({
         userToken : (state,action) =>{
             state.token = action.payload;
         },
-         clearUser(state) {
-      state.userdata =[]
-      state.id = null
+         admin:(state,action)=> {
+        state.token = action.payload;
     },
         
 
         
     }
 })
-export const {userinfo,userToken,userId,clearUser} = Slice.actions;
+export const {userinfo,userToken,userId,admin} = Slice.actions;
 export default Slice.reducer
