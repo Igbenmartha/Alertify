@@ -48,7 +48,7 @@ export const DashboardHeader = () => {
           <div className='DashBoardHeaderMenuUpside'>
             <div className='DashBoardHeaderMenuUpsideInner'>
               <div className='DashBoardHeaderMenuUpsideInnerCircle'>
-                <img src={Face} className='DashBoardFaceImage' alt="User Face"/>
+                <img src={''} className='DashBoardFaceImage' alt="User Face"/>
               </div>
               <div className='DashBoardHeaderMenuUpsideInnerText'>
                 <h4>Victory Aboy</h4>
