@@ -3,7 +3,7 @@ import "./DashboardUserManagement.css"
 import "./DashboardUserManagementMobile.css"
 import { FaUserAlt, } from 'react-icons/fa'; 
 import { RiFolderUserFill } from "react-icons/ri";
-import Face from "../assets/Face.JPEG";
+// import Face from "../assets/Face.JPEG";
 
 export const DashboardUser = () => {
 
@@ -21,7 +21,7 @@ export const DashboardUser = () => {
       user.map(() => (
         <div className="userCardContainer">
       <div className="userImageContainer">
-        <img src={Face}
+        <img src={""}
           // src="https://via.placeholder.com/150"
           alt="Ike Chiamaka"
           className="userImage"
