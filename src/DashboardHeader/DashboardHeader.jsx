@@ -3,11 +3,13 @@ import "./DashboardHeaderMobile.css";
 import "./DashboardHeader.css";
 import Logo from "../assets/AlertifyLogo.svg";
 import { RiMenu2Line } from "react-icons/ri";
-import Face from "../assets/Face.JPEG";
+// import Face from "../assets/Face.jpeg";
 import { IoMdHome } from "react-icons/io";
 import { MdOutlineRoundaboutLeft, MdPermContactCalendar, MdDashboard } from "react-icons/md";
 import { HiExclamationTriangle } from "react-icons/hi2";
 import { RiLogoutCircleLine } from "react-icons/ri";
+// import Face from '../assets/'
+// import Face from '../assets/Face.jpeg'
 
 export const DashboardHeader = () => {
   const [menuChange, setMenuChange] = useState(false);
@@ -26,7 +28,7 @@ export const DashboardHeader = () => {
         <div className='DashboardHeaderLeftCornerTwo'>
           <div className='DashBoardUserProfile'>
             <div className='DashBoardImageProfile'>
-            <img src={Face} className='DashBoardActiveReportImahe'/>
+            <img src={""} className='DashBoardActiveReportImahe'/>
 
             </div>
             <div>
