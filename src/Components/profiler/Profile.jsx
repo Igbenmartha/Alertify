@@ -47,85 +47,38 @@ const Profile = () => {
         setEdit(false); // Exit edit mode
     };
 
-    // const { userId } = useParams()
-    // const token = useSelector((state) => state.user.token)
-    // const userDetail = async (e) => {
-    //     e.preventDefault();
-    //     const url = "https://alertify-9tr5.onrender.com/api/v1/user"
+  return (
+    <div className='Profile-MainBody'>
+    <div className='profileImg'>
+        
+        {imgP ? <img src={imgP} alt="" /> : <img src={person} alt="" />}
+        <label htmlFor="i">
+            {
+                edit? 
+                  <div className='pro-cam'>
 
-    //     try {
-    //         const res = await axios.get(`${url}/${userId}`, {
-    //             headers: {
-    //                 "Content-Type": "application/json",
-    //                 Authorization: `Bearer ${token}`
-
-    //                 }
-    //             }
-    //         )
-    //         console.log(res);
-            
-    //     } catch (error) {
-    //             console.log(error);
-                
-    //     }
-    // }
-    return (
-        <div className='Profile-MainBody'>
-            <div className='profileImg'>
-                {imgP ? <img src={imgP} alt="" /> : <img src={person} alt="" />}
-                <label htmlFor="i">
-                    <div className='pro-cam'>
-                        <img src={cam} alt="" />
-                    </div>
-                </label>
-                <input type="file" id="i" hidden onChange={posting} />
-            </div>
-            <div className='pro-inputbody'>
-                <div className='InputHolder'>
-                    <p>Full Name:</p>
-                    {edit ? (
-                        <input
-                            type="text"
-                            className='Profile-input'
-                            name="name" // Add a name to match with state key
-                            value={editData.name}
-                            onChange={handleInputChange} // Add onChange handler
-                        />
-                    ) : (
-                        <div className='ProfileText'>{profileData.name}</div>
-                    )}
-                </div>
-
-                <div className='InputHolder'>
-                    <p>Address:</p>
-                    {edit ? (
-                        <input
-                            type="text"
-                            className='Profile-input'
-                            name="address"
-                            value={editData.address}
-                            onChange={handleInputChange}
-                        />
-                    ) : (
-                        <div className='ProfileText'>{profileData.address}</div>
-                    )}
-                </div>
-
-                <div className='InputHolder'>
-                    <p>Gender:</p>
-                    {edit ? (
-                        <input
-                            type="text"
-                            className='Profile-input'
-                            name="gender"
-                            value={editData.gender}
-                            onChange={handleInputChange}
-                        />
-                    ) : (
-                        <div className='ProfileText'>{profileData.gender}</div>
-                    )}
-                </div>
-
+                <img src={cam} alt="" />
+            </div>: null
+            }
+          
+        </label>
+        <input type="file" id="i" hidden onChange={posting} />
+    </div>
+    <div className='pro-inputbody'>
+        <div className='InputHolder'>
+            <p>Full Name:</p>
+            {edit ? (
+                <input
+                    type="text"
+                    className='Profile-input'
+                    name="name" // Add a name to match with state key
+                    value={editData.name}
+                    onChange={handleInputChange} // Add onChange handler
+                />
+            ) : (
+                <div className='ProfileText'>{profileData.name}</div>
+            )}
+        </div>
                 <div className='InputHolder'>
                     <p>Phone Number:</p>
                     {edit ? (

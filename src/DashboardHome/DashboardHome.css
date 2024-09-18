@@ -1,0 +1,157 @@
+.DashBoardHomeContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    overflow-y: auto;
+}
+
+.DashboardHomeContainerInner{
+    width: 95%;
+    height: 100%;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    /* background-color: #072ACB; */
+}
+
+.DashboardHomeContaineroverflow{
+    width: 100%;
+    height: max-content;
+}
+
+.DashboardHomeActiveReport{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
+    padding-top: 20px;
+}
+
+.DashBoardHomeh1{
+    width: 100%;
+    font-size: 20px;
+    color: #072ACB;
+
+}
+
+.DashboardActiveReportInner{
+    width: 97%;
+    height: max-content;
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+
+}
+
+.DashboardActiveReportCard{
+    width: 170px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 10px;
+    gap: 10px;
+    /* flex-wrap: wrap; */
+    /* margin-top: 10px; */
+    padding: 25px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+.DashBoardActiveReportImahe{
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+}
+
+.DashBaordActiveReportProfile{
+    width: 70px;
+    height: 70px;
+    background-color: red;
+    border-radius: 50pc;
+}
+
+.DashBoardAvtiveReportText2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+}
+
+.DashBoardAvtiveReportText{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.DashBoardHomeAlertifyUser{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.DashBoardHomeAlertifyContainer{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 25px;
+    /* background-color: red; */
+}
+
+.DashBoardalertifyProfileContainer{
+    width: 75px;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.DashBoardHomeProfilePicture{
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    background-color: black;
+
+    & img{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+}
+
+.DashBoardHomeFooter{
+    display: none;
+}
+
+
+
+.DashBoardHomeContainer::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .DashBoardHomeContainer::-webkit-scrollbar-track {
+    background: white; 
+  }
+   
+  .DashBoardHomeContainer::-webkit-scrollbar-thumb {
+    background: white; 
+  }
+  
+  .DashBoardHomeContainer::-webkit-scrollbar-thumb:hover {
+    background:#ffffff;
+}
+    

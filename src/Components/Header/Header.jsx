@@ -97,8 +97,11 @@ const Header = () => {
   return (
     <div className='Header'>
       <div className='Header-inner'>
+
+
         <div className='header-logo'>
           <img src={logo} alt="Logo" />
+
         </div>
         <div className='burger-menu'>
           <FiMenu size={30} onClick={toggleMenu} />

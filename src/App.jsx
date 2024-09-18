@@ -12,10 +12,10 @@ import AboutUs from './AboutUs/AboutUs'
 import SignUp from './Components/Forms/SignUp'
 import Login from './Components/Forms/Login'
 import SignUpImage from './Components/Forms/SignUpImage'
+import DashboardHolder from './DashboardHome/DashboardHolder'
 import Reset from './Reset/Reset'
 import Description from '../Description/Description'
 import UserPrivate from './Components/Route/UserPrivate'
-
 // import AboutUs from './Components/About Us/AboutUs'
 
 const App = () => {
@@ -36,7 +36,7 @@ const App = () => {
       <Route path= "signup" element={<SignUp/>}></Route>
       <Route path= "login" element={<Login/>}></Route>
       <Route path= "signupimage" element={<SignUpImage/>}></Route>
-
+        <Route path="dashboard" element={<DashboardHolder/>}></Route>  
     </Routes>
    </HashRouter>
   

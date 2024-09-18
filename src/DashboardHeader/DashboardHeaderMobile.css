@@ -1,0 +1,121 @@
+@media screen and (max-width: 768px) {
+    .DashBoardHeaderContainer {
+        background-color: white !important;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+
+    .DashBoardHeaderLogo{
+        width: 90% !important;
+        height: 60% !important;
+     
+    }
+
+    .DashBoardUserProfile{
+    display: none !important;
+    }
+
+    .DashBoardMenuIcon{
+        display: block !important;
+        width: 30%;
+        height: 100%;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center;
+    }
+
+    .DashBoardMobileMenu{
+        display: block !important;
+        position: absolute;
+        background-color: white ;
+        right: 0px;
+        top: 0px;
+        opacity: 0;
+        height: 0;
+        overflow: hidden;
+        transition: opacity 0.5s ease, height 0.5s ease;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
+    .DashBoardMobileMenu.show {
+        opacity: 1;
+        height: auto;
+        height: 190%;
+        width: 80%;
+    }
+
+    .DashBoardHeaderMenuUpside{
+        width: 100%;
+        height: 16%;
+        background-color:  #072ACB;
+        border-radius: 0px 0px 15px 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .DashBoardHeaderMenuUpsideInner{
+        width: 70%;
+        height: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        color: white;
+    }
+
+    .DashBoardHeaderMenuUpsideInnerCircle{
+        width: 50px;
+        height: 50px;
+        background-color: rgb(0, 255, 98);
+        border-radius: 50px;
+
+    }
+
+    .DashBoardFaceImage{
+        width: 100%;
+        height: 100%;
+        border-radius: 50px;
+    }
+
+    .DashBoardHome{
+        width: 80%;
+        height: 15%;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .DashBoardHeaderMenDownside{
+        width: 100%;
+        height: 28%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .DashBoardMenuList{
+        width: 90%;
+        height: 100%;
+    }
+
+    .DashBoardLogout{
+        display: block !important   ;
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .DashBoardLogoutIcon{
+        padding-left: 30px;
+        display: flex;
+        gap: 10px;
+    }
+
+
+
+}
+
+@media screen and (min-width:768px) and (max-width: 1024px) {
+
+
+}
