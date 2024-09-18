@@ -1,7 +1,7 @@
 import React from 'react'
 import "./DashboardHome.css"
 import "./DashboardHomeMobile.css"
-import Face from "../assets/Face.JPEG";
+// import Face from "../assets/Face.JPEG";
 
 export const Dashboardhome = () => {
   const data = [
@@ -28,7 +28,7 @@ export const Dashboardhome = () => {
 
                 <div className='DashboardActiveReportCard'>
                   <div className='DashBaordActiveReportProfile'>
-                    <img src={Face} className='DashBoardActiveReportImahe'/>
+                    <img src="" className='DashBoardActiveReportImahe'/>
                   </div>
 
                   <div className='DashBoardAvtiveReportText'>

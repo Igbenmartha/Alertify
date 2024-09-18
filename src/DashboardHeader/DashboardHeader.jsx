@@ -3,7 +3,7 @@ import "./DashboardHeaderMobile.css";
 import "./DashboardHeader.css";
 import Logo from "../assets/AlertifyLogo.svg";
 import { RiMenu2Line } from "react-icons/ri";
-import Face from "../assets/Face.JPEG";
+// import Face from "../assets/Face.JPEG";
 import { IoMdHome } from "react-icons/io";
 import { MdOutlineRoundaboutLeft, MdPermContactCalendar, MdDashboard } from "react-icons/md";
 import { HiExclamationTriangle } from "react-icons/hi2";
@@ -20,7 +20,7 @@ export const DashboardHeader = () => {
     <div className='DashBoardHeaderContainer'>
       <div className='DashBoardHeaderInnerContainer'>
         <div className='DashboardHeaderLeftCornerone'>
-          <img src={Logo} className='DashBoardHeaderLogo' alt="Logo"/>
+          <img src="" className='DashBoardHeaderLogo' alt="Logo"/>
         </div>
 
         <div className='DashboardHeaderLeftCornerTwo'>
