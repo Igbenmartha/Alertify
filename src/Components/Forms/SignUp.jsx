@@ -229,13 +229,13 @@ setLoading(true)
 
 
     const response = await axios.post("https://alertify-9tr5.onrender.com/api/v1/user/sign-up", data)
-    // console.log(res.response.response)
+    toast(response.response.response)
     // console.log(response)
     // Handle successful signup (e.g., redirect or show a success message)
   } catch (error) {
     // console.log(error)
-    // toast.error(error.message)
-    console.log(error.response.data.message);
+     toast.error(error.message)
+    toast.error(error.response.data.message);
     
     // toast.error("Signup failed, please try again")
     setLoading(false)
