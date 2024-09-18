@@ -17,28 +17,65 @@ const Hero = () => {
     };
   const token = useSelector((state) => state.user.token)
 
-    const Alert = (e)=>{
-        e.preventDefault()
-        setPopupVisible(true);
-        setLoading(true)
+    // const Alert = (e)=>{
+    //     e.preventDefault()
+    //     setLoading(true)
 
+    //     fetch(`https://alertify-9tr5.onrender.com/api/v1/user/distress`, {  
+    //         method: "POST",  
+    //         headers: {
+    //           "Content-Type": "application/json",
+    //           "Authorization": `Bearer ${token}`, 
+    //         },
+    //       })
+    //       .then(response => response.json())
+    //       .then(data => {
+    //         toast.success(data.message); 
+    //     setPopupVisible(true);
+
+    //         setLoading(false) 
+    //       })
+    //       .catch(error => {
+    //         console.error('Error:', error);
+    //         setLoading(false)
+    //       });
+    // }
+    const Alert = (e) => {
+        e.preventDefault();
+        setLoading(true);
+      
+        if (!token) {
+          toast.error("Emergency action cannot be completed. Please log in to send a distress alert.");
+          setLoading(false);
+          return;
+        }
+      
         fetch(`https://alertify-9tr5.onrender.com/api/v1/user/distress`, {  
-            method: "POST",  
-            headers: {
-              "Content-Type": "application/json",
-              "Authorization": `Bearer ${token}`, 
-            },
-          })
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`,
+          },
+        })
           .then(response => response.json())
           .then(data => {
-            toast.success(data.message); 
-            setLoading(false) 
+            if (data.success) {
+              toast.success(data.message);
+              setPopupVisible(true);
+            } else {
+              toast.error(data.message);
+            }
+            setLoading(false);
           })
           .catch(error => {
             console.error('Error:', error);
-            setLoading(false)
+            setLoading(false);
+            console.log(error);
+            
+            toast.error("An error occurred while sending your distress alert. Please try again.");
           });
-    }
+      };
+      
     return (
         <div className='heroPage'>
         <Toaster/>
