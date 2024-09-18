@@ -18,7 +18,7 @@ const Header = () => {
     <div className='Header'> 
       <div className='Header-inner'>
         <div className='logo'>
-          <img src={logo} alt="Logo" />
+          <img src={logo} alt="Logo"  />
         </div>
         <div className='burger-menu' onClick={toggleMenu}>
           {menuOpen ? <AiOutlineClose size={30} /> : <FiMenu size={30} />}

@@ -46,11 +46,17 @@ const Profile = () => {
   return (
     <div className='Profile-MainBody'>
     <div className='profileImg'>
+        
         {imgP ? <img src={imgP} alt="" /> : <img src={person} alt="" />}
         <label htmlFor="i">
-            <div className='pro-cam'>
+            {
+                edit? 
+                  <div className='pro-cam'>
+
                 <img src={cam} alt="" />
-            </div>
+            </div>: null
+            }
+          
         </label>
         <input type="file" id="i" hidden onChange={posting} />
     </div>

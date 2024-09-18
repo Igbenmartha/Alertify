@@ -1,0 +1,44 @@
+@media screen and (max-width: 768px) {
+    .DashboardUserManagementContainerInner{
+        width: 100%;
+    }
+
+    .DashBoardUsermangementContainerOverflow{
+        width: 100%;
+        justify-content: center;
+    }
+
+        
+    .userCardContainer {
+        width: 120px;
+        padding: 20px;
+    }
+
+    .userName {
+        font-size: 15px;
+        margin: 5px 0;
+    }
+
+    .userEmail {
+        font-size: 10px;
+        color: gray;
+      }
+
+    .userImage {
+        width: 80px;
+        height: 80px;
+        border-radius: 50px;
+        object-fit: cover;
+      }
+
+      .DashBaordUserManagementBuuton {
+        font-size: 10px;
+      }
+
+    
+}
+
+@media screen and (min-width:768px) and (max-width: 1024px) {
+
+
+}

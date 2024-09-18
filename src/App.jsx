@@ -11,6 +11,7 @@ import AboutUs from './Components/About Us/AboutUs'
 import SignUp from './Components/Forms/SignUp'
 import Login from './Components/Forms/Login'
 import SignUpImage from './Components/Forms/SignUpImage'
+import DashboardHolder from './DashboardHome/DashboardHolder'
 // import AboutUs from './Components/About Us/AboutUs'
 
 const App = () => {
@@ -31,7 +32,7 @@ const App = () => {
       <Route path= "sigup" element={<SignUp/>}></Route>
       <Route path= "login" element={<Login/>}></Route>
       <Route path= "signupimage" element={<SignUpImage/>}></Route>
-
+        <Route path="dashboard" element={<DashboardHolder/>}></Route>  
     </Routes>
    </HashRouter>
   )
