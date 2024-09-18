@@ -149,6 +149,11 @@ const SignUp = () => {
       toast.error("Address is required");
       return;
     }
+     
+    if (!gender) {
+      toast.error("Gender is required");
+      return;
+    }
   
     if (!phoneNumber) {
       toast.error("Phone Number is required");
@@ -195,11 +200,7 @@ const SignUp = () => {
       toast.error("Passwords do not match");
       return;
     }
-  
-    if (!gender) {
-      toast.error("Gender is required");
-      return;
-    }
+ 
   
     // If all validations pass, move to the next step
     setContinueSignUp(1);

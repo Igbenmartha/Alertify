@@ -39,7 +39,7 @@ const Hero = () => {
           });
     }
     return (
-        <div className='hero'>
+        <div className='heroPage'>
             <div className='HeroHolder'>
                 <div className='HeroleftHolder'>
                     <div className='Heroinner-left-Holder'>

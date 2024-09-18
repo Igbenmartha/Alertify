@@ -25,7 +25,7 @@ const Header = () => {
   const userDetail = () => {
   // const url = "https://alertify-9tr5.onrender.com/api/v1/user"
 
-    fetch(`https://alertify-9tr5.onrender.com/api/v1/user/one/:${userId}`, {  
+    fetch(`https://alertify-9tr5.onrender.com/api/v1/user/one/${userId}`, {  
       method: "GET",  
       headers: {
         "Content-Type": "application/json",
