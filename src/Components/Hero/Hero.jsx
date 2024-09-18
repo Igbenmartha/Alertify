@@ -20,7 +20,8 @@ const Hero = () => {
     };
   const token = useSelector((state) => state.user.token)
 
-    const Alert = ()=>{
+    const Alert = (e)=>{
+        e.preventDefault()
         setPopupVisible(true);
 
         fetch(`https://alertify-9tr5.onrender.com/api/v1/user/distress`, {  
