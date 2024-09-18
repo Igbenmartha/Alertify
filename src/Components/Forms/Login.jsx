@@ -56,11 +56,12 @@ const Login = () => {
             setLoading(false); 
           }, 2000);
         } catch (error) {
-          // console.log(error);
-          toast.error(error.response.data.data.message);
-          setLoading(false)
+          console.log(error);
+          toast.error(error.response.data.message);
+        setLoading(false)
           
         }
+
       }
 
   return (
