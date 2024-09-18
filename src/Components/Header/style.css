@@ -231,6 +231,9 @@
 
 
   }
+  .Auth{
+    display: none;
+  }
 
   .profileAuth {
     display: none;
