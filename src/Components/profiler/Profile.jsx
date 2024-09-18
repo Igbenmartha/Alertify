@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import "./profilerStyle.css"
 import cam from "../../assets/Cameraa.svg";
 import person from "../../assets/person.png";
+import { useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import axios from 'axios';
 
 const Profile = () => {
     const [imgP, setImgP] = useState(null);
@@ -43,6 +46,7 @@ const Profile = () => {
         setProfileData(editData); // Save edited data
         setEdit(false); // Exit edit mode
     };
+
   return (
     <div className='Profile-MainBody'>
     <div className='profileImg'>
@@ -75,75 +79,44 @@ const Profile = () => {
                 <div className='ProfileText'>{profileData.name}</div>
             )}
         </div>
+                <div className='InputHolder'>
+                    <p>Phone Number:</p>
+                    {edit ? (
+                        <input
+                            type="text"
+                            className='Profile-input'
+                            name="phoneNumber"
+                            value={editData.phoneNumber}
+                            onChange={handleInputChange}
+                        />
+                    ) : (
+                        <div className='ProfileText'>{profileData.phoneNumber}</div>
+                    )}
+                </div>
 
-        <div className='InputHolder'>
-            <p>Address:</p>
-            {edit ? (
-                <input
-                    type="text"
-                    className='Profile-input'
-                    name="address"
-                    value={editData.address}
-                    onChange={handleInputChange}
-                />
-            ) : (
-                <div className='ProfileText'>{profileData.address}</div>
-            )}
+                <div className='InputHolder'>
+                    <p>Email:</p>
+                    {edit ? (
+                        <input
+                            type="text"
+                            className='Profile-input'
+                            name="email"
+                            value={editData.email}
+                            onChange={handleInputChange}
+                        />
+                    ) : (
+                        <div className='ProfileText'>{profileData.email}</div>
+                    )}
+                </div>
+
+                {edit ? (
+                    <button className='ProfileUpdbtn' onClick={handleUpdateProfile}>Update Profile</button>
+                ) : (
+                    <button className='ProfileEditbtn' onClick={() => setEdit(true)}>Edit Profile</button>
+                )}
+            </div>
         </div>
-
-        <div className='InputHolder'>
-            <p>Gender:</p>
-            {edit ? (
-                <input
-                    type="text"
-                    className='Profile-input'
-                    name="gender"
-                    value={editData.gender}
-                    onChange={handleInputChange}
-                />
-            ) : (
-                <div className='ProfileText'>{profileData.gender}</div>
-            )}
-        </div>
-
-        <div className='InputHolder'>
-            <p>Phone Number:</p>
-            {edit ? (
-                <input
-                    type="text"
-                    className='Profile-input'
-                    name="phoneNumber"
-                    value={editData.phoneNumber}
-                    onChange={handleInputChange}
-                />
-            ) : (
-                <div className='ProfileText'>{profileData.phoneNumber}</div>
-            )}
-        </div>
-
-        <div className='InputHolder'>
-            <p>Email:</p>
-            {edit ? (
-                <input
-                    type="text"
-                    className='Profile-input'
-                    name="email"
-                    value={editData.email}
-                    onChange={handleInputChange}
-                />
-            ) : (
-                <div className='ProfileText'>{profileData.email}</div>
-            )}
-        </div>
-
-        {edit ? (
-            <button className='ProfileUpdbtn' onClick={handleUpdateProfile}>Update Profile</button>
-        ) : (
-            <button className='ProfileEditbtn' onClick={() => setEdit(true)}>Edit Profile</button>
-        )}
-    </div>
-</div>
-  )
+    )
 }
 
 export default Profile

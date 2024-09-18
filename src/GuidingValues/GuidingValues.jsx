@@ -1,15 +1,17 @@
 // GuidingValues.js
 import React from 'react';
 import "./GuildingValues.css"
-// import hand from "../../assets/hand.svg"
-import hand from "../assets/hand.svg"
-// import heart from "./../../assets/heart.svg"
+import hand from '../assets/hand.svg'
+import heart from "../assets/heart.svg"
 
 const GuidingValues = () => {
   return (
       <div className="guiding-values">
+        <div className='guilding'>
         <h1 className='guid'>Our Guiding Values</h1>
+        </div>
     
+      <div className="innerdiv">
       <div className="value-section1">
         <img src={heart} alt=""  className='heart'/>
         <h2>User Satisfaction</h2>
@@ -34,6 +36,7 @@ const GuidingValues = () => {
           solutions. We extend this spirit of collaboration to our relationships with our customers, partners, and
           communities, believing that by working together, we can achieve more than we ever could alone.
         </p>
+      </div>
       </div>
     </div>
   );

@@ -75,6 +75,11 @@
     font-weight: 700;
     line-height: 21px;
 }
+@media screen  and (max-width:480px){
+    .questionBody{
+        border: solid red;
+    }
+}
 
 
 @media (max-width: 1024px) {

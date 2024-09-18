@@ -47,6 +47,7 @@ main{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
     gap:72px
 
 
@@ -66,7 +67,7 @@ main{
     width: 100%;
     Height:260.47px;
 
-    & img{
+    img{
         width: 100%;
         height: 100%;
         object-position: center;
@@ -82,7 +83,7 @@ main{
 }
 .Main-box-title{
     width: 85%;
-    height: 58px;
+    height: auto;
     font-family: Montserrat;
 font-size: 24px;
 font-weight: 600;
@@ -101,4 +102,64 @@ line-height: 21.09px;
 text-align: center;
 color:#302E2E;
 
+}
+@media screen and (max-width:900px){
+    .Scenerio-holder{
+        width: 94%;
+        /* border: solid blue; */
+    }
+    .Scenerio-title{
+        width: 45%;
+        
+        font-size: 35px;
+
+    }
+    .Main-box{
+        width: 43%;
+        height: 370px;
+
+
+    }
+    .Main-boxImg{
+        height: 45%;
+    }
+    .Main-boxText{
+        gap:10px
+    }
+   
+    
+}
+@media (min-width: 310px) and (max-width: 500px)  {
+   .scenerio{
+    margin-top:30px;
+   }
+   .Scenerio-holder{
+    align-items: center;
+
+   }
+   .Scenerio-title{
+    display:block;
+    width: 90%;
+    height: 80px;
+    font-size: 29px;
+    text-align: center;
+    line-height: normal;
+    align-items: center;
+
+   }
+   .main{
+
+    display: block;
+    gap:30px;
+
+   }
+   .Main-box{
+    width: 75%;
+    height: 60vh;
+    margin: 20px;;
+
+   }
+   .Main-box-title{
+    width: 100%;
+   }
 }

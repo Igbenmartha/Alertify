@@ -10,7 +10,7 @@
     width: 90%;
     height: 100%;
     display: flex;
-    gap: 20px;
+    gap: 15px;
     flex-direction: column;
     align-items: center; 
 }
@@ -57,15 +57,42 @@ text-align: center;
 
 .formDiv{
     width: 90%;
-    height: 75%;
+    height: 65%;
     display: flex;
-     gap:10px;
+     gap:13px;
     flex-direction: column;
-}
+    /* border: solid green; */
 
+    /* border: solid green; */
+}
+.passwordDiv {
+    position: relative;
+  }
+  
+  .passwordStrengthBar {
+    height: 7px;
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .passwordStrengthProgress {
+    height: 100%;
+    border-radius: 5px;
+    /* border: solid beige; */
+
+  }
+  
+  .passwordStrengthLabel {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #333;
+  }
+  
 .fullnameInputDiv{
     width: 100%;
-    height: 43px;
+    height: 45px;
     border-radius: 5px;
   
     cursor: pointer;
@@ -128,6 +155,13 @@ outline: none;
     justify-content: center;
     /* align-items: center; */
     flex-direction: column;
+
+ 
+    & span:hover{
+        cursor: pointer;
+        color:red;
+
+    }
 }
 /* .continueButton{
     width: 90%;

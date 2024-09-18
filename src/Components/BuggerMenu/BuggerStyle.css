@@ -1,0 +1,159 @@
+.BuggerMenu {
+    width: 70vw;
+    height: 100vh;
+    background: white;
+    position: fixed;
+    top: -50vh;
+    /* left: 0; */
+    right: 0;
+    margin: auto;
+    transition: top 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+    /* justify-content: space-between; */
+  }
+  
+  .BuggerMenu.open {
+    top: 0;
+  }
+  .Bugger-Header{
+    width: 100%;
+    height: 30%;
+    background: #072ACB;
+    border-radius: 0 0 20px 20px;
+
+  }
+  .bugger-headerclose{
+    width: 100%;
+    height: 20%;
+    /* background: white; */
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .bugger-profile-holder{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .bugger-profile{
+    width: 50px;
+    height: 50px;
+
+
+     img{
+        width: 100%;
+        height: 100%;
+    }
+
+  }
+  .bugger-profile-text-holder{
+width: 60%;
+height: 30%;
+display: flex;
+flex-direction: column;
+padding-left: 10px;
+/* align-items: center; */
+& h5{
+    color: #FFF;
+font-family: Roboto;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+& p{
+    color:WHITE;
+font-family: Roboto;
+font-size: 12px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+
+  }
+  .bugger-main{
+    width: 80%;
+    height: 45%;
+    /* background: #072ACB; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+}
+.bugger-main-div{
+    width: 100%;
+    height: 10%;
+    background-color: white;
+    display: flex;
+    gap:15px;
+    align-items: center;
+    
+
+
+    & p{
+        color: #171717;
+
+font-family: Roboto;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+    }
+}
+.bugger-main-div:hover{
+    cursor: pointer;
+    background: #072ACB;
+}
+.buggerActive{
+    background: #072ACB;
+
+}
+.buggerNotActive{
+    background: white;
+}
+.bugger-icon{
+    width: 25px;
+    height: 25px;
+    /* background-image: url(../../assets/home.svg); */
+
+
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.bugger-Logout-holder{
+    width: 80%;
+    height: 4%;
+    display: flex;
+    gap:10px;
+    /* align-items: flex-end; */
+
+    & p{
+        color: #171717;
+
+font-family: Roboto;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+    }
+}
+  .bugger-logoutico{
+    width: 25px;
+    height: 25px;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+   
+  }

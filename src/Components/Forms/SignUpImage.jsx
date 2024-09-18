@@ -17,6 +17,7 @@ const SignUpImage = ({ alert }) => {
   return (
     <>
       <div className="signupbodyLogo">
+
         <img src={alert} alt="" />
       </div>
       <div className='imageBox'>

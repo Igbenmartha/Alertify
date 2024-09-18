@@ -476,6 +476,20 @@ text-align: left;
 
 }
 
+
+
+@media screen  and (max-width:900px){
+   .EmergencyDepressionBoxDiv{
+    gap:30px;
+    border: solid red;
+    justify-content: center;
+    width: 50%;
+   } 
+   .emergencyDepressionImageDiv{
+    width: 30%;
+   }
+}
+
 /* .emergencyArmyBox1{
     width: 50%;
     height: 50%;
