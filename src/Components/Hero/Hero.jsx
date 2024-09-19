@@ -68,9 +68,9 @@ const Hero = () => {
             setLoading(false);
           })
           .catch(error => {
-            console.error('Error:', error);
+            // console.error('Error:', error);
             setLoading(false);
-            console.log(error);
+            // console.log(error);
             
             toast.error("An error occurred while sending your distress alert. Please try again.");
           });

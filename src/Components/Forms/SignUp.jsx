@@ -2,14 +2,12 @@ import React, { useState } from 'react'
 import "./signup.css"
 import alert from "../../assets/AlertifyLogo.svg"
 import { FaEye } from "react-icons/fa6";
-// import { TiEyeOutline } from "react-icons/ti";
 import { FaRegEyeSlash } from "react-icons/fa";
 import { Toaster, toast } from 'react-hot-toast';
-
-
-import SignUpImage from './SignUpImage';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
+
 
 const SignUp = () => {
   const [continueSignUp, setContinueSignUp] = useState(0)
@@ -23,9 +21,7 @@ const SignUp = () => {
   const [phoneNumber, setPhoneNumber] = useState('')
   const [gender, setGender] = useState()
   const [loading,setLoading] = useState(false)
-
   const [confirmPassword, setConfirmPassword] = useState("");
-  // const [passwordCheck, setPasswordCheck] = useState(false)
   const [passwordErrorlow, setPasswordErrorLow] = useState("");
   const [passwordErrorUpper, setPasswordErrorUpper] = useState();
   const [passwordErrorNumber, setPasswordErrorNumber] = useState();
@@ -36,8 +32,6 @@ const SignUp = () => {
   const [showStrengthBar, setShowStrengthBar] = useState(false);
   const [confirmPasswordError, setConfirmPasswordError] = useState()
   const [fullName, setFullName] = useState('')
-
-
   const [emergencyContacts, setEmergencyContacts] = useState([
     {
       name: "",
@@ -114,32 +108,13 @@ const SignUp = () => {
       setConfirmPasswordError(""); // Clear message when passwords match
     }
   };
-  const data = {
-    fullName,
-    email,
-    address,
-    gender,
-    phoneNumber,
-    password,
-    confirmPassword,
-    emergencyContacts
-  }
 
-  // const Continue = ()=>{
-  //   if (!fullName || !email || !address || !phoneNumber || !password || !confirmPassword || !gender) {
-  //     toast.error("Please fill out all fields")
-  //     return
-  //   }
-  //   setContinueSignUp(1)
-  // }
+  
   const Continue = () => {
-    // Regular expression for email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     
-    // Regular expression for special characters
     const specialCharRegex = /[!@#$%^&*(),.?":{}|<>]/;
   
-    // Validation checks
     if (!fullName) {
       toast.error("Full Name is required");
       return;
@@ -208,13 +183,16 @@ const SignUp = () => {
   
 
 
+
 const handleSubmit = async (e) => {
-  e.preventDefault()
+  e.preventDefault();
 
   const validEmergencyContacts = emergencyContacts.filter(
     contact => contact.name && contact.phoneNumber && contact.email
-  )
-setLoading(true)
+  );
+  
+  setLoading(true);
+
   try {
     const data = {
       fullName,
@@ -224,23 +202,36 @@ setLoading(true)
       phoneNumber,
       password,
       confirmPassword,
-      emergencyContacts: validEmergencyContacts // Only send valid contacts
+      emergencyContacts: validEmergencyContacts
+    };
+
+    const response = await axios.post("https://alertify-9tr5.onrender.com/api/v1/user/sign-up", data);
+    
+    Swal.fire({
+      title: 'Success!',
+      text: response.data.message,
+      icon: 'success',
+      confirmButtonText: 'OK'
+    });
+    console.log(response.data);
+
+  } catch (error) {
+    console.log(error);
+
+    if (error.response) {
+      toast.error(error.response.data.message || "An error occurred during signup.");
+      console.error(error.response.data);
+    } else {
+      toast.error(error.message || "An error occurred.");
+      console.error("Error:", error.message);
     }
 
-
-    const response = await axios.post("https://alertify-9tr5.onrender.com/api/v1/user/sign-up", data)
-    toast(response.response.response)
-    // console.log(response)
-    // Handle successful signup (e.g., redirect or show a success message)
-  } catch (error) {
-    // console.log(error)
-     toast.error(error.message)
-    toast.error(error.response.data.message);
-    
-    // toast.error("Signup failed, please try again")
-    setLoading(false)
+  } finally {
+    setLoading(false);
   }
-}
+};
+
+
 const Navigate = useNavigate()
   return (
     <div className="signupbody">
@@ -267,6 +258,7 @@ const Navigate = useNavigate()
                       type="text"
                       placeholder="Fullname"
                       className="fullnameInput"
+                      required={true}
                       onChange={((e)=>setFullName(e.target.value))}
                     />
                   </div>
@@ -275,11 +267,15 @@ const Navigate = useNavigate()
                       type="text"
                       placeholder="Address"
                       className="fullnameInput"
+                      required={true}
+
                       onChange={((e)=>setAddress(e.target.value))}
 
                     />
                   </div>
                   <select name="geneder" className="fullnameInputDiv"
+                      required={true}
+
                   onChange={((e)=>setGender(e.target.value))}>
                     <option value="">Select Gender</option>
                     <option value="male">Male</option>
@@ -290,6 +286,8 @@ const Navigate = useNavigate()
                       type="number"
                       placeholder="Phone Number"
                       className="fullnameInput"
+                      required={true}
+
                       onChange={((e) => setPhoneNumber(e.target.value))}
 
                     />
@@ -300,6 +298,8 @@ const Navigate = useNavigate()
                       type="email"
                       placeholder="Email"
                       className="fullnameInput"
+                      required={true}
+
                     />
                     {emailErrorShow ? (
                       <p style={{ color: "red" }}>{emailError}</p>
@@ -310,6 +310,8 @@ const Navigate = useNavigate()
                       type={showEye ? "password" : "text"}
                       placeholder="Password"
                       className="passwordInput"
+                      required={true}
+
                       onChange={handlePassword}
                       onFocus={() => setPasswordFocused(true)}
                       onBlur={() => setPasswordFocused(false)}
@@ -329,6 +331,8 @@ const Navigate = useNavigate()
                       type={showEye ? "password" : "text"}
                       placeholder="ConfirmPassword"
                       className="passwordInput"
+                      required={true}
+
                       onChange={HandleConfirmPassword}
 
 
@@ -357,7 +361,7 @@ const Navigate = useNavigate()
                         }}
                       />
                     </div>
-                  )}
+                  )}\
                   {passwordFocused && showStrengthBar && (
                     <p className="passwordStrengthLabel">{strengthLabel}</p>
                   )}
