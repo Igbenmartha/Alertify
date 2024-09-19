@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import "./ModalProfileStyle.css"
 import { useSelector } from 'react-redux'
+import toast, { Toaster } from 'react-hot-toast'
 
 const ModalProfile = ({setToggle}) => {
     const [name,setName]= useState('')
@@ -26,33 +27,43 @@ const ModalProfile = ({setToggle}) => {
           .then(response => response.json())
           .then(data => {
             console.log(data); 
-            console.log(data.message)
+            toast.success(data.message)
             setLoading(false) 
           })
           .catch(error => {
-            console.error('Error:', error);  
+            console.log(error);
+            
+            toast.error( error.message);  
             setLoading(false)
           });
     }
   return (
     <div className='ModalProfile'>
+      <Toaster/>
         <div className='ModalProfile-inner'>
-            <div className='modalprofile-close' onClick={(()=>setToggle(false))}>X</div>
+          <div className='ModalProfile-header'>Add trusted contacts and mails</div>
+            {/* <div className='modalprofile-close' onClick={(()=>setToggle(false))}>X</div> */}
             <div className='div-holder'>
-               <div className='div-holdername'>Name:</div>
-                <input type="text" onChange={((e)=>setName(e.target.value))} />
-            </div>
-            <div className='div-holder'>
-                
-            <div className='div-holdername'>Email:</div>
 
-                <input type="email" onChange={((e)=>setEmail(e.target.value))}/>
+                <input type="text" 
+                placeholder='Contact name'
+                onChange={((e)=>setName(e.target.value))} />
             </div>
             <div className='div-holder'>
                 
-            <div className='div-holdername'>Number:</div>
+
+                <input type="email"
+                placeholder='Emergency Contact'
+
+                 onChange={((e)=>setEmail(e.target.value))}/>
+            </div>
+            <div className='div-holder'>
+                
             
-                <input type="text"  onChange={((e)=>setPhoneNumber(e.target.value))}/>
+                <input type="text" 
+                placeholder='Emergency Mail'
+
+                 onChange={((e)=>setPhoneNumber(e.target.value))}/>
             </div>
             <button className='ModalProfile-addBtn' onClick={addEmergencyContact}>{!loading? "Add":"loading..."}</button>
         </div>

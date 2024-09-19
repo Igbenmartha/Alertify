@@ -8,10 +8,12 @@ import { FiMenu } from "react-icons/fi"; // Import burger menu icon
 import BuggerMenu from '../BuggerMenu/BuggerMenu';
 import { useSelector } from 'react-redux';
 import axios from 'axios';
+import Setting from './Setting';
 
 const Header = () => {
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [setting,setSetting] = useState(false)
 
   const toggleMenu = () => {
     setMenuOpen(true);
@@ -130,8 +132,11 @@ const Header = () => {
               <div className='Header-Profile'>
                 <div className='Header-profile-inner'>
                   <div className='Header-username-holder'>
-                    <CgProfile className='Cg' onClick={(() => navigate(`/profile`))} />
-                  </div>
+                    <CgProfile className='Cg' onMouseEnter={(() => setSetting(true))} />
+                  </div> 
+                  {
+                    setting? <Setting setSetting={setSetting}/>: null
+                  }
                   <div className='Header-username-textholder'>
                     <h6 onClick={userDetail}>igben oghenfejiro</h6>
                     {/* <p>igbenji@gmail.com</p> */}

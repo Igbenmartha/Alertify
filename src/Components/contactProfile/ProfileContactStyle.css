@@ -28,7 +28,7 @@ border: 1px solid  #072ACB;
     height: max-content;
     display: flex;
     flex-wrap: wrap;
-    gap:20px;
+    gap:70px;
     justify-content: center;
 }
 .ProfileContactBoxCont{
@@ -69,24 +69,42 @@ align-items: center;
 .ProfileContactBtnDiv{
     width: 100%;
     height: 25%;
-    /* background-color: aqua; */
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.ProfileContacEditBtn,
+.ProfileContacEditBtn{
+    
+        width: 20%;
+        height: 31px;
+        color: #072AC8;
+        font-family: Poppins;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        border-radius: 5px;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        
+}
 .ProfileContacDeleteBtn
 {
 width: 20%;
 height: 31px;
-color: #FFF;
+color: #EF233C;
+display: flex;
+align-items: center;
+justify-content: flex-start;
+
 font-family: Poppins;
 font-size: 14px;
 font-style: normal;
 font-weight: 700;
 line-height: normal;
 border-radius: 5px;
-background: #072AC8;
 border: none;
 }
 @media screen  and (max-width:900px){
