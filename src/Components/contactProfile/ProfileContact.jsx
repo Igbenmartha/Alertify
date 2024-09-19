@@ -8,7 +8,11 @@ const ProfileContact = () => {
   return (
     <div className='ProfileContact'> 
     
-        <button className='ProfileCatAddBtn' onClick={(()=>setToggle(true))}>Add contact</button>
+        
+        {
+            toggle ?<ModalProfile setToggle={setToggle}/> : 
+            <>
+            <button className='ProfileCatAddBtn' onClick={(()=>setToggle(true))}>Add contact</button>
         <div className='ProfileContactBoxHolder'>
         {
             item.map(()=>
@@ -23,15 +27,14 @@ const ProfileContact = () => {
                  Email: <span> Joedoeeeee@gmail.com</span>
             </div>
             <div className='ProfileContactBtnDiv'>
-                <button className='ProfileContacEditBtn'>Edit</button>
-                <button className='ProfileContacDeleteBtn'>Delete</button>
+                <div className='ProfileContacDeleteBtn'>Delete</div>
+                <div className='ProfileContacEditBtn'>Edit</div>
             </div>
         </div>
             )
         }
         </div>
-        {
-            toggle ?<ModalProfile setToggle={setToggle}/> : null
+            </>
         }
         
        

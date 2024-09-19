@@ -46,7 +46,7 @@ const Footer = () => {
                 </div>
                 <div className='Footer-section-2c'>
                 <div className='Fotter-section2-NewsHolder'>News Letter</div>
-                    <button className='suscribeBtn'>Suscribe</button>
+                    <button className='suscribeBtn'>Subscribe</button>
                 </div>
                 
                 

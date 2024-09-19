@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import "./ProfileStyle.css";
 
 import Profile from '../../Components/profiler/Profile';
+import Header  from '../../Components/Header/Header'
 import ProfileContact from '../../Components/contactProfile/ProfileContact';
 
 const ProfilePage = () => {
@@ -13,6 +14,7 @@ const ProfilePage = () => {
             <div className='ProfilePageHeader'>
                 <div className='ProfileLogo'></div>
             </div>
+         <div className='Mobile-header'></div>
             <div className='Profile-Main'>
                 <div className='Profile-SubHeader'>
                     <button className= {`ProfileCatBtn ${activeComponent ? 'active' :''}`}
