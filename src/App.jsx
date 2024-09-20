@@ -16,32 +16,40 @@ import DashboardHolder from './DashboardHome/DashboardHolder'
 import Reset from './Reset/Reset'
 import Description from '../Description/Description'
 import UserPrivate from './Components/Route/UserPrivate'
+import SettingLayout from './Pages/ProfilePage/SettingLayout'
+import Profile from './Components/profiler/Profile'
+import ProfileContact from './Components/contactProfile/ProfileContact'
 
 const App = () => {
   return (
-   <HashRouter>
-    <Routes>
-      <Route element={<Layout/>} >
-      <Route path= "/" element={<HomePage/>}/>
-      <Route path= "contact" element={<Holder/>}/>
-      <Route path= "emergency" element={<EmergencyHolder/>}/>
-      <Route path='about' element= {<AboutUs/>}/>
+    <HashRouter>
+      <Routes>
+        <Route element={<Layout />} >
+          <Route path="/" element={<HomePage />} />
+          <Route path="contact" element={<Holder />} />
+          <Route path="emergency" element={<EmergencyHolder />} />
+          <Route path='about' element={<AboutUs />} />
 
-      </Route>
-      <Route element= {<UserPrivate/>}>
-      <Route path= "profile/" element={<ProfilePage/>}/>
+        </Route>
+        <Route element={<UserPrivate />}>
+        <Route element={<SettingLayout/>}>
+        
+          <Route path="profile-setting/" element={<Profile />} />
+          <Route path="contact-setting/" element={<ProfileContact />} />
 
-      </Route>
-      <Route path= "signup" element={<SignUp/>}></Route>
-      <Route path= "login" element={<Login/>}></Route>
-      <Route path= "signupimage" element={<SignUpImage/>}></Route>
-        <Route path="dashboard" element={<DashboardHolder/>}></Route>  
-    </Routes>
-   </HashRouter>
-  
-  
-  
-  
+        </Route>
+
+        </Route>
+        <Route path="signup" element={<SignUp />}></Route>
+        <Route path="login" element={<Login />}></Route>
+        <Route path="signupimage" element={<SignUpImage />}></Route>
+        <Route path="dashboard" element={<DashboardHolder />}></Route>
+      </Routes>
+    </HashRouter>
+
+
+
+
     //  <Reset/>
 
 
