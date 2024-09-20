@@ -88,7 +88,7 @@ const Profile = () => {
     //     formData.append('phoneNumber', phoneNumber);
     //     formData.append('address', address);
     //     if (profilePic) {
-    //         formData.append('profilePic', profilePic); // Append the file object
+    //         formData.append('profilePic', profilePic);
     //     }
         
     //     fetch(`https://alertify-9tr5.onrender.com/api/v1/user/update`, {  
@@ -177,7 +177,7 @@ const Profile = () => {
                     <div className='Div-btn'>
 
                         <button className='ProfileUpdbtn' onClick={(()=>setEdit(false))}>Cancel</button>
-                        <button className='ProfileUpdbtn'>Update Profile</button>
+                        <button className='ProfileUpdbtn'onClick={updateProfile}>Update Profile</button>
                     </div>
                 ) : (
                     <button className='ProfileEditbtn' onClick={startEditMode}>Edit Profile</button>

@@ -235,7 +235,7 @@ const handleSubmit = async (e) => {
 const Navigate = useNavigate()
   return (
     <div className="signupbody">
-      <form className="signupbodyInner" onSubmit={handleSubmit}>
+      <form className="signupbodyInner" >
         <Toaster />
         {
           continueSignUp === 0 ? (
@@ -446,7 +446,7 @@ const Navigate = useNavigate()
                   </div> */}
                   <button
                     className="newNextButton"
-                    type='submit'
+                   onClick={handleSubmit}
                   >
                     {!loading? "Sign Up": "Loading..."}
                   </button>
