@@ -19,6 +19,7 @@ import UserPrivate from './Components/Route/UserPrivate'
 import SettingLayout from './Pages/ProfilePage/SettingLayout'
 import Profile from './Components/profiler/Profile'
 import ProfileContact from './Components/contactProfile/ProfileContact'
+import ModalProfile from './Components/ModalProfile/ModalProfile'
 
 const App = () => {
   return (
@@ -36,6 +37,8 @@ const App = () => {
         
           <Route path="profile-setting/" element={<Profile />} />
           <Route path="contact-setting/" element={<ProfileContact />} />
+          <Route path="add-emergency-contact/" element={<ModalProfile />} />
+          
 
         </Route>
 
