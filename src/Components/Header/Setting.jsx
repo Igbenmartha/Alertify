@@ -25,11 +25,11 @@ const Setting = ({setSetting}) => {
     // }
   return (
     <div className='Setting' onMouseLeave={(()=>setSetting(false))}>
-        <div className='Setting-holder' >
+        <div className='Setting-holder' onClick={handleSetting}>
             <div className='setting-icon-holder'></div>
             Setting
         </div>
-        <div className='Setting-holder'onClick={Logout}>
+        <div className='Setting-holder'>
             <div className='setting-logout'></div>
             Logout
         </div>
