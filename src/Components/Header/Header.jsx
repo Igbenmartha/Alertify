@@ -14,37 +14,39 @@ const Header = () => {
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
   const [setting,setSetting] = useState(false)
+  const [user,setUser]= useState({})
 
   const toggleMenu = () => {
     setMenuOpen(true);
   };
   const token = useSelector((state) => state.user.token)
-  const userId = useSelector((state) => state.user.id)
   // console.log(token);
   // const {userId} = useParams();
   // const userId = localStorage.getItem('userId');
 
-  console.log("this is happening", userId);
-
-  const userDetail = () => {
+  // console.log("this is happening", userId);
   // const url = "https://alertify-9tr5.onrender.com/api/v1/user"
 
-    fetch(`https://alertify-9tr5.onrender.com/api/v1/user/one/${userId}`, {  
+  const userDetail = () => {
+
+    fetch(`https://alertify-9tr5.onrender.com/api/v1/user/one`, {  
       method: "GET",  
       headers: {
         "Content-Type": "application/json",
-        // "Authorization": `Bearer ${token}`, 
+        "Authorization": `Bearer ${token}`, 
       },
     })
     .then(response => response.json())
     .then(data => {
-      console.log(data);  
+      setUser(data.data);  
     })
     .catch(error => {
       console.error('Error:', error);  
     });
   };
-  
+  useEffect(()=>{
+    userDetail()
+  },[])
 
 
 //   const userDetail = async (e) => {
@@ -138,13 +140,13 @@ const Header = () => {
                     setting? <Setting setSetting={setSetting}/>: null
                   }
                   <div className='Header-username-textholder'>
-                    <h6 onClick={userDetail}>igben oghenfejiro</h6>
+                    <h6>{user.fullName}</h6>
                     {/* <p>igbenji@gmail.com</p> */}
                   </div>
 
                 </div>
 
-                <button className='EmergencyCtbtn'> Emergency Contact</button>
+                <button className='EmergencyCtbtn'onClick={(()=>navigate('/emergency'))}> Emergency Service</button>
 
               </div>
             </div>
@@ -156,7 +158,7 @@ const Header = () => {
                 <p onClick={(() => navigate('/signup'))}>Sign Up</p>
               </div>
               <button className='EmergencyCtbtn' onClick={() => navigate('/emergency')}>
-                Emergency Contact
+                Emergency Services
               </button>
             </div>
           )

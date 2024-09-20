@@ -361,7 +361,7 @@ const Navigate = useNavigate()
                         }}
                       />
                     </div>
-                  )}\
+                  )}
                   {passwordFocused && showStrengthBar && (
                     <p className="passwordStrengthLabel">{strengthLabel}</p>
                   )}
