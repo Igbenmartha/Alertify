@@ -212,8 +212,12 @@ const handleSubmit = async (e) => {
       text: response.data.message,
       icon: 'success',
       confirmButtonText: 'OK'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        navigate('/login'); 
+      }
     });
-    console.log(response.data);
+    // console.log(response.data);
 
   } catch (error) {
     console.log(error);
@@ -223,7 +227,7 @@ const handleSubmit = async (e) => {
       console.error(error.response.data);
     } else {
       toast.error(error.message || "An error occurred.");
-      console.error("Error:", error.message);
+      // console.error("Error:", error.message);
     }
 
   } finally {

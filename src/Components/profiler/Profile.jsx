@@ -40,14 +40,14 @@ const Profile = () => {
         })
             .then(response => response.json())
             .then(data => {
-                console.log(data);
+                // console.log(data);
                 setUser(data.data);
                 setFullName(data.data.fullName);
                 setAddress(data.data.address);
                 setPhoneNumber(data.data.phoneNumber);
             })
             .catch(error => {
-                console.error('Error:', error);
+                // console.error('Error:', error);
             });
     };
 
@@ -73,11 +73,11 @@ const Profile = () => {
                     "Authorization": `Bearer ${token}`,
                 },
             });
-            console.log(response.data);
+            // console.log(response.data);
             setEdit(false);
             userDetail();
         } catch (error) {
-            console.error('Error updating profile:', error);
+            // console.error('Error updating profile:', error);
         }
     };
 

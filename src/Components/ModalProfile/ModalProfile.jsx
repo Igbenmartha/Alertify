@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import "./ModalProfileStyle.css"
 import { useSelector } from 'react-redux'
 import toast, { Toaster } from 'react-hot-toast'
+import { useNavigate } from 'react-router-dom'
 
 const ModalProfile = ({setToggle}) => {
     const [name,setName]= useState('')
@@ -10,6 +11,7 @@ const ModalProfile = ({setToggle}) => {
     const [loading,setLoading]= useState(false)
 
     const token = useSelector((state) => state.user.token)
+    const Nav = useNavigate()
 
     const addEmergencyContact=()=>{
         const data={name,email,phoneNumber}
@@ -26,8 +28,11 @@ const ModalProfile = ({setToggle}) => {
           })
           .then(response => response.json())
           .then(data => {
-            console.log(data); 
+            // console.log(data); 
             toast.success(data.message)
+            setTimeout(()=>{
+              Nav('/contact-setting')
+            },2000)
             setLoading(false) 
           })
           .catch(error => {

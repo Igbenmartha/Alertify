@@ -43,11 +43,11 @@ const Header = () => {
     .then(data => {
       setUser(data.data);  
       setProfilePic(data.data.profilePic);
-      console.log(data);
+      // console.log(data);
       
     })
     .catch(error => {
-      console.error('Error:', error);  
+      // console.error('Error:', error);  
     });
   };
   useEffect(()=>{
