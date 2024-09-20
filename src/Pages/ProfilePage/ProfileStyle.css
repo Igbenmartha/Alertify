@@ -62,6 +62,11 @@
     border: 1px solid #072ACB;
     border: none;
 }
+.ProfileEmgBtn,
+.ProfileCatBtn:hover{
+    cursor: pointer;
+ }
+    
 
 .ProfileEmgBtn {
     width: 34%;
@@ -80,7 +85,10 @@
 .active{
     background-color: #072ACB;
     color: white;
-}  
+} 
+.ProfileLogo:hover{
+    cursor: pointer;
+} 
 @media screen  and (max-width:900px){
     .Profile {
         gap:30px;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./profilerStyle.css"
 import cam from "../../assets/Cameraa.svg";
 import person from "../../assets/person.png";
@@ -9,28 +9,24 @@ import axios from 'axios';
 const Profile = () => {
     const [imgP, setImgP] = useState(null);
     const [edit, setEdit] = useState(false);
-    const [profileData, setProfileData] = useState({
-        name: 'John Doe',
-        address: "46, community road",
-        gender: "female",
-        phoneNumber: "08099475775",
-        email: 'john@example.com',
-    });
+    const [user,setUser] = useState({})
+    const [fullName,setFullName] = useState('')
+    const [profilePic, setProfilePic] = useState(null);
+    const [address,setAddress] = useState('')
+    const [phoneNumber,setPhoneNumber] = useState('')
+   
 
-    const [editData, setEditData] = useState({
-        name: profileData.name,
-        email: profileData.email,
-        address: profileData.address,
-        gender: profileData.gender,
-        phoneNumber: profileData.phoneNumber,
-    });
+
+    const userId = useSelector((state) => state.user.id)
 
     const posting = (e) => {
         const file = e.target.files[0];
         const img = URL.createObjectURL(file);
         setImgP(img);
+        setProfilePic(file)
         console.log(img);
     };
+
 
     // Update editData as user types
     const handleInputChange = (e) => {
@@ -40,18 +36,85 @@ const Profile = () => {
             [name]: value, // Dynamically update the corresponding field
         });
     };
+    const startEditMode = () => {
+        setFullName(user.fullName || '');
+        setPhoneNumber(user.phoneNumber || '');
+        setAddress(user.address || '');
+    
+        if (user.profilePic) {
+            setProfilePic(user.profilePic);
+        } else {
+            setProfilePic(person);
+        }
+    
+        setEdit(true);
+    };
+
 
     // Function to handle updating profile data
     const handleUpdateProfile = () => {
         setProfileData(editData); // Save edited data
         setEdit(false); // Exit edit mode
     };
+  const token = useSelector((state) => state.user.token)
+
+    const userDetail = () => {
+
+        fetch(`https://alertify-9tr5.onrender.com/api/v1/user/one`, {  
+          method: "GET",  
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`, 
+          },
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            
+          setUser(data.data);  
+        })
+        .catch(error => {
+          console.error('Error:', error);  
+        });
+      };
+      useEffect(()=>{
+        userDetail()
+      },[])
+
+
+    //   const updateProfile = ()=>{
+    //     const formData = new FormData();
+    //     formData.append('fullName', fullName);
+    //     formData.append('phoneNumber', phoneNumber);
+    //     formData.append('address', address);
+    //     if (profilePic) {
+    //         formData.append('profilePic', profilePic); // Append the file object
+    //     }
+        
+    //     fetch(`https://alertify-9tr5.onrender.com/api/v1/user/update`, {  
+    //         method: "PUT",  
+    //         headers: {
+    //           "Content-Type": "application/json",
+    //           "Authorization": `Bearer ${token}`, 
+    //         },
+    //         body:formData
+    //       })
+    //       .then(response => response.json())
+    //       .then(data => {
+    //           console.log(data);
+              
+    //         setUser(data.data);  
+    //       })
+    //       .catch(error => {
+    //         console.error('Error:', error);  
+    //       });
+    //   }
 
   return (
     <div className='Profile-MainBody'>
     <div className='profileImg'>
         
-        {imgP ? <img src={imgP} alt="" /> : <img src={person} alt="" />}
+        {imgP? <img src={imgP} alt="" /> : <img src={person} alt="" />}
         <label htmlFor="i">
             {
                 edit? 
@@ -72,11 +135,11 @@ const Profile = () => {
                     type="text"
                     className='Profile-input'
                     name="name" // Add a name to match with state key
-                    value={editData.name}
-                    onChange={handleInputChange} // Add onChange handler
+                    value={fullName}
+                    onChange={((e)=>setFullName(e.target.value))} // Add onChange handler
                 />
             ) : (
-                <div className='ProfileText'>{profileData.name}</div>
+                <div className='ProfileText'>{user.fullName}</div>
             )}
         </div>
                 <div className='InputHolder'>
@@ -86,33 +149,38 @@ const Profile = () => {
                             type="text"
                             className='Profile-input'
                             name="phoneNumber"
-                            value={editData.phoneNumber}
-                            onChange={handleInputChange}
+                            value={phoneNumber}
+                            onChange={((e)=>setPhoneNumber(e.target.value))}
                         />
                     ) : (
-                        <div className='ProfileText'>{profileData.phoneNumber}</div>
+                        <div className='ProfileText'>{user.phoneNumber}</div>
                     )}
                 </div>
-
                 <div className='InputHolder'>
-                    <p>Email:</p>
+                    <p>Address:</p>
                     {edit ? (
                         <input
                             type="text"
                             className='Profile-input'
-                            name="email"
-                            value={editData.email}
-                            onChange={handleInputChange}
+                            name="phoneNumber"
+                            value={address}
+                            onChange={((e)=>setAddress(e.target.value))}
                         />
                     ) : (
-                        <div className='ProfileText'>{profileData.email}</div>
+                        <div className='ProfileText'>{user.address}</div>
                     )}
                 </div>
 
+             
+
                 {edit ? (
-                    <button className='ProfileUpdbtn' onClick={handleUpdateProfile}>Update Profile</button>
+                    <div className='Div-btn'>
+
+                        <button className='ProfileUpdbtn' onClick={(()=>setEdit(false))}>Cancel</button>
+                        <button className='ProfileUpdbtn'>Update Profile</button>
+                    </div>
                 ) : (
-                    <button className='ProfileEditbtn' onClick={() => setEdit(true)}>Edit Profile</button>
+                    <button className='ProfileEditbtn' onClick={startEditMode}>Edit Profile</button>
                 )}
             </div>
         </div>
