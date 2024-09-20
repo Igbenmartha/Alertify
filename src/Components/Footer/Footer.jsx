@@ -39,7 +39,7 @@ const Footer = () => {
                
                 <div className='Fotter-section2-ContactHolder'>CONTACT INFORMATION</div>
                 <div className='Footer-section2-infoHolder'>
-                        <p>Info@InciWatch.com</p>
+                        <p>alertifyfirm@gmail.com</p>
                         <p>+234-000-000-0000-Ajeromi
                         Ifelodun, Lagos State</p>
                     </div>

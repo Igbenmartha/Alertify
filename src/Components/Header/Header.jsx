@@ -9,12 +9,15 @@ import BuggerMenu from '../BuggerMenu/BuggerMenu';
 import { useSelector } from 'react-redux';
 import axios from 'axios';
 import Setting from './Setting';
+import person from "../../assets/person.png";
 
 const Header = () => {
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
   const [setting,setSetting] = useState(false)
   const [user,setUser]= useState({})
+  const [profilePic, setProfilePic] = useState(null); 
+
 
   const toggleMenu = () => {
     setMenuOpen(true);
@@ -39,6 +42,9 @@ const Header = () => {
     .then(response => response.json())
     .then(data => {
       setUser(data.data);  
+      setProfilePic(data.data.profilePic);
+      console.log(data);
+      
     })
     .catch(error => {
       console.error('Error:', error);  
@@ -83,14 +89,14 @@ const Header = () => {
               <div className='Header-Profile'>
                 <div className='Header-profile-inner'>
                   <div className='Header-username-holder'>
-                    <CgProfile className='Cg' onMouseEnter={(() => setSetting(true))} />
+                    <img src={profilePic ? profilePic : person} alt=""   className='Cg' onMouseEnter={(() => setSetting(true))}/>
+                    {/* <CgProfile className='Cg' onMouseEnter={(() => setSetting(true))} /> */}
                   </div> 
                   {
                     setting? <Setting setSetting={setSetting}/>: null
                   }
                   <div className='Header-username-textholder'>
-                    {/* <h6>{user.fullName}</h6> */}
-                    {/* <h6>{user.fullName}</h6> */}
+                    <h6>{user.fullName}</h6>
                     {/* <p>igbenji@gmail.com</p> */}
                   </div>
 

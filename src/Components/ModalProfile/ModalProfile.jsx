@@ -53,7 +53,7 @@ const ModalProfile = ({setToggle}) => {
                 
 
                 <input type="email"
-                placeholder='Emergency Contact'
+                placeholder='Emergency Email'
 
                  onChange={((e)=>setEmail(e.target.value))}/>
             </div>
@@ -61,7 +61,8 @@ const ModalProfile = ({setToggle}) => {
                 
             
                 <input type="text" 
-                placeholder='Emergency Mail'
+                placeholder='Emergency Contact'
+             
 
                  onChange={((e)=>setPhoneNumber(e.target.value))}/>
             </div>

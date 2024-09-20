@@ -9,6 +9,16 @@ import { useNavigate } from 'react-router-dom';
 const ProfilePage = () => {
     const [activeComponent, setActiveComponent] = useState('true');
     const Nav = useNavigate()
+    const personal = ()=>{
+        Nav("/profile-setting")
+        setActiveComponent(true)
+
+    }
+    const contact = ()=>{
+        Nav("/contact-setting")
+        setActiveComponent(false)
+
+    }
    
 
     return (
@@ -20,15 +30,15 @@ const ProfilePage = () => {
             <div className='Profile-Main'>
                 <div className='Profile-SubHeader'>
                     <button className= {`ProfileCatBtn ${activeComponent ? 'active' :''}`}
-                     onClick={(()=>setActiveComponent(true))}>Personal details</button>
+                     onClick={personal}>Personal details</button>
                     <button className=  {`ProfileEmgBtn ${!activeComponent ? 'active' :''}`}
-                    onClick={(()=>setActiveComponent(false))}>Emergency contact detail</button>
+                    onClick={contact}>Emergency contact detail</button>
                 </div>
-                {
+                {/* {
                
                activeComponent? <Profile/> :
                <ProfileContact/>
-                }
+                } */}
             </div>
         </div>
     );
