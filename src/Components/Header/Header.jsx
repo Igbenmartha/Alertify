@@ -49,57 +49,6 @@ const Header = () => {
   },[])
 
 
-//   const userDetail = async (e) => {
-//     e.preventDefault();
-//     const url = "https://alertify-9tr5.onrender.com/api/v1/user"
-//     const userId = "your-user-id";
-// const token = "your-jwt-token";
-
-
-
-//     try {
-//         const res = await axios.get(`${url}/one/:${userId}`,
-//           headers:{
-//             'Content-type': "application/json"
-//           },
-
-
-//         )
-//         console.log(res);
-
-//     } catch (error) {
-//             console.log(error);
-
-//     }
-//   }
-
-  // const userDetail = async (e) => {
-  //   e.preventDefault();
-  //   const url = "https://alertify-9tr5.onrender.com/api/v1/user";
-
-  //   if (!userId) {
-  //     console.error('userId is not defined');
-  //     return;
-  //   }
-
-  //   console.log(`Requesting URL: ${url}/${userId}`);
-
-  //   try {
-  //     const res = await axios.get(`${url}/${userId}`);
-  //     console.log('API Response:', res);
-  //   } catch (error) {
-  //     console.error('API Error:', error);
-  //   }
-  // }
-  // useEffect(()=>{
-  //   userDetail()
-  // },[])
-
-  // useEffect(() => {
-  //   if (userId) {
-  //     userDetail();
-  //   }
-  // }, [userId]);
   return (
     <div className='Header'>
       <div className='Header-inner'>
@@ -140,7 +89,8 @@ const Header = () => {
                     setting? <Setting setSetting={setSetting}/>: null
                   }
                   <div className='Header-username-textholder'>
-                    <h6>{user.fullName}</h6>
+                    {/* <h6>{user.fullName}</h6> */}
+                    {/* <h6>{user.fullName}</h6> */}
                     {/* <p>igbenji@gmail.com</p> */}
                   </div>
 
