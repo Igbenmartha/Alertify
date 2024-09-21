@@ -43,11 +43,9 @@ const Header = () => {
     .then(data => {
       setUser(data.data);  
       setProfilePic(data.data.profilePic);
-      // console.log(data);
       
     })
     .catch(error => {
-      // console.error('Error:', error);  
     });
   };
   useEffect(()=>{
@@ -90,7 +88,6 @@ const Header = () => {
                 <div className='Header-profile-inner'>
                   <div className='Header-username-holder'>
                     <img src={profilePic ? profilePic : person} alt=""   className='Cg' onMouseEnter={(() => setSetting(true))}/>
-                    {/* <CgProfile className='Cg' onMouseEnter={(() => setSetting(true))} /> */}
                   </div> 
                   {
                     setting? <Setting setSetting={setSetting}/>: null

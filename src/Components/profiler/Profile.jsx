@@ -162,7 +162,7 @@ const Profile = () => {
                 {edit ? (
                     <div className='Div-btn'>
                         <button className='ProfileUpdbtn' onClick={() => setEdit(false)}>Cancel</button>
-                        <button className='ProfileUpdbtn' onClick={updateProfile}>Update Profile</button>
+                        <button className='ProfileUpdbtn' onClick={updateProfile}>Update</button>
                     </div>
                 ) : (       <button className='ProfileEditbtn' onClick={() => setEdit(true)}>Edit Profile</button>
             )}

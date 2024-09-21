@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "./BuggerStyle.css";
 import { AiOutlineClose } from "react-icons/ai";
 import home from "../../assets/home.svg";
@@ -7,12 +7,19 @@ import contact from "../../assets/contact.svg";
 import emergent from "../../assets/emergent.svg";
 import setting from "../../assets/setting.svg";
 import logout from "../../assets/logout.svg";
+import signup from "../../assets/signup.svg";
 import person from "../../assets/person.png";
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 const BuggerMenu = ({ menuOpen, setMenuOpen }) => {
+    const [user,setUser]= useState({})
+    const [profilePic, setProfilePic] = useState(null); 
+  
+
+
     const navigate = useNavigate();
+
     
     const closeMenu = () => {
         setMenuOpen(false);
@@ -24,6 +31,28 @@ const BuggerMenu = ({ menuOpen, setMenuOpen }) => {
     };
 
     const token = useSelector((state)=>state.user.token)
+    const userDetail = () => {
+
+        fetch(`https://alertify-9tr5.onrender.com/api/v1/user/one`, {  
+          method: "GET",  
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`, 
+          },
+        })
+        .then(response => response.json())
+        .then(data => {
+          setUser(data.data);  
+          setProfilePic(data.data.profilePic);
+          
+        })
+        .catch(error => {
+        });
+      };
+      useEffect(()=>{
+        userDetail()
+      },[])
+    
 
     return (
         <div className={`BuggerMenu ${menuOpen ? 'open' : ''}`}>
@@ -33,11 +62,15 @@ const BuggerMenu = ({ menuOpen, setMenuOpen }) => {
                 </div>
                 <div className='bugger-profile-holder'>
                     <div className='bugger-profile'>
-                        <img src={person} alt="person" />
+                    <img src={profilePic ? profilePic : person} alt=""   />
+
                     </div>
                     <div className='bugger-profile-text-holder'>
-                        <h5>Username</h5>
-                        <p>username@gmail.com</p>
+                        <h5>
+                            {
+                                user?  user.fullName :"userName"
+                            }
+                        </h5>
                     </div>
                 </div>
             </div>
@@ -80,10 +113,18 @@ const BuggerMenu = ({ menuOpen, setMenuOpen }) => {
             <>
             
             <div className='bugger-main-div'  onClick={handleNavigation("/login")}>
-                      Login
+            <div className='bugger-icon'>
+            <img src={signup} alt="" />
+
+            </div>
+                   <p>Sign Up</p>
                     </div>
                     <div className='bugger-main-div' onClick={handleNavigation("/signup")}>
-                      Sign Up
+                    <div className='bugger-icon'>
+            <img src={logout} alt="" />
+
+            </div>
+                 <p>Login</p>
                     </div>
             </>
 
