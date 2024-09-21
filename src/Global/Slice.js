@@ -7,7 +7,8 @@ const Slice = createSlice({
         
         id: "",
         token: "",
-        isAdmin: ""
+        isAdmin: "",
+        contactId : ""
         
     },
     reducers:{
@@ -24,6 +25,7 @@ const Slice = createSlice({
          admin:(state,action)=> {
         state.token = action.payload;
     },
+   
         
 
         

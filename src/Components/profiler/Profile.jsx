@@ -4,6 +4,9 @@ import cam from "../../assets/Cameraa.svg";
 import person from "../../assets/person.png";
 import { useSelector } from 'react-redux';
 import axios from 'axios';
+import "../contactProfile/style.css"
+import logo from "../../assets/logo.svg"
+import { HashLoader } from 'react-spinners';
 
 const Profile = () => {
     const [imgP, setImgP] = useState(null);
@@ -14,6 +17,8 @@ const Profile = () => {
     const [imageFile, setImageFile] = useState(null); 
     const [address, setAddress] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
+    const [loading,setLoading] = useState(false)
+
 
     const token = useSelector((state) => state.user.token);
 
@@ -31,6 +36,8 @@ const Profile = () => {
     };
 
     const userDetail = () => {
+        setLoading(true)
+
         fetch(`https://alertify-9tr5.onrender.com/api/v1/user/one`, {
             method: "GET",
             headers: {
@@ -45,9 +52,13 @@ const Profile = () => {
                 setFullName(data.data.fullName);
                 setAddress(data.data.address);
                 setPhoneNumber(data.data.phoneNumber);
+            setLoading(false);
+
             })
+            
             .catch(error => {
-                // console.error('Error:', error);
+            setLoading(false);
+                
             });
     };
 
@@ -83,7 +94,17 @@ const Profile = () => {
 
     return (
         <div className='Profile-MainBody'>
-            <div className='profileImg'>
+
+
+            {
+                loading ? (
+                    <div className='Loading'>
+                  <HashLoader color="#072ACB" size="80px" />
+
+                    </div>
+                ):
+                <>
+                  <div className='profileImg'>
                 {profilePic ? (
                     <img src={profilePic} alt="Profile" />
                 ) : (
@@ -143,10 +164,14 @@ const Profile = () => {
                         <button className='ProfileUpdbtn' onClick={() => setEdit(false)}>Cancel</button>
                         <button className='ProfileUpdbtn' onClick={updateProfile}>Update Profile</button>
                     </div>
-                ) : (
-                    <button className='ProfileEditbtn' onClick={() => setEdit(true)}>Edit Profile</button>
-                )}
-            </div>
+                ) : (       <button className='ProfileEditbtn' onClick={() => setEdit(true)}>Edit Profile</button>
+            )}
+        </div>
+                </>
+            }
+          
+                
+             
         </div>
     );
 };

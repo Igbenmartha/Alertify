@@ -66,6 +66,17 @@ align-items: center;
 
 
 }
+.ModalHolder{
+    height: 100vh;
+    width: 100%;
+    background: rgba(128, 128, 128, 0.518);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    
+}
 .ProfileContactBtnDiv{
     width: 100%;
     height: 25%;
@@ -138,6 +149,9 @@ font-size: 16px;
     }
 }
 @media screen  and (max-width:480px){
+    .ProfileContact{
+        height: auto;
+    }
     .ProfileCatAddBtn {
         width: 35%;
         height: 40px;
@@ -146,5 +160,17 @@ font-size: 16px;
     .ProfileContactBox {
         width: 70%;
         height: 30vh;
+    }
+}
+.custom-swal-popup {
+    width: 400px;
+}
+
+@media screen and (max-width: 768px) {
+    .custom-swal-popup {
+        width: 80%;
+        max-width: 300px;
+    
+        height: 400px;
     }
 }

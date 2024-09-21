@@ -155,7 +155,7 @@
 @media screen  and (max-width:480px){
     .Profile-MainBody {
         width: 90%;
-        height: 80vh;
+        height: 70vh;
     }
 }
 @media screen  and (max-width:380px){

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from './Components/Header/Header'
 import Footer from './Components/Footer/Footer'
 import { HashRouter, Route, Routes } from 'react-router-dom'
@@ -33,10 +33,10 @@ const App = () => {
 
         </Route>
         <Route element={<UserPrivate />}>
-        <Route element={<SettingLayout/>}>
+        <Route element={<SettingLayout />}>
         
           <Route path="profile-setting/" element={<Profile />} />
-          <Route path="contact-setting/" element={<ProfileContact />} />
+          <Route path="contact-setting/" element={<ProfileContact  />} />
           <Route path="add-emergency-contact/" element={<ModalProfile />} />
           
 

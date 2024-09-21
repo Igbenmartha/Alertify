@@ -66,7 +66,7 @@ const BuggerMenu = ({ menuOpen, setMenuOpen }) => {
                     </div>
                     <p>Emergency contact</p>
                 </div>
-                <div className='bugger-main-div' onClick={handleNavigation("/profile")}>
+                <div className='bugger-main-div' onClick={handleNavigation("/profile-setting")}>
                     <div className='bugger-icon'>
                         <img src={setting} alt="setting" />
                     </div>
