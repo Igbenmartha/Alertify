@@ -5,7 +5,7 @@ import { FaUserAlt, } from 'react-icons/fa';
 import { RiFolderUserFill } from "react-icons/ri";
 import { useSelector } from 'react-redux';
 import axios from 'axios';
-import Vick from "../assets/Vicky.svg"
+import roundface from "../assets/RoundFace.svg"
 // import Face from "../assets/Face.JPEG";
 
 export const DashboardUser = () => {
@@ -55,6 +55,7 @@ console.log(token)
   useEffect(()=>{
     getAllUser()
   },[])
+  // {roundface}
 console.log("gatall ",getAllUser)
   return (
     <div className='DashBoardUserMangemnetContainer'>
@@ -66,7 +67,7 @@ console.log("gatall ",getAllUser)
       user.map((e) => (
         <div className="userCardContainer">
       <div className="userImageContainer">
-        <img src={Vick}
+        <img src={user? e.profilePic : roundface}
           // src="https://via.placeholder.com/150"
           // alt="Ike Chiamaka"
           className="userImage"
