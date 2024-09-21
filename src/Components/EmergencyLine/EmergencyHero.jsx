@@ -1,19 +1,22 @@
-import React from 'react'
-import "./EmergencyHero.css"
+import React from "react";
+import "./emergencycallline.css";
+import "./emergencyMobile.css";
+import Emergencypic from "../../assets/Emergency-Illustration.svg";
 const EmergencyHero = () => {
   return (
-    <div className="emergencyHeroBody">
-      <div className="emergencyHeroBodyInner">
-        <div className='emergencyHeroTextDiv'>
-            <div className='emergencyHeroTexts'>
-                <h1>In danger? <br/>Help is closer than you think.</h1>
-                <p>Instantly notify Emergency Services</p>
-            </div>
+    <div className="HomePgeContainerInner">
+      <div className="HomePageHerosection">
+        <div className="HomePageHeroInnerSideOne">
+          <h1>In danger?</h1>
+          <h1>help is closer than you think</h1>
+          <p>instantly notify emergency services</p>
         </div>
-        <div className='emergencyHeroImageDiv'></div>
+        <div className="HomePageHeroInnerSideTwo">
+          <img src={Emergencypic} className="CallImage" />
+        </div>
       </div>
     </div>
   );
-}
+};
 
-export default EmergencyHero
+export default EmergencyHero;

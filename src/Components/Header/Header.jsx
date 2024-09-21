@@ -6,10 +6,11 @@ import { CgProfile } from "react-icons/cg";
 import { FiMenu } from "react-icons/fi"; // Import burger menu icon
 // Close icon for burger menu
 import BuggerMenu from '../BuggerMenu/BuggerMenu';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import Setting from './Setting';
 import person from "../../assets/person.png";
+
 
 const Header = () => {
   const navigate = useNavigate();
@@ -23,13 +24,7 @@ const Header = () => {
     setMenuOpen(true);
   };
   const token = useSelector((state) => state.user.token)
-  // console.log(token);
-  // const {userId} = useParams();
-  // const userId = localStorage.getItem('userId');
-
-  // console.log("this is happening", userId);
-  // const url = "https://alertify-9tr5.onrender.com/api/v1/user"
-
+    const dispatch = useDispatch()
   const userDetail = () => {
 
     fetch(`https://alertify-9tr5.onrender.com/api/v1/user/one`, {  
@@ -99,7 +94,9 @@ const Header = () => {
 
                 </div>
 
+
                 <button className='EmergencyCtbtn'onClick={(()=>navigate('/emergency'))}> Emergency Service</button>
+
 
               </div>
             </div>

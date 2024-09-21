@@ -1,73 +1,67 @@
-import React, { useState } from 'react'
-import "./login.css"
+import React, { useState } from "react";
+import "./login.css";
 import alert from "../../assets/AlertifyLogo.svg";
- import { FaEye } from "react-icons/fa6";
- // import { TiEyeOutline } from "react-icons/ti";
-  import { FaRegEyeSlash } from "react-icons/fa";
-import axios from 'axios';
-import { Toaster, toast } from 'react-hot-toast';
-import { useNavigate } from 'react-router-dom';
-import { userId, userinfo, userToken } from '../../Global/Slice';
-import { useDispatch } from 'react-redux';
-
+import { FaEye } from "react-icons/fa6";
+// import { TiEyeOutline } from "react-icons/ti";
+import { FaRegEyeSlash } from "react-icons/fa";
+import axios from "axios";
+import { Toaster, toast } from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
+import { admin, userId, userinfo, userToken } from "../../Global/Slice";
+import { useDispatch } from "react-redux";
 
 const Login = () => {
-      const [showEye, setShowEye] = useState(true);
-      const[email,setEmail] = useState('');
-      const [password,setPassword] = useState('')
-      const [loading,setLoading] = useState(false)
+  const [showEye, setShowEye] = useState(true);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
 
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      const navigate = useNavigate()
-      const dispatch = useDispatch()
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  
+  const handleLoginSubmit = async (e) => {
+    e.preventDefault();
+  
+    const url = "https://alertify-9tr5.onrender.com/api/v1/user";
 
-      const handleLoginSubmit = async (e) => {
-        e.preventDefault()
-
-  const url = "https://alertify-9tr5.onrender.com/api/v1/user"
-       
-  const login = {email,password}
-
-        e.preventDefault()
-        setLoading(true)
-        try {
-          const response = await axios.post(
-            `${url}/log-in`,login,
-         
+    const login = { email, password };
+    setLoading(true);
+    try {
+      const response = await axios.post(`${url}/log-in`, login);
+      dispatch(userinfo(response.data?.data));
+      dispatch(userId(response.data.data._id));
+      toast.success(response.data.message);
+      dispatch(userToken(response.data.token));
     
-          )
-          console.log(response.data.data.isAdmin);
-   dispatch(userId (response.data.data._id))
-  //  localStorage.setItem('userId', JSON.stringify(response.data.data._id))
+      const isAdmin = response.data.data.isAdmin;
+      navigate("/dashboard")
+      setTimeout(() => {
+        if (isAdmin) {
+            dispatch(admin(true));
+          navigate("/dashboard");
+        } else {
+          navigate("/");
+        }
+        setLoading(false);
+      }, 2000);
+    } catch (error) {
+      // console.log(error);
+      // console.log(error.response.data.data.message);
+      setLoading(false);
+    }
+  };
 
-          toast.success(response.data.message)
-          // dispatch(userinfo(response.data))
-          dispatch(userToken(response.data.token))
-          const isAdmin = response.data.data.isAdmin
-
-          setTimeout(() => {
-
-            if(isAdmin) {
-              (navigate('/dashboard'))
-            }else {
-              navigate('/');
-            }
-           
-            setLoading(false); 
-          }, 2000);
-        } catch (error) {
-          // console.log(error);
-          toast.error(error.response.data.message);
-        setLoading(false)
-          
+         
         }
 
       }
 
+
   return (
     <div className="loginbody">
       <div className="loginInner">
-        <Toaster/>
+        <Toaster />
         <div className="logoBody">
           <img src={alert} alt="" />
         </div>
@@ -85,7 +79,7 @@ const Login = () => {
                 type="email"
                 placeholder="Email"
                 className="LoginEmailInput"
-                onChange={((e)=>setEmail(e.target.value))}
+                onChange={(e) => setEmail(e.target.value)}
                 required={true}
               />
             </div>
@@ -94,9 +88,8 @@ const Login = () => {
                 type={!showEye ? "text" : "password"}
                 placeholder="Password"
                 className="loginPasswordInput"
-                onChange={((e)=>setPassword(e.target.value))}
+                onChange={(e) => setPassword(e.target.value)}
                 required={true}
-
               />
               {!showEye ? (
                 <FaEye size={25} onClick={() => setShowEye(true)} />
@@ -110,9 +103,14 @@ const Login = () => {
               </div>
               <div className="loginBtnandTextDiv">
                 {/* <div> */}
-                  <button className="loginBtn" type='submit'>{!loading? "Login " :"loading..."}</button>
+                <button className="loginBtn" type="submit">
+                  {!loading ? "Login " : "loading..."}
+                </button>
 
-                  <p className='loginlastText'>Don't have an account? <span onClick={(()=> navigate("/signup"))}>Sign Up</span></p>
+                <p className="loginlastText">
+                  Don't have an account?{" "}
+                  <span onClick={() => navigate("/signup")}>Sign Up</span>
+                </p>
                 {/* </div> */}
               </div>
             </div>
@@ -121,6 +119,6 @@ const Login = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Login
+export default Login;

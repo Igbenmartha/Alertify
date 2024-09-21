@@ -14,12 +14,14 @@ import { MdDashboard } from "react-icons/md";
 import { FaUserFriends } from "react-icons/fa";
 import { PiWarningDiamondFill } from "react-icons/pi";
 import { FaUserAlt } from "react-icons/fa";
+import { useDispatch } from 'react-redux';
+import { cleartoken } from '../Global/Slice';
 
 
 
 export const DashBoardPages = () => {
   const [activeItem, setActiveItem] = useState('home');
-
+   const dispatch = useDispatch()
   const handleItemClick = (item) => {
     setActiveItem(item);
   };
@@ -79,7 +81,7 @@ export const DashBoardPages = () => {
       <div className='DashBoardLogou'>
             <div className='DashBoardLogoutIcon'>
               <RiLogoutCircleLine size={20} color='blue' />
-              <p>Logout</p>
+              <p onClick={()=> dispatch(cleartoken())}>Logout</p>
             </div>
           </div>
 

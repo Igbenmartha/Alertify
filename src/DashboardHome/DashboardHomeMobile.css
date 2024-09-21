@@ -8,7 +8,8 @@
     }
 
     .DashboardActiveReportCard{
-        width: 100px;
+        /* width: 170px; */
+        width: 45%;
         border-radius: 20px;
     }
 

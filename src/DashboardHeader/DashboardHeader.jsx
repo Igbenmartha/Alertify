@@ -3,37 +3,65 @@ import "./DashboardHeaderMobile.css";
 import "./DashboardHeader.css";
 import Logo from "../assets/AlertifyLogo.svg";
 import { RiMenu2Line } from "react-icons/ri";
-// import Face from "../assets/Face.jpeg";
 import { IoMdHome } from "react-icons/io";
 import { MdOutlineRoundaboutLeft, MdPermContactCalendar, MdDashboard } from "react-icons/md";
 import { HiExclamationTriangle } from "react-icons/hi2";
 import { RiLogoutCircleLine } from "react-icons/ri";
-// import Face from '../assets/'
-// import Face from '../assets/Face.jpeg'
+import Alert from "../assets/AlertifyLogo.svg"
+import { useSelector } from 'react-redux';
 
 export const DashboardHeader = () => {
   const [menuChange, setMenuChange] = useState(false);
+  // const [get, setGetone]=useState([])
+  // const[one, setOne]=useState([])
+  const userInfo=useSelector((state)=>state.user.userdata)
+  console.log(userInfo)
 
   const handleMenuChange = () => {
     setMenuChange(!menuChange);
   };
 
+
+  // const getone=()=>{
+  //   const url = "https://alertify-9tr5.onrender.com/api/v1/user/one";
+  //   axios.get(url,{
+  //     headers:{
+  //       application:"application/json",
+  //       Authorization:`Bearer ${token}`
+  //     }
+  //   })
+  //   .then((res)=>{
+  //     console.log(data)
+  //     setOne(res?.datadata)
+  //   })
+  //   .catch((err)=>{
+  //     console.log(err)
+  //   })
+
+  // }
+
+  //   useEffect(() => {
+  //     getone();
+  //   }, []);
+
+
   return (
     <div className='DashBoardHeaderContainer'>
       <div className='DashBoardHeaderInnerContainer'>
         <div className='DashboardHeaderLeftCornerone'>
-          <img src="" className='DashBoardHeaderLogo' alt="Logo"/>
+          <img src={Alert} className='DashBoardHeaderLogo' alt="Logo"/>
         </div>
 
         <div className='DashboardHeaderLeftCornerTwo'>
+          
           <div className='DashBoardUserProfile'>
             <div className='DashBoardImageProfile'>
             <img src={""} className='DashBoardActiveReportImahe'/>
 
             </div>
             <div>
-              <h4>Victory Aboy</h4>
-              <p style={{ fontSize: "12px" }}>Victory@gmail.com</p>
+              <h4>{userInfo.fullName}</h4>
+              <p style={{ fontSize: "12px" }}>{userInfo.email}</p>
             </div>
           </div>
 
@@ -58,7 +86,7 @@ export const DashboardHeader = () => {
           </div>
           <div className='DashBoardHeaderMenDownside'>
             <div className='DashBoardMenuList'>
-              <div className='DashBoardHome'>
+              <div className='DashBoardHome' >
                 <IoMdHome size={20} color='blue' />
                 <p>Home</p>
               </div>

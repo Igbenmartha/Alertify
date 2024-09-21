@@ -1,119 +1,233 @@
-import React from 'react'
-import "./emergencycallline.css"
-import police from "../../assets/PoliceImage.svg"
-import helipcopter from "../../assets/HelicopterImage.svg"
-import boykick from "../../assets/BoyKickGirl.svg"
-import ArmyMan from "../../assets/SoldierMan.svg"
+import React from "react";
+import "./emergencycallline.css";
+import "./emergencyMobile.css";
+import police from "../../assets/PoliceImage.svg";
+import helipcopter from "../../assets/HelicopterImage.svg";
+import boykick from "../../assets/BoyKickGirl.svg";
+import ArmyMan from "../../assets/SoldierMan.svg";
 import rope from "../../assets/HangRope.svg"
-import FederalRoadSafetyLogo from "../../assets/FrscGreenHead.svg"
-import domesticBoy from "../../assets/DomesticBoy.svg"
-import shortNikaGirl from "../../assets/ShortNika.svg"
+import FederalRoadSafetyLogo from "../../assets/FrscGreenHead.svg";
+import domesticBoy from "../../assets/DomesticBoy.svg";
+import shortNikaGirl from "../../assets/ShortNika.svg";
 
 const EmergencyCallLine = () => {
   return (
-    <div className="emergencyCallIneBody">
-      <div className="emergencyCallIneBodyInner">
-        <div className="PlsCallOnlyDiv">
-          <h1>
-            Please call this lines <span>ONLY</span> when you need help
-          </h1>
-        </div>
-        <div className="emergencyCallLineFirstImages">
-          <div className="emergencyCallLineImage1Div">
-            <div className="emergencycallLinePoliceImageDiv">
-              <div className="policeImage">
-                <img src={police} alt="" />
-              </div>
-              <div className="policeImageText">
-                <h1>Police emergency Phone Numbers</h1>
-                <p>01-4931260, 01-4978899</p>
-              </div>
-            </div>
-            <div className="emergencyRapidSquad">
-              <div className="helipCopterImage">
-                <img src={helipcopter} alt="" />
-              </div>
-              <div className="HelipcopterText">
-                <h1>Rapid response squad</h1>
-                <p>070-55350249, 070-35068242, 080-79279349</p>
-              </div>
+    <div className="HomePagesImagesStageInner">
+      <h3 className="HomePageH3">
+        Please call this lines <span style={{ color: "blue" }}>ONLY</span>when
+        you need help
+      </h3>
+
+      <div className="HomePageImagesStage">
+        <div className="HomePagesImageStageInnerOne">
+          <div className="HomePageImageTextConatinerHloder">
+            <img src={police} className="HaomePageImageIcons" />
+
+            <div className="HomePagetextContainerHolderTwo">
+              <p
+                style={{ fontSize: "20px", fontWeight: "700" }}
+                className="HomePagePtage"
+              >
+                Polive emergency Phone Number
+              </p>
+              <p
+                style={{ fontSize: "10px", color: "gray" }}
+                className="HomePageNombers"
+              >
+                01-4931260,01-14978899
+              </p>
             </div>
           </div>
 
-          <div className="emergencyCallLineImage2Div">
-            <div className="boyGirlImageDiv">
-              <div className="BoyGirlImage">
-                <img src={boykick} alt="" />
-              </div>
-              <div className="BoyKickImageText">
-                <h1>Rape Helpline</h1>
-                <p>080072732255</p>
-              </div>
+          <div className="HomePageImageTextConatinerHloderTwo">
+            <img src={helipcopter} className="HaomePageImageIcons" />
+
+            <div className="HomePagetextContainerHolderTwo">
+              <p
+                style={{ fontSize: "20px", fontWeight: "700" }}
+                className="HomePagePtage"
+              >
+                Rapid response squad
+              </p>
+              <p
+                style={{ fontSize: "10px", color: "gray" }}
+                className="HomePageNombers"
+              >
+                070-5555262626, 070622526262,08072628276
+              </p>
             </div>
           </div>
-        </div>{" "}
-        <div className="emergencycallLineArmyRightsBox">
-          <div className="emencygencyCallLineArmyBox1">
-            <div className="emergencyArmyBox1Div">
-              <div className="emergencyArmyBox1ImageDiv">
-                <img src={ArmyMan} alt="" />
-              </div>
-              <div className="emergencyArmyBox1TextDiv">
-                <h1>Nigerian army human right</h1>
-                <p>
-                  If you’re harassed by an army officials, call 08160134303 or
-                  08161507644
+        </div>
+
+        <div className="HomePagesImageStageInnerTwo">
+          <div className="HomePageConatinerRape">
+            <img src={boykick} />
+
+            <div className="HomePagetextContainerHolderTwo">
+              <p
+                style={{ fontSize: "20px", fontWeight: "700" }}
+                className="HomePagePtage"
+              >
+                Rape Helpline
+              </p>
+              <p
+                style={{ fontSize: "10px", color: "gray" }}
+                className="HomePageNombers"
+              >
+                08007662672
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="HomePagesImageStageInnerOne">
+          <div className="HomePageImageTextConatinerHloder">
+            <img src={ArmyMan} className="HaomePageImageIcons" />
+
+            <div className="HomePagetextContainerHolderTwo">
+              <p
+                style={{ fontSize: "20px", fontWeight: "700" }}
+                className="HomePagePtage"
+              >
+                Nigerian army human right
+              </p>
+              <p
+                style={{ fontSize: "10px", color: "gray" }}
+                className="HomePageNombers"
+              >
+                if you're harassed by an army officals call 09072682752 or
+                08067526523
+              </p>
+            </div>
+          </div>
+
+          <div className="HomePageImageTextConatinerHloderTwo">
+            <img src={rope} className="HaomePageImageIcons" />
+
+            <div className="HomePagetextContainerHolderTwo">
+              <p
+                style={{ fontSize: "20px", fontWeight: "700" }}
+                className="HomePagePtage"
+              >
+                Depression / sucide prevention initiatives
+              </p>
+              <p
+                style={{ fontSize: "10px", color: "gray" }}
+                className="HomePageNombers"
+              >
+                08037893693, 09072876276,0818738723, 070673327863, 080633638778
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="HomePagesImageStageInnerTwo">
+          <div className="HomePageConatinerRape">
+            <img src={FederalRoadSafetyLogo} className="HaomePageImageIcons" />
+
+            <div className="HomePagetextContainerHolderTwo">
+              <p
+                style={{ fontSize: "20px", fontWeight: "700" }}
+                className="HomePagePtage"
+              >
+                Federal road safety service (FRSC)
+              </p>
+              <p
+                style={{ fontSize: "10px", color: "gray" }}
+                className="HomePageNombers"
+              >
+                01-4931260,01-14978899
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="HomePagesImageStageInnerOne">
+          <div className="HomePageImageTextConatinerHloder">
+            <img src={domesticBoy} className="HaomePageImageIcons" />
+
+            <div className="HomePagetextContainerHolderTwo">
+              <p
+                style={{ fontSize: "20px", fontWeight: "700" }}
+                className="HomePagePtage"
+              >
+                Child Domestic Violence
+              </p>
+              <p
+                style={{ fontSize: "10px", color: "gray" }}
+                className="HomePageNombers"
+              >
+                01-4931260,01-14978899
+              </p>
+            </div>
+          </div>
+
+          <div className="HomePageImageTextConatinerHloderTwo">
+            <img src={ArmyMan} className="HaomePageImageIcons" />
+
+            <div className="HomePagetextContainerHolderTwo">
+              <p
+                style={{ fontSize: "20px", fontWeight: "700" }}
+                className="HomePagePtage"
+              >
+                Violation of girls and women helpline
+              </p>
+              <p
+                style={{ fontSize: "10px", color: "gray" }}
+                className="HomePageNombers"
+              >
+                090652765678
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="HomePageRapeSymbolMobile">
+          <div className="HomePagesImageStageInnerTwoMobile">
+            <div className="HomePageConatinerRape">
+              <img src={shortNikaGirl} className="HaomePageImageIconsMobile" />
+
+              <div className="HomePagetextContainerHolderTwoMobile">
+                <p
+                  style={{ fontSize: "20px", fontWeight: "700" }}
+                  className="HomePagePtage"
+                >
+                  Federal road safety service (FRSC)
+                </p>
+                <p
+                  style={{ fontSize: "10px", color: "gray" }}
+                  className="HomePageNombers"
+                >
+                  01-4931260,01-14978899
                 </p>
               </div>
             </div>
-            <div className="EmergencyDepressionBoxDiv">
-              <div className="emergencyDepressionImageDiv">
-                <img src={rope} alt="" />
-              </div>
-              <div className="emergencydepressionTextDiv">
-                <h1>Depression / suicide prevention initiatives</h1>
-                <p>08062106393, 08092106493,</p>
-                <p>09080217555, 09034400009,</p>
-                <p>08111909909, 0801311143</p>
-              </div>
-            </div>
           </div>
 
-          <div className=" emencygencyCallLineArmyBox2">
-            <div className="emengencyFederalRoadServiceDiv">
-              <div className="emergencyFederalRoadServiceImageDiv">
-                <img src={FederalRoadSafetyLogo} alt="" />
+          <div className="HomePagesImageStageInnerTwoMobile">
+            <div className="HomePageConatinerRape">
+              <img src={rope} className="HaomePageImageIconsMobile" />
+
+              <div className="HomePagetextContainerHolderTwo">
+                <p
+                  style={{ fontSize: "20px", fontWeight: "700" }}
+                  className="HomePagePtage"
+                >
+                  Rape Helpline
+                </p>
+                <p
+                  style={{ fontSize: "10px", color: "gray" }}
+                  className="HomePageNombers"
+                >
+                  08007662672
+                </p>
               </div>
-              <div className="emergencyFederalRoadServiceTextDiv">
-                <h1>Federal road safety services (fRSC)</h1>
-                <p>08132222105-9</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="emergencyCallLineLastDiv">
-          <div className="emergencyChildViolenceDiv">
-            <div className="ChildViolenceImageDiv">
-              <img src={domesticBoy} alt="" />
-            </div>
-            <div className="ChildViolenceTextDiv">
-              <h1>Child Domestic Violence</h1>
-              <p>0807572829, 081316543208</p>
-            </div>
-          </div>
-          <div className="GirlsViolationAndWomenHelplineDiv">
-            <div className="GirlsViolationImageDiv">
-              <img src={shortNikaGirl} alt="" />
-            </div>
-            <div className="GirlsViolationTextDiv">
-              <h1>Violation of girls and women helpline</h1>
-              <p>0800072732255</p>
             </div>
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
 
-export default EmergencyCallLine
+export default EmergencyCallLine;
