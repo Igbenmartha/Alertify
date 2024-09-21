@@ -1,7 +1,7 @@
 import React from "react";
 import "./emergencycallline.css";
 import "./emergencyMobile.css";
-import Emergencypic from "../../assets/Emergency-Illustration.svg";
+import Emergencypic from "../../assets/Emergency-illustration.svg";
 const EmergencyHero = () => {
   return (
     <div className="HomePgeContainerInner">
