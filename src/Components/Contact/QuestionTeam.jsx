@@ -14,7 +14,7 @@ const QuestionTeam = () => {
             <p>Questions about your safety needs?</p>
           </div>
           <div className="safetyQuestionText2">
-            <p>Get in touch with  one of team today</p>
+            <p>Get in touch with  one of our team today</p>
           </div>
           <div className="btn">
             <p className='pTag2'>Get in touch</p>
