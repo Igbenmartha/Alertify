@@ -47,6 +47,7 @@ const App = () => {
         <Route path="login" element={<Login />}></Route>
         <Route path="signupimage" element={<SignUpImage />}></Route>
         <Route path="dashboard" element={<DashboardHolder />}></Route>
+        <Route path="forgot-password" element={<Reset />}></Route>
       </Routes>
     </HashRouter>
 
