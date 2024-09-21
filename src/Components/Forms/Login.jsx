@@ -99,10 +99,9 @@ const Login = () => {
             </div>
             <div className="lastLoginDiv">
               <div className="loginForgetPasswordDiv">
-                <p>Forget Password</p>
+                <p>Forget PassWord</p>
               </div>
               <div className="loginBtnandTextDiv">
-                {/* <div> */}
                 <button className="loginBtn" type="submit">
                   {!loading ? "Login " : "loading..."}
                 </button>
@@ -111,7 +110,6 @@ const Login = () => {
                   Don't have an account?{" "}
                   <span onClick={() => navigate("/signup")}>Sign Up</span>
                 </p>
-                {/* </div> */}
               </div>
             </div>
           </form>
