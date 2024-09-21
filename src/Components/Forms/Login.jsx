@@ -38,7 +38,7 @@ const Login = () => {
           )
           console.log(response.data.data.isAdmin);
    dispatch(userId (response.data.data._id))
-   localStorage.setItem('userId', JSON.stringify(response.data.data._id))
+  //  localStorage.setItem('userId', JSON.stringify(response.data.data._id))
 
           toast.success(response.data.message)
           // dispatch(userinfo(response.data))
@@ -57,10 +57,11 @@ const Login = () => {
           }, 2000);
         } catch (error) {
           // console.log(error);
-          // console.log(error.response.data.data.message);
-          setLoading(false)
+          toast.error(error.response.data.message);
+        setLoading(false)
           
         }
+
       }
 
   return (
