@@ -94,6 +94,63 @@ const Hero = () => {
 
 
 
+    // const Alert = async (e) => {
+    //     e.preventDefault();
+    //     setLoading(true);
+    
+    //     if (!token) {
+    //         toast.error("Emergency action cannot be completed. Please log in to send a distress alert.");
+    //         setLoading(false);
+    //         return;
+    //     }
+    
+    //     // Get user location
+    //     try {
+    //         const position = await new Promise((resolve, reject) => {
+    //             navigator.geolocation.getCurrentPosition(resolve, reject, {
+    //                 enableHighAccuracy: true, // Enable high accuracy
+    //                 timeout: 10000, // Timeout after 10 seconds
+    //                 maximumAge: 5000, // Allow cached location up to 5 seconds old
+    //             });
+    //         });
+    
+    //         const lat = position.coords.latitude;
+    //         const lon = position.coords.longitude;
+    //         const accuracy = position.coords.accuracy;
+    
+    //         // Ensure location accuracy (e.g., under 30 meters is acceptable)
+    //         if (accuracy > 30) {
+    //             toast.warning("Location accuracy is too low. Try again for better accuracy.");
+    //             setLoading(false);
+    //             return;
+    //         }
+    
+    //         const response = await fetch("https://alertify-9tr5.onrender.com/api/v1/user/distress", {
+    //             method: "POST",
+    //             headers: {
+    //                 "Content-Type": "application/json",
+    //                 "Authorization": `Bearer ${token}`,
+    //             },
+    //             body: JSON.stringify({ latitude: lat, longitude: lon }) // Sending coordinates
+    //         });
+    
+    //         const data = await response.json();
+    //         if (data.success) {
+    //             setPopupVisible(true);
+    //             toast.success(data.message);
+    //         } else {
+    //             setPopupVisible(true);
+    //             toast.error(data.message);
+    //         }
+    //     } catch (error) {
+    //         console.error('Error getting location:', error);
+    //         toast.error("Unable to get your location. Please allow location access.");
+    //     } finally {
+    //         setLoading(false);
+    //     }
+    // };
+
+
     const Alert = async (e) => {
         e.preventDefault();
         setLoading(true);
@@ -104,34 +161,43 @@ const Hero = () => {
             return;
         }
     
+        // Check for geolocation permission before proceeding
+        try {
+            const permissionStatus = await navigator.permissions.query({ name: 'geolocation' });
+    
+            if (permissionStatus.state === 'denied') {
+                toast.error("Location permission is denied. Please enable location services for your browser.");
+                setLoading(false);
+                return;
+            }
+        } catch (err) {
+            console.error('Permission error:', err);
+            toast.error("Unable to verify location permissions.");
+            setLoading(false);
+            return;
+        }
+    
         // Get user location
         try {
             const position = await new Promise((resolve, reject) => {
                 navigator.geolocation.getCurrentPosition(resolve, reject, {
-                    enableHighAccuracy: true, // Enable high accuracy
-                    timeout: 10000, // Timeout after 10 seconds
-                    maximumAge: 5000, // Allow cached location up to 5 seconds old
+                    enableHighAccuracy: true,  // Request more accurate results
+                    timeout: 10000,            // Adjust the timeout for slower connections
+                    maximumAge: 0              // Prevent using cached location data
                 });
             });
     
             const lat = position.coords.latitude;
             const lon = position.coords.longitude;
-            const accuracy = position.coords.accuracy;
     
-            // Ensure location accuracy (e.g., under 30 meters is acceptable)
-            if (accuracy > 30) {
-                toast.warning("Location accuracy is too low. Try again for better accuracy.");
-                setLoading(false);
-                return;
-            }
-    
+            // Call the backend API with the location data
             const response = await fetch("https://alertify-9tr5.onrender.com/api/v1/user/distress", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                     "Authorization": `Bearer ${token}`,
                 },
-                body: JSON.stringify({ latitude: lat, longitude: lon }) // Sending coordinates
+                body: JSON.stringify({ latitude: lat, longitude: lon }) // Send coordinates
             });
     
             const data = await response.json();
@@ -139,16 +205,16 @@ const Hero = () => {
                 setPopupVisible(true);
                 toast.success(data.message);
             } else {
-                setPopupVisible(true);
                 toast.error(data.message);
             }
         } catch (error) {
             console.error('Error getting location:', error);
-            toast.error("Unable to get your location. Please allow location access.");
+            toast.error("Unable to get your location. Please allow location access or try again.");
         } finally {
             setLoading(false);
         }
     };
+    
     
     
       
