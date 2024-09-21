@@ -6,7 +6,10 @@ const Slice = createSlice({
         userdata:{},
         id: "",
         token: "",
+
         isAdmin:false,
+
+      
         
     },
     reducers:{
@@ -24,12 +27,14 @@ const Slice = createSlice({
          admin:(state,{payload})=> {
         state.isAdmin=(payload);
     },
+
     cleartoken:(state,action)=>{
         state.token = "",
         state.userdata ="",
         state.id=""
         state.isAdmin=""
     }
+
         
 
         

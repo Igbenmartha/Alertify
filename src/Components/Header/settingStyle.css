@@ -1,0 +1,44 @@
+.Setting{
+    width: 185px;
+    height: 140px;
+    border-radius: 10px;
+background: white;
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+position: absolute;
+top:100%;
+padding: 15px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+.Setting-holder{
+width: 100%;
+height: 40%;
+display: flex;
+gap:7px;
+align-items: center;
+color: #000;
+font-family: Roboto;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.Setting-holder:hover{
+    cursor: pointer;
+    background-color:#072ACB ;
+}
+.setting-icon-holder{
+    width: 40px;
+    height: 40px;
+    background-image: url(../../assets/Settingheader.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.setting-logout{
+    width: 40px;
+    height: 40px;
+    background-image: url(../../assets/logout.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

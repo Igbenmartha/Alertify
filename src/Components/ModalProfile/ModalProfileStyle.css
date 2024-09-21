@@ -1,26 +1,34 @@
 .ModalProfile{
     width: 100%;
-    height: 100vh;
-    position: absolute;
-    bottom:-10%;
+    height: 75vh;
     display:flex;
+    /* background: red; */
     justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    background-color: rgba(255, 255, 255, 0.34);
-    filter: brightness(97%);
-    /* backdrop-filter: blur(10px); / */
+    align-items: flex-end;
+    /* background-color: white; */
+  
+}
+.ModalProfile-header{
+    width: 70%;
+    height: 8%;
+    color: #111;
+text-align: center;
+font-family: Montserrat;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+margin-bottom: 20px;
 }
  .ModalProfile-inner {
-    width: 37%;
-    height: 55%;
+    width: 50%;
+    height: 92%;
     background-color: white;
     padding: 10px;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     border-radius: 20px;
-    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
  
 }  
 .modalprofile-close{
@@ -34,9 +42,10 @@
 }  
 .div-holder{
     width: 100%;
-    height: 25%;
+    height: 17%;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap:10px;
 
 
@@ -44,7 +53,7 @@
 
 
     & input{
-        width: 75%;
+        width: 85%;
         height: 70%;
         outline: 1px solid rgba(0, 0, 0, 0.084);
         font-size: 20px;
@@ -61,8 +70,8 @@
     }
 }   
 .ModalProfile-addBtn{
-    width: 25%;
-    height: 31px;
+    width: 85%;
+    height: 51px;
     border-radius: 5px;
     display: flex;
     justify-content: center;
@@ -75,7 +84,7 @@ font-style: normal;
 font-weight: 700;
 line-height: normal;
 background: #072AC8;
-margin:10px;
+margin:30px;
 } 
 @media screen  and (max-width:900px){
     .ModalProfile{
@@ -100,18 +109,38 @@ margin:10px;
 }
 @media screen  and (max-width:480px){
     .ModalProfile{
-        align-items: center;
-        top:0%;
+      width: 100%;
+      height: 70vh;
+align-items: flex-end;
+      /* margin-top: 20px; */
     
         }
         .ModalProfile-inner {
-            width: 80%;
-            padding: 10px;
+            width: 100%;
+            height: 80%;
+            gap:15px
+            /* padding: 10px; */
         }
-        .div-holdername{
-            width: 40%;
+        .ModalProfile-header{
+            font-size: 16px;
+            width: 85%;
+            margin: 0;
+        }
+        .div-holder{
+            width: 100%;
+
+            & input{
+                width: 100%;
+               
+            }
+
 
             
+        }
+        .ModalProfile-addBtn{
+            margin: 0;
+            width: 100%;
+            height: 31px;
         }
 }
   

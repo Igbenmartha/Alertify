@@ -19,22 +19,18 @@ const Login = () => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const navigate = useNavigate();
   const dispatch = useDispatch();
-
+  
   const handleLoginSubmit = async (e) => {
     e.preventDefault();
-
+  
     const url = "https://alertify-9tr5.onrender.com/api/v1/user";
 
     const login = { email, password };
-
-    e.preventDefault();
     setLoading(true);
     try {
       const response = await axios.post(`${url}/log-in`, login);
       dispatch(userinfo(response.data?.data));
-      console.log(response.data.data.isAdmin);
       dispatch(userId(response.data.data._id));
-      localStorage.setItem("userId", JSON.stringify(response.data.data._id));
       toast.success(response.data.message);
       dispatch(userToken(response.data.token));
     
@@ -55,6 +51,12 @@ const Login = () => {
       setLoading(false);
     }
   };
+
+         
+        }
+
+      }
+
 
   return (
     <div className="loginbody">

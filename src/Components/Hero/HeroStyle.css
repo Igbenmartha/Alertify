@@ -196,7 +196,7 @@ opacity: 0px;
     }
     .HeroinnerText-left-Holder{
         width: 100%;
-        height: 30%;
+        height: 15%;
         /* border: solid green; */
         gap:0;
         font-size: 28px;
@@ -218,12 +218,13 @@ opacity: 0px;
         height: 60%;
         background: url(../../assets//cuateV.svg);
         background-size: cover;
+        background-position: center;
         /* border: solid green; */
 
 
     }
     .HeroBtn{
-            margin-top: 30px;
+            margin-top: 10px;
     }
 }
 @media screen and (max-width: 380px){

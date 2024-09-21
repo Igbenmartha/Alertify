@@ -48,6 +48,8 @@
      img{
         width: 100%;
         height: 100%;
+        border-radius: 50%;
+        position: center;
     }
 
   }
@@ -57,7 +59,8 @@ height: 30%;
 display: flex;
 flex-direction: column;
 padding-left: 10px;
-/* align-items: center; */
+justify-content: center
+/* align-items: center; */;
 & h5{
     color: #FFF;
 font-family: Roboto;
@@ -111,6 +114,15 @@ line-height: normal;
 .bugger-main-div:hover{
     cursor: pointer;
     background: #072ACB;
+
+    img {
+      color:white
+    }
+
+    & p{
+      color:white
+
+    }
 }
 .buggerActive{
     background: #072ACB;
@@ -135,7 +147,9 @@ line-height: normal;
     width: 80%;
     height: 4%;
     display: flex;
+    margin-top: 10px;
     gap:10px;
+    align-items: center;
     /* align-items: flex-end; */
 
     & p{
@@ -147,6 +161,14 @@ font-style: normal;
 font-weight: 500;
 line-height: normal;
     }
+}
+.bugger-Logout-holder:hover{
+  background-color: #072ACB;
+
+  & p{
+    color: white;
+  }
+
 }
   .bugger-logoutico{
     width: 25px;
