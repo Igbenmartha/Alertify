@@ -76,7 +76,7 @@ const Login = () => {
               contacts
             </p>
           </div>
-          <form className="loginFormDiv" onSubmit={handleLoginSubmit}>
+          <form className="loginFormDiv" >
             <div className="LoginEmailDiv">
               <input
                 type="email"
@@ -106,7 +106,7 @@ const Login = () => {
               </div>
               <div className="loginBtnandTextDiv">
                 {/* <div> */}
-                <button className="loginBtn" type="submit">
+                <button className="loginBtn" onClick={handleLoginSubmit}>
                   {!loading ? "Login " : "loading..."}
                 </button>
 
