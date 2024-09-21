@@ -6,8 +6,9 @@ import { CgProfile } from "react-icons/cg";
 import { FiMenu } from "react-icons/fi"; // Import burger menu icon
 // Close icon for burger menu
 import BuggerMenu from '../BuggerMenu/BuggerMenu';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
+import { cleartoken } from '../../Global/Slice';
 
 const Header = () => {
   const navigate = useNavigate();
@@ -23,7 +24,7 @@ const Header = () => {
   const userId = localStorage.getItem('userId');
 
   console.log("this is happening", userId);
-
+    const dispatch = useDispatch()
   const userDetail = () => {
   // const url = "https://alertify-9tr5.onrender.com/api/v1/user"
 
@@ -139,7 +140,7 @@ const Header = () => {
 
                 </div>
 
-                <button className='EmergencyCtbtn'> Emergency Contact</button>
+                <button className='EmergencyCtbtn' > Emergency Contact</button>
 
               </div>
             </div>

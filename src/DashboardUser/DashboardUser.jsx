@@ -1,16 +1,61 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./DashboardUserManagement.css"
 import "./DashboardUserManagementMobile.css"
 import { FaUserAlt, } from 'react-icons/fa'; 
 import { RiFolderUserFill } from "react-icons/ri";
+import { useSelector } from 'react-redux';
+import axios from 'axios';
+import Vick from "../assets/Vicky.svg"
 // import Face from "../assets/Face.JPEG";
 
 export const DashboardUser = () => {
 
-  const user = [
-    1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19
-  ]
+  const [user, setUser]=useState([])
+  console.log(user)
+const token = useSelector((state)=>state.user.token)
+console.log(token)
+  // const getAllUser= (e)=>{
+  //   e.preventDefault();
+    
+  //       fetch(`https://alertify-9tr5.onrender.com/api/v1/user/all`, {
+  //         method: "GET",
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //           Authorization: `Bearer ${token}`,
+  //         },
+  //       })
+  //         .then((response) => response.json())
+  //         .then((data) => {
+  //         console.log(data);
+  //         })
+  //         .catch((error) => {
+  //           console.error("Error:", error);
+  //         });
 
+  // }
+
+  const getAllUser=()=>{
+
+    const url = "https://alertify-9tr5.onrender.com/api/v1/user/all";
+    axios.get(url,{
+      headers:{
+        application:"application/json",
+        Authorization:`Bearer ${token}`
+      }
+    })
+    .then((res)=>{
+      console.log(res?.data?.data)
+      setUser(res?.data?.data)
+    })
+    .catch((err)=>{
+      console.log(err)
+    })
+  }
+
+  useEffect(()=>{
+    getAllUser()
+  },[])
+console.log("gatall ",getAllUser)
   return (
     <div className='DashBoardUserMangemnetContainer'>
     <div className='DashboardUserManagementContainerInner'>
@@ -18,17 +63,17 @@ export const DashboardUser = () => {
 
 
     {
-      user.map(() => (
+      user.map((e) => (
         <div className="userCardContainer">
       <div className="userImageContainer">
-        <img src={""}
+        <img src={Vick}
           // src="https://via.placeholder.com/150"
-          alt="Ike Chiamaka"
+          // alt="Ike Chiamaka"
           className="userImage"
         />
       </div>
-      <h2 className="userName">Ike Chiamaka</h2>
-      <p className="userEmail">ikechiamaka123@gmail.com</p>
+      <h2 className="userName">{e.fullName}</h2>
+      <p className="userEmail">{e.email}</p>
       <div className="buttonContainer">
         <div className="accountDetailsButton">
           <RiFolderUserFill  size={20} className="buttonIcon" /> <button className='DashBaordUserManagementBuuton'> Account details</button>

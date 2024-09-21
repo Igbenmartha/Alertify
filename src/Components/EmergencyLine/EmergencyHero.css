@@ -1,71 +1,131 @@
-.emergencyHeroBody{
-    width: 100%;
-    height: 80vh;
-     background-color: #EFF0F5; 
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
 
-    /* background-color: rgb(62, 162, 162); */
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-.emergencyHeroBodyInner{
-    width: 90%;
-    height: 100%;
-    background-color: aqua;
-    display: flex;
+.HomePageContainer{
+    width: 100%;
+    height: max-content;
+}
+
+.HomePgeContainerInner{
+    width: 100%;
+    height: 450px;
     background: #EFF0F5;
-
-    /* justify-content: center; */
-    /* align-items: center; */
-
-
-}
-
-.emergencyHeroTextDiv{
-    width: 55%;
-    height: 100%;
-    /* background-color: red; */
-     display: flex;
-     
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.HomePageHerosection{
+    width: 80%;
+    height: 85%;
+    display: flex;
+    gap: 10px;
+}
 
-.emergencyHeroTexts{
-    width: 100%;
-    height: 70%;
+.HomePageHeroInnerSideOne{
+    width: 50%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    /* background-color: lawngreen; */
-
-    >h1{
-        font-family: Montserrat;
-font-size: 50px;
-font-weight: 700;
-line-height: 58.51px;
-text-align: left;
-color: #252424;
-
-
-    }
-
-    >p{
-        font-family: Montserrat;
-font-size: 24px;
-font-weight: 700;
-line-height: 29.26px;
-text-align: left;
-color: #2E2B2B;
-;
-    }
-   
+    gap: 10px;
+    justify-content: center;
 }
 
-.emergencyHeroImageDiv{
-    width: 45%;
+.HomePageHeroInnerSideTwo{
+    width: 50%;
     height: 100%;
-    /* background-color: purple; */
+    object-fit: contain;
+    display: flex;
+    justify-content: center;
+}
+
+.CallImage{
+    width: 450px;
+    height: 100%;
+}
+
+.HomePagesImagesStageInner{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.HomePageImagesStage{
+    width: 80%;
+    height: max-content;
+    /* background-color: red; */
+}
+
+.HomePagesImageStageInnerOne{
+    width: 100%;
+    height: 150px;
+    /* background-color: greenyellow; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.HomePageImageTextConatinerHloder{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.HomePageImageTextConatinerHloderTwo{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: flex-end;
+}
+
+.HomePagesImageStageInnerTwo{
+    width: 100%;
+    height: 150px;
+    /* background-color: goldenrod; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.HomePagetextContainerHolderTwo{
+    width: 50%;
+    /* background-color: red; */
+}
+
+.HomePageConatinerRape{
+    width: 40%;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.HomePageRapeSymbolMobile{
+    display: none;
+}
+
+.HomePagesImagesStageInnerTwo{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    background-color: #E3E6F4;
+}
+
+.HaomePageImageIconsDestop{
+    width: 100px;
 }

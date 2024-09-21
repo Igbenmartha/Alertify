@@ -1,0 +1,92 @@
+@media screen and (max-width: 768px) {
+    .HomePageHerosection{
+        padding-top: 40px;
+        flex-direction: column-reverse;
+    }
+
+    .HomePgeContainerInner{
+        width: 100%;
+        height: 700px;
+    }
+
+    .HomePageHeroInnerSideOne{
+        width: 100%;
+    }
+
+    .CallImage{
+        width: 100%;
+        height: 100%;
+    }
+
+    .HomePageHeroInnerSideTwo{
+        width: 100%;
+    }
+
+    .HomePageH3{
+        font-size: 13px;
+    }
+
+    .HomePageImagesStage{
+        width: 90%;
+        height: max-content;
+    }
+    
+    .HomePagesImageStageInnerOne{
+        width: 100%;
+        height: 150px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .HomePageImageTextConatinerHloder{
+        width: 50%;
+        gap: 5px;
+    }
+    
+
+    .HomePageImageTextConatinerHloderTwo{
+        width: 50%;
+        gap: 5px;
+    }
+
+
+    .HaomePageImageIcons{
+        width: 70px;
+    }
+
+    .HomePagePtage{
+        font-size: 12px !important;
+    }
+
+    .HomePageNombers{
+        font-size: 8px !important;
+    }
+
+    .HomePagesImageStageInnerTwo{
+        display: none;
+    }
+
+    .HomePageRapeSymbolMobile{
+        display: block;
+        display: flex;
+        width: 100%;
+        height: 150px;
+        align-items: center;
+    }
+
+    .HaomePageImageIconsMobile{
+        width: 80px;
+    }
+
+    .HomePagetextContainerHolderTwoMobile{
+        width: 100%;
+    }
+
+    .HomePageConatinerRape{
+        width: 90%;
+    }
+
+    .HaomePageImageIconsDestop{
+        width: 60px;
+    }
+}
