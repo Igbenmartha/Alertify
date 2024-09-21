@@ -43,7 +43,7 @@ const SignUp = () => {
 
   // event.preventdefault()
 
-
+const navigate= useNavigate()
 
   const handleEmail = (e) => {
     const validateEmail = (input) => {
