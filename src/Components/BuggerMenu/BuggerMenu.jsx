@@ -103,7 +103,7 @@ const BuggerMenu = ({ menuOpen, setMenuOpen }) => {
                     <div className='bugger-icon'>
                         <img src={setting} alt="setting" />
                     </div>
-                    <p>Profile</p>
+                    <p>Setting</p>
                 </div>
 
                 {
@@ -112,14 +112,14 @@ const BuggerMenu = ({ menuOpen, setMenuOpen }) => {
                  :
             <>
             
-            <div className='bugger-main-div'  onClick={handleNavigation("/login")}>
+            <div className='bugger-main-div'  onClick={handleNavigation("/signup")}>
             <div className='bugger-icon'>
             <img src={signup} alt="" />
 
             </div>
                    <p>Sign Up</p>
                     </div>
-                    <div className='bugger-main-div' onClick={handleNavigation("/signup")}>
+                    <div className='bugger-main-div' onClick={handleNavigation("/login")}>
                     <div className='bugger-icon'>
             <img src={logout} alt="" />
 
