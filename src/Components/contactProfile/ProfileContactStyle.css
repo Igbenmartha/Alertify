@@ -43,8 +43,11 @@ font-weight: 500;
 line-height: normal;
 display: flex;
 align-items: center;
+/* gap:20px; */
 
 & span{
+    width: 70%;
+    /* border: solid green; */
      font-weight: 400;  
      font-size: 18px; 
 }
@@ -147,6 +150,13 @@ font-size: 16px;
 }
 
     }
+}
+.contact-input{
+    width: 70%;
+    height: 70%;
+    padding: 10px;
+    font-size: 15px;
+    font-family: Poppins;
 }
 @media screen  and (max-width:480px){
     .ProfileContact{

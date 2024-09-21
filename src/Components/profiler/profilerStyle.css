@@ -157,6 +157,20 @@
         width: 90%;
         height: 70vh;
     }
+
+.ProfileUpdbtn,
+.ProfileEditbtn{
+margin-top: 10px;
+font-size: 12px;
+}
+.InputHolder{
+
+
+    & p{
+        font-size: 12px;
+    }
+}
+    
 }
 @media screen  and (max-width:380px){
     .Profile-MainBody {
