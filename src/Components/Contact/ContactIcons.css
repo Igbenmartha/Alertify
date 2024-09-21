@@ -114,7 +114,6 @@ justify-content: center;
         gap: 10px;
         width: 90%;
         flex-direction: column;
-        border: solid green;
         /* height: auto; */
     }
     
