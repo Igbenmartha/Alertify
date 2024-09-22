@@ -3,11 +3,12 @@ import "./settingStyle.css"
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { RiErrorWarningLine } from 'react-icons/ri'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
 const Setting = ({setSetting}) => {
     const Nav = useNavigate()
     const token = useSelector((state)=>state.user.token)
+    const dispatch = useDispatch()
     const handleSetting = ()=>{
         Nav('/profile-setting')
         setSetting(false)
@@ -19,9 +20,11 @@ const Setting = ({setSetting}) => {
                     "Content-Type": "application/json",
                     "Authorization": `Bearer ${token}`, 
                   }}
+              
             )
             console.log(response);
-            Nav('/login')
+            
+            // Nav('/login')
             
         } catch (error) {
             console.log(error);
