@@ -20,6 +20,7 @@ import SettingLayout from './Pages/ProfilePage/SettingLayout'
 import Profile from './Components/profiler/Profile'
 import ProfileContact from './Components/contactProfile/ProfileContact'
 import ModalProfile from './Components/ModalProfile/ModalProfile'
+import ForgetPassword from './Pages/FogotPage/ForgotPassword'
 
 const App = () => {
   return (
@@ -47,7 +48,7 @@ const App = () => {
         <Route path="login" element={<Login />}></Route>
         <Route path="signupimage" element={<SignUpImage />}></Route>
         <Route path="dashboard" element={<DashboardHolder />}></Route>
-        <Route path="forgot-password" element={<Reset />}></Route>
+        <Route path="forgot-password" element={<ForgetPassword/>}></Route>
       </Routes>
     </HashRouter>
 

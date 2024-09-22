@@ -102,7 +102,7 @@ const Login = () => {
             </div>
             <div className="lastLoginDiv">
               <div className="loginForgetPasswordDiv">
-                <p>Forget Password</p>
+                <p onClick={(()=>navigate('/forgot-password'))}>Forget Password</p>
               </div>
               <div className="loginBtnandTextDiv">
                 {/* <div> */}
