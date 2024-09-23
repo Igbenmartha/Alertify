@@ -10,7 +10,7 @@ const EmailVerified = () => {
      <div className='verify-box'>
         <div className='Verify-icon'></div>
         <div className='Verified-text-holder'>Email Verified
-            <p>your email address successfully verified</p>
+            <p>your Email Address has being successfully verified</p>
         </div>
         <button className='Verified-home' onClick={(()=>navigate('/'))}>Home</button>
      </div>
