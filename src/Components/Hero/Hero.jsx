@@ -140,7 +140,7 @@ const Hero = () => {
                 toast.success(data.message);
             } else {
                 setPopupVisible(true);
-                toast.error(data.message);
+                toast.success(data.message);
             }
         } catch (error) {
             console.error('Error getting location:', error);
