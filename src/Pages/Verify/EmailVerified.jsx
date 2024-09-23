@@ -12,7 +12,7 @@ const EmailVerified = () => {
         <div className='Verified-text-holder'>Email Verified
             <p>your Email Address has being successfully verified</p>
         </div>
-        <button className='Verified-home' onClick={(()=>navigate('/'))}>Home</button>
+        <button className='Verified-home' onClick={(()=>navigate('/login'))}>Home</button>
      </div>
     </div>
   )
