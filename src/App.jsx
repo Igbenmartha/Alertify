@@ -19,6 +19,7 @@ import ProfileContact from './Components/contactProfile/ProfileContact'
 import ModalProfile from './Components/ModalProfile/ModalProfile'
 import ForgotPassword from './Pages/ForgotPassword/ForgotPassword'
 import ResetPassword from './Pages/ForgotPassword/ResetPassword'
+import EmailVerified from './Pages/Verify/EmailVerified'
 
 const App = () => {
   return (
@@ -45,8 +46,9 @@ const App = () => {
         <Route path="signup" element={<SignUp />}></Route>
         <Route path="login" element={<Login />}></Route>
         <Route path="forgot-password" element={<ForgotPassword />}></Route>
-        <Route path="reset-password" element={<ResetPassword />}></Route>
         <Route path="signupimage" element={<SignUpImage />}></Route>
+        <Route path="reset-password" element={<ResetPassword />}></Route>
+        <Route path="verify" element={<EmailVerified />}></Route>
         <Route path="dashboard" element={<DashboardHolder />}></Route>
       </Routes>
     </HashRouter>
