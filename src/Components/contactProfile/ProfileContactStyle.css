@@ -168,8 +168,9 @@ font-size: 16px;
 
     }
     .ProfileContactBox {
-        width: 70%;
+        width: auto;
         height: 30vh;
+        min-width: 70%;
     }
 }
 .custom-swal-popup {
