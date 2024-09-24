@@ -245,7 +245,7 @@ const Navigate = useNavigate()
           continueSignUp === 0 ? (
             <>
               <div className="signupbodyLogo">
-                <img src={alert} alt="" />
+                <img src={alert} alt=""  onClick={(()=>navigate('/'))}/>
               </div>
               <div className="signUpDiv">
                 <div className="signupDivText">

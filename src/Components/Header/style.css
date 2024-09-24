@@ -48,7 +48,7 @@
   & p {
 
     font-family: Roboto;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 400;
   }
 
@@ -161,18 +161,30 @@
   }
 
   .profileAuth {
-    width: 51%;
+    width: max-content;
 
   }
 
   .Header-nav{
-    display: none;
+    width: 25%;
+
+    & p{
+      font-size: 18px;
+    }
+
+    /* display: none; */
   }
 
   .Header-username-textholder {
-    font-size: 10px;
+    font-size: 15px;
 
   }
+  .Cg{
+    width: 30px;
+    height: 30px;
+  }
+  
+ 
 
 
 }

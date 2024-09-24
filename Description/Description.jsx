@@ -98,7 +98,7 @@ setLoading(true)
       <Toaster/>
       <div className='text-con'>
         {/* <p>Briefly describe the situation you are in under <span className='words'>(30 characters)</span></p> */}
-        <p>Briefly describe the situation you are in under <span className='words'>{description.length}/250</span></p>
+        <p>Briefly describe the situation you are in under <span className='words'>{description.length}/250</span> and if you mistakenly click the report button, simply click the 'False Alarm' button to cancel </p>
         <textarea
           type='text'
           placeholder='Description'
@@ -108,7 +108,7 @@ setLoading(true)
         />
         {/* <p>Character count: {description.length} / 250</p> */}
         <div className='description-btnDiv'>
-          <button onClick={FalseAlarm}>{!loading? "false Alarm" : "Loading"}</button>
+          <button className='FalseAlertBtn' onClick={FalseAlarm}>{!loading? "false Alarm" : "Loading"}</button>
           <button className='btn-btn-description' onClick={Describe}>{!loading? "Send" : "Loading"}</button>
         </div>
       </div>
