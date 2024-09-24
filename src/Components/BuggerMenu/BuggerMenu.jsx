@@ -10,12 +10,13 @@ import logout from "../../assets/logout.svg";
 import signup from "../../assets/signup.svg";
 import person from "../../assets/person.png";
 import { useNavigate } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { cleartoken } from '../../Global/Slice';
 
 const BuggerMenu = ({ menuOpen, setMenuOpen }) => {
     const [user,setUser]= useState({})
     const [profilePic, setProfilePic] = useState(null); 
-  
+  const dispatch = useDispatch()
 
 
     const navigate = useNavigate();
@@ -29,7 +30,9 @@ const BuggerMenu = ({ menuOpen, setMenuOpen }) => {
         navigate(path);
         closeMenu(); 
     };
-
+const handleLogout=()=>{
+    dispatch(cleartoken())
+}
     const token = useSelector((state)=>state.user.token)
     const userDetail = () => {
 
@@ -134,7 +137,7 @@ const BuggerMenu = ({ menuOpen, setMenuOpen }) => {
 
             {
                 token ? 
-                <div className='bugger-Logout-holder'>
+                <div className='bugger-Logout-holder'onClick={handleLogout}>
                 <div className='bugger-logouticon'>
                     <img src={logout} alt="" />
                 </div>
