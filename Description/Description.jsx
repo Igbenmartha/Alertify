@@ -8,7 +8,7 @@ import{ toast,Toaster} from 'react-hot-toast';
 const Description = ({setPopupVisible}) => {
   const [description, setDescription] = useState("");
   const [loading,setLoading] = useState(false)
-  const [toggle,setToggle] = useState(false)
+  const [toggles,setToggles] = useState(false)
 
 
 
@@ -27,7 +27,7 @@ const Description = ({setPopupVisible}) => {
 
   const FalseAlarm = (e)=>{
     e.preventDefault();
-    setToggle(true)
+    setToggles(true)
     fetch(`https://alertify-9tr5.onrender.com/api/v1/user/false-alarm`, {  
       method: "POST",  
       headers: {
@@ -40,12 +40,12 @@ const Description = ({setPopupVisible}) => {
     .then(response => response.json())
     .then(data => {
       toast.success(data.message); 
-      setToggle(false)
+      setToggles(false)
       setPopupVisible(false) 
     })
     .catch(error => {
       console.error('Error:', error);  
-      setToggle(false)
+      setToggles(false)
     });
   }
 
@@ -110,7 +110,7 @@ setLoading(true)
         />
         {/* <p>Character count: {description.length} / 250</p> */}
         <div className='description-btnDiv'>
-          <button className='FalseAlertBtn' onClick={FalseAlarm}>{!toggle? "false Alarm" : "Loading"}</button>
+          <button className='FalseAlertBtn' onClick={FalseAlarm}>{!toggles? "false Alarm" : "Loading"}</button>
           <button className='btn-btn-description' onClick={Describe}>{!loading? "Send" : "Loading"}</button>
         </div>
       </div>
