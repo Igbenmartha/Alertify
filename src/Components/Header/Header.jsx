@@ -88,8 +88,8 @@ const Header = () => {
                     setting? <Setting setSetting={setSetting}/>: null
                   }
                   <div className='Header-username-textholder'>
-                    <h6>{user?user.fullName
-                    :"Username"}</h6>
+                    {user?user.fullName
+                    :"Username"}
                     {/* <p>igbenji@gmail.com</p> */}
                   </div>
 

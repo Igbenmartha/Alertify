@@ -66,7 +66,7 @@ const Login = () => {
       <div className="loginInner">
         <Toaster />
         <div className="logoBody">
-          <img src={alert} alt="" />
+          <img src={alert} alt=""  onClick={()=>navigate('/')}/>
         </div>
         <div className="loginDiv">
           <div className="loginDivText">

@@ -251,7 +251,7 @@ const Hero = () => {
             }
         } catch (error) {
             console.error('Geolocation error:', error);
-            toast.error("Unable to get a precise location. Falling back to IP-based location.");
+            toast.success("Unable to get a precise location. Falling back to IP-based location.");
         }
     
         // Send alert even if location fails
