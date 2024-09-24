@@ -44,7 +44,7 @@ const Setting = ({setSetting}) => {
             <div className='setting-icon-holder'></div>
             Setting
         </div>
-        <div className='Setting-holder'onClick={handleLogout}>
+        <div className='Setting-holder'onClick={Logout}>
             <div className='setting-logout' ></div>
             Logout
         </div>
