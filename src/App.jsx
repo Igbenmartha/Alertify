@@ -1,6 +1,4 @@
-import React, { useState } from 'react'
-import Header from './Components/Header/Header'
-import Footer from './Components/Footer/Footer'
+
 import { HashRouter, Route, Routes } from 'react-router-dom'
 import Layout from './Components/Layout/Layout'
 import HomePage from './Pages/HomePage/HomePage'
@@ -13,17 +11,21 @@ import SignUp from './Components/Forms/SignUp'
 import Login from './Components/Forms/Login'
 import SignUpImage from './Components/Forms/SignUpImage'
 import DashboardHolder from './DashboardHome/DashboardHolder'
-import Reset from './Reset/Reset'
 import Description from '../Description/Description'
 import UserPrivate from './Components/Route/UserPrivate'
 import SettingLayout from './Pages/ProfilePage/SettingLayout'
 import Profile from './Components/profiler/Profile'
 import ProfileContact from './Components/contactProfile/ProfileContact'
 import ModalProfile from './Components/ModalProfile/ModalProfile'
+import ForgotPassword from './Pages/ForgotPassword/ForgotPassword'
+import ResetPassword from './Pages/ForgotPassword/ResetPassword'
+import EmailVerified from './Pages/Verify/EmailVerified'
+import ScrollToTop from './Components/ScrollToTop'
 
 const App = () => {
   return (
     <HashRouter>
+      <ScrollToTop/>
       <Routes>
         <Route element={<Layout />} >
           <Route path="/" element={<HomePage />} />
@@ -45,7 +47,10 @@ const App = () => {
         </Route>
         <Route path="signup" element={<SignUp />}></Route>
         <Route path="login" element={<Login />}></Route>
+        <Route path="forgot-password" element={<ForgotPassword />}></Route>
         <Route path="signupimage" element={<SignUpImage />}></Route>
+        <Route path="reset-password" element={<ResetPassword />}></Route>
+        <Route path="verify" element={<EmailVerified />}></Route>
         <Route path="dashboard" element={<DashboardHolder />}></Route>
       </Routes>
     </HashRouter>

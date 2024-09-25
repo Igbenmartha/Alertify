@@ -153,6 +153,9 @@ outline: none;
 
     }
 }
+.loginForgetPasswordDiv:hover{
+    cursor: pointer;
+}
 .loginBtnandTextDiv{
     width: 100%;
     height: 70px;

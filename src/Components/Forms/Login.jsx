@@ -46,8 +46,11 @@ const Login = () => {
         setLoading(false);
       }, 2000);
     } catch (error) {
-      // console.log(error);
-      // console.log(error.response.data.data.message);
+      // console.log(error.response.data.message);
+      toast.error(error.response.data.message);
+      console.log(error);
+      
+
       setLoading(false);
     }
   };
@@ -63,7 +66,7 @@ const Login = () => {
       <div className="loginInner">
         <Toaster />
         <div className="logoBody">
-          <img src={alert} alt="" />
+          <img src={alert} alt=""  onClick={()=>navigate('/')}/>
         </div>
         <div className="loginDiv">
           <div className="loginDivText">
@@ -73,7 +76,7 @@ const Login = () => {
               contacts
             </p>
           </div>
-          <form className="loginFormDiv" onSubmit={handleLoginSubmit}>
+          <form className="loginFormDiv" >
             <div className="LoginEmailDiv">
               <input
                 type="email"
@@ -99,10 +102,13 @@ const Login = () => {
             </div>
             <div className="lastLoginDiv">
               <div className="loginForgetPasswordDiv">
-                <p>Forget Password</p>
+                <p onClick={(()=>navigate('/forgot-password'))}>Forget Password</p>
               </div>
               <div className="loginBtnandTextDiv">
-                <button className="loginBtn" type="submit">
+
+           
+                {/* <div> */}
+                <button className="loginBtn" onClick={handleLoginSubmit}
                   {!loading ? "Login " : "loading..."}
                 </button>
 

@@ -4,21 +4,31 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background-color: black; */
     padding: 1rem; 
     box-sizing: border-box; 
+
 }
 
 .text-con {
     width: 100%;
     max-width: 600px;
     padding: 1rem;
+    /* border: solid red; */
     box-sizing: border-box;
+
 }
 
 .text-con p {
-    font-size: 1.4rem; 
-    margin-bottom: 1rem; 
+    /* font-size: 1.4rem; 
+    margin-bottom: 1rem;  */
+
+color: #434141;
+
+font-family: Roboto;
+font-size: 20.434px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
 }
 
 
@@ -51,11 +61,28 @@
     text-align: center; 
     /* margin-left: 40px; */
 }
+.FalseAlertBtn{
+    width: 180px;
+    height: 45px;
+    background-color: red;
+    color: white;
+    margin-top: 1rem;
+    font-weight: bold;
+    font-size: 1rem; 
+    border-radius: 0.5rem; 
+    cursor: pointer;
+    border: none; 
+    text-align: center; 
+}
+.FalseAlertBtn,
+.btn-btn-description{
+cursor: pointer;
+}
 
 .description-btnDiv{
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 
 @media (max-width: 768px) {
@@ -74,6 +101,7 @@
 }
 
 @media (max-width: 480px) {
+   
     .text-con p {
         font-size: 10px; 
         font-weight: 700;
@@ -83,8 +111,9 @@
         height: 100px; 
     }
 
-    .btn-btn-description {
-        width: 100%; 
+    .btn-btn-description, 
+    .FalseAlertBtn{
+        width:35%; 
         max-width: none; 
         font-size: 0.8rem; 
         margin-left: 0rem;
