@@ -35,6 +35,8 @@
     width: 100%;
     font-size: 20px;
     color: #072ACB;
+    display: flex;
+    
 
 }
 
@@ -48,9 +50,11 @@
 }
 
 .DashboardActiveReportCard{
-    width: 170px;
+    width: 200px;
     border-radius: 20px;
     display: flex;
+    flex-wrap: wrap;
+    /* background: #000; */
     align-items: center;
     flex-direction: column;
     font-size: 10px;
@@ -109,13 +113,16 @@
 }
 
 .DashBoardalertifyProfileContainer{
-    width: 75px;
+    width: 120px;
+    height: auto;
     padding: 20px;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 10px;
+    flex-wrap: wrap;
+    /* background: #000; */
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -124,7 +131,8 @@
     width: 60px;
     height: 60px;
     border-radius: 50px;
-    background-color: black;
+    border: 1px solid gray;
+    /* background-color: black; */
 
     & img{
         width: 100%;

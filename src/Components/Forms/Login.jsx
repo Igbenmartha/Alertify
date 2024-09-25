@@ -105,8 +105,10 @@ const Login = () => {
                 <p onClick={(()=>navigate('/forgot-password'))}>Forget Password</p>
               </div>
               <div className="loginBtnandTextDiv">
+
+           
                 {/* <div> */}
-                <button className="loginBtn" onClick={handleLoginSubmit}>
+                <button className="loginBtn" onClick={handleLoginSubmit}
                   {!loading ? "Login " : "loading..."}
                 </button>
 
@@ -114,7 +116,6 @@ const Login = () => {
                   Don't have an account?{" "}
                   <span onClick={() => navigate("/signup")}>Sign Up</span>
                 </p>
-                {/* </div> */}
               </div>
             </div>
           </form>

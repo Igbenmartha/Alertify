@@ -3,7 +3,7 @@ import "./emergencycallline.css";
 import "./emergencyMobile.css";
 import police from "../../assets/PoliceImage.svg";
 import helipcopter from "../../assets/HelicopterImage.svg";
-import boykick from "../../assets/BoyKickGirl.svg";
+import boykick from "../../assets/NewRape.svg";
 import ArmyMan from "../../assets/SoldierMan.svg";
 import rope from "../../assets/HangRope.svg"
 import FederalRoadSafetyLogo from "../../assets/FrscGreenHead.svg";
@@ -163,7 +163,7 @@ const EmergencyCallLine = () => {
           </div>
 
           <div className="HomePageImageTextConatinerHloderTwo">
-            <img src={ArmyMan} className="HaomePageImageIcons" />
+            <img src={shortNikaGirl} className="HaomePageImageIcons" />
 
             <div className="HomePagetextContainerHolderTwo">
               <p
@@ -185,7 +185,7 @@ const EmergencyCallLine = () => {
         <div className="HomePageRapeSymbolMobile">
           <div className="HomePagesImageStageInnerTwoMobile">
             <div className="HomePageConatinerRape">
-              <img src={shortNikaGirl} className="HaomePageImageIconsMobile" />
+              <img src={boykick} className="HaomePageImageIconsMobile" />
 
               <div className="HomePagetextContainerHolderTwoMobile">
                 <p
@@ -206,7 +206,10 @@ const EmergencyCallLine = () => {
 
           <div className="HomePagesImageStageInnerTwoMobile">
             <div className="HomePageConatinerRape">
-              <img src={rope} className="HaomePageImageIconsMobile" />
+              <img
+                src={FederalRoadSafetyLogo}
+                className="HaomePageImageIconsMobile"
+              />
 
               <div className="HomePagetextContainerHolderTwo">
                 <p
