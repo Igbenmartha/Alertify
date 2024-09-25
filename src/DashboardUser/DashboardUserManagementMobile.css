@@ -1,16 +1,19 @@
 @media screen and (max-width: 768px) {
     .DashboardUserManagementContainerInner{
         width: 100%;
+        
     }
 
     .DashBoardUsermangementContainerOverflow{
         width: 100%;
         justify-content: center;
+        gap: 20px;
     }
 
         
     .userCardContainer {
-        width: 120px;
+        width: 47%;
+        /* height: 250px; */
         padding: 20px;
     }
 

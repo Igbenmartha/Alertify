@@ -99,7 +99,7 @@ const Login = () => {
             </div>
             <div className="lastLoginDiv">
               <div className="loginForgetPasswordDiv">
-                <p>Forget PassWadd ord</p>
+                <p>Forget Password</p>
               </div>
               <div className="loginBtnandTextDiv">
                 <button className="loginBtn" type="submit">
