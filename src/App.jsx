@@ -20,10 +20,12 @@ import ModalProfile from './Components/ModalProfile/ModalProfile'
 import ForgotPassword from './Pages/ForgotPassword/ForgotPassword'
 import ResetPassword from './Pages/ForgotPassword/ResetPassword'
 import EmailVerified from './Pages/Verify/EmailVerified'
+import ScrollToTop from './Components/ScrollToTop'
 
 const App = () => {
   return (
     <HashRouter>
+      <ScrollToTop/>
       <Routes>
         <Route element={<Layout />} >
           <Route path="/" element={<HomePage />} />
