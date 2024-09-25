@@ -107,15 +107,18 @@ const Login = () => {
               <div className="loginBtnandTextDiv">
 
            
-                {/* <div> */}
-                <button className="loginBtn" onClick={handleLoginSubmit}
-                  {!loading ? "Login " : "loading..."}
+               
+                <button className="loginBtn" onClick={handleLoginSubmit}>
+                  {!loading ? "Login " : "loading..."} 
                 </button>
-
+                
+                
                 <p className="loginlastText">
                   Don't have an account?{" "}
                   <span onClick={() => navigate("/signup")}>Sign Up</span>
                 </p>
+                
+              
               </div>
             </div>
           </form>
