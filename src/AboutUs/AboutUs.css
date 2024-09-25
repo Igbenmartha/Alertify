@@ -177,7 +177,7 @@ p{
         justify-content: center;
         display: flex;
         /* margin-top: 50rem; */
-        font-size: 40px;
+        font-size: 25px;
         gap: none;
         margin-left: 2rem;
     }
@@ -185,8 +185,8 @@ p{
     .inci{
         align-items: center;
         display: flex;
-        font-size: 40px;
-        margin-top: 3rem;
+        font-size: 25px;
+        /* margin-top: 3rem; */
         margin-right: 1rem;
 
     }
