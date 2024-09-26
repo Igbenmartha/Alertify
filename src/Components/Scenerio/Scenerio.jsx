@@ -21,8 +21,8 @@ const Scenerio = () => {
         },
         {
             img: pana1,
-            title:"Chronic health condition",
-            text: "Individuals with chronic health condition will need this application to quickly and easily notify caregivers or relative when they need them the most."
+            title:"Higher Institution",
+            text: "Universities and colleges that are concerned with ensuring the safety of their student on and off campus can adopt alertify as a safety protocol for their students to enable them to quickly report unsafe conditions quickly and efficiently."
         },
         {
             img: pana2,
